@@ -7,6 +7,23 @@ translate managed VD context and analysis into entry packets, actual Newton
 entries, and trace/evaluator checks. It does not own the organization or
 maintenance of the NML document collection.
 
+## Repository access and boundaries
+
+The private GitHub repository `canvalidk/VD-Newton` is the backing repository
+for this workspace. Its local `origin` points there, and the installed GitHub
+connector has confirmed read/write access. Use that repository for normal
+workspace commits and pushes, while still verifying the current remote and
+authentication before a write.
+
+`VDfirst/` is a separate local checkout of `canvalidk/VDfirst`. It is excluded
+from VD-Newton and must not be staged, committed, or pushed as part of this
+workspace. Do not write or push to `canvalidk/VDfirst` unless the user explicitly
+asks for work on that repository.
+
+Repository access does not change the context boundary below:
+`canvalidk/VD-docs` remains the managed-context authority, while VD-Newton owns
+the active Newton entry-production surface.
+
 ## VD-docs is the managed-context authority
 
 The private GitHub repository `canvalidk/VD-docs` is the default source for VD
