@@ -1,0 +1,26 @@
+# Nested repository kept separate
+VDfirst/
+
+# Local helper tools and agent state
+.tools/
+.agents/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+.test_deps/
+.codex_deps/
+*.egg-info/
+build/
+dist/
+
+# Temporary output
+*.log
+*.tmp
