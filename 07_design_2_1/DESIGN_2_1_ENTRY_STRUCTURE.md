@@ -53,9 +53,27 @@ ledger.
 ## Law Table
 
 Six-entry law blocks. Each law keeps its chimney, triplet, and two wall slots
-sequential. Design 2.1 currently inserts one Newton I-side acceleration
-placeholder between the Newton I and Newton II blocks so the trajectory-read
-acceleration entry does not borrow Newton II force vocabulary.
+sequential. Newton II follows the Newton I walls directly: E7 gives the
+peripheral definition of `inertial-acceleration-material-object`, and E8 gives
+the same headword its inward Newton-II definition. Generic point-particle
+motion remains available through the earlier kinematic `acceleration` entry;
+there is no separate point-particle inertial-acceleration headword.
+
+### Official NML2.1 headwords
+
+The following entry headwords are fixed for the current NML2.1 drafting pass.
+They may be shortened informally in discussion, but the ledger and eventual
+entry headings use these full forms:
+
+```text
+[E7]  inertial-acceleration-material-object
+[E8]  inertial-acceleration-material-object
+[E9]  net-force-material-object
+[E10] inertial-mass-material-object
+[E11] net-force-material-object
+```
+
+The outward-facing inertial-mass wall at [E12] remains deferred until NML2.2.
 
 | Number | Role | Contents | Attribute refs | Notes |
 |---|---|---|---|---|
@@ -65,43 +83,42 @@ acceleration entry does not borrow Newton II force vocabulary.
 | [E4] | Newton I triplet; free-particle winter entry. | Captures D2[E17]. | point-particle status; frame of description; uniform-motion |  |
 | [E5] | Newton I wall; inertial-frame. | Captures D2[E18]. | reference-frame slots; inertial-frame commitment; frame modelling input |  |
 | [E6] | Newton I wall; free-particle. | Captures D2[E19]. | point-particle status; free-particle status; absence of relevant external influence |  |
-| [E7] | Newton I-side acceleration bridge; inertial-acceleration_point-particle. | For a point-particle with a trajectory described in an inertial-frame, the acceleration read from that trajectory at a selected time. | point-particle; trajectory; inertial-frame; acceleration; selected time | Trajectory-read acceleration entry; stands in no relation to net-force. |
-| [E8] | Newton II chimney; material-object inertial-acceleration. | Captures D2[E20], revised as the Newton II-side acceleration entry. | material-object witness; trajectory; inertial-frame; net-force; inertial-mass | Differentiated from [E7] by its Newton II commitment. |
-| [E9] | Newton II triplet; material-object inertial-acceleration November redefine. | Captures D2[E21]; for a target carrying a material-object witness, this acceleration is net-force divided by inertial-mass. | material-object witness; material-object inertial-acceleration; net-force; inertial-mass | Do not route this distinction by witness-domain dispatch; the cut is definitional role. |
-| [E10] | Newton II triplet; net-force winter entry. | Captures D2[E22]. | material-object witness; net-force; inertial-mass; material-object inertial-acceleration |  |
-| [E11] | Newton II triplet; inertial-mass winter entry. | Captures D2[E23]. | material-object witness; inertial-mass; net-force; material-object inertial-acceleration |  |
-| [E12] | Newton II wall; net-force. |  | material-object witness; net-force; interacting-forces-set |  |
-| [E13] | Newton II wall; inertial-mass. |  | material-object witness; inertial-mass |  |
-| [E14] | Force-sum chimney; net-force. |  | material-object witness; net-force; interacting-forces-set |  |
-| [E15] | Force-sum triplet; net-force November redefine. | Captures D2[E24]. | material-object witness; net-force; interacting-forces-set; attached-force |  |
-| [E16] | Force-sum triplet; interacting-forces-set winter entry. | Captures D2[E25]. | material-object witness; interacting-forces-set; attached-force; net-force |  |
-| [E17] | Force-sum triplet; attached-force winter entry. | Captures D2[E26]. | attached-force; interacting-forces-set; net-force |  |
-| [E18] | Force-sum wall; IFS generator. | Supports one-at-a-time unfolding of attached-forces through mechanical-composition. | material-object witness; mechanical-composition_point-particle; acting-object; attached-force; interacting-forces-set |  |
-| [E19] | Force-sum wall; IFS closer / terminator. | Supports explicit closure when no more acting-objects are to be considered. | interacting-forces-set; generator state; no-more-acting-objects signal |  |
-| [E20] | Meta-typing chimney; raw-class. | Captures D2[E27]. | raw-class status |  |
-| [E21] | Meta-typing triplet; raw-class November redefine. | Captures D2[E28]. | raw-class; class-specific-features; instance-of |  |
-| [E22] | Meta-typing triplet; class-specific-features winter entry. | Captures D2[E29]. | raw-class; class-specific-features; instance-of |  |
-| [E23] | Meta-typing triplet; instance-of winter entry. | Captures D2[E30]. | entity identity; instance-of; raw-class; class-specific-features |  |
-| [E24] | Meta-typing wall; class-specific-features. |  | raw-class; class-specific-features |  |
-| [E25] | Meta-typing wall; instance-of. |  | entity identity; instance-of; raw-class |  |
-| [E26] | Action-reaction chimney; attached-force. |  | attached-force; action-or-reaction status |  |
-| [E27] | Action-reaction triplet; attached-force November redefine. | Captures D2[E31]. | attached-force; action-force_acting-object; reaction-force_acting-object |  |
-| [E28] | Action-reaction triplet; action-force_acting-object winter entry. | Captures D2[E32]. | acting-object; action-force; reaction-force; attached-force |  |
-| [E29] | Action-reaction triplet; reaction-force_acting-object winter entry. | Captures D2[E33]. | acting-object; reaction-force; action-force; attached-force |  |
-| [E30] | Action-reaction wall; action-force_acting-object. |  | acting-object; action-force; concrete action-force |  |
-| [E31] | Action-reaction wall; reaction-force_acting-object. |  | acting-object; reaction-force; paired material-object; action-force |  |
-| [E32] | Acting-object chimney; action-force_acting-object. |  | acting-object; action-force; activation-condition |  |
-| [E33] | Acting-object triplet; action-force_acting-object November redefine. | Captures D2[E36]. | acting-object; action-force; activation-condition; target material-object |  |
-| [E34] | Acting-object triplet; acting-object winter entry. | Captures D2[E34]. | acting-object; activation-condition; action-force |  |
-| [E35] | Acting-object triplet; activation-condition_acting-object winter entry. | Captures D2[E35]. | acting-object; activation-condition; action-force; target material-object |  |
-| [E36] | Acting-object wall; acting-object. | Peripheral meaning for acting-object. | acting-object identity; concrete type; paired material-object; participant slots | Unclear what should be here. |
-| [E37] | Acting-object wall; activation-condition_acting-object. | Physical circumstance under which a concrete acting-object's force contribution is coherent. | activation-condition; concrete activation-condition; concrete acting-object |  |
-| [E38] | Closure chimney; interaction-candidate. | Captures D2[E40]. | mechanical-system; force-accounting member particle; attached-force; interacting-forces-set |  |
-| [E39] | Closure triplet; interaction-candidate November redefine. | Captures D2[E41]. | interaction-candidate; interaction-pair; mechanically-closed-system |  |
-| [E40] | Closure triplet; interaction-pair winter entry. | Captures D2[E42]. | interaction-candidate; interaction-pair; mechanically-closed-system |  |
-| [E41] | Closure triplet; mechanically-closed-system winter entry. | Captures D2[E43]. | mechanical-system; interaction-candidate; interaction-pair |  |
-| [E42] | Closure wall; interaction-pair. | Captures D2[E44]. | two interaction-candidates; shared acting-object; canonical/reaction roles; paired material-object |  |
-| [E43] | Closure wall; mechanically-closed-system. | Captures D2[E45]. | mechanical-system; internal interactions; produced equations |  |
+| [E7] | Newton II chimney; inertial-acceleration-material-object. | Captures D2[E20], revised to make the massive/material-object domain part of the headword itself. | material-object; trajectory; inertial-frame; acceleration; selected time | First of exactly two inertial-acceleration-material-object definitions. Generic point-particle acceleration remains kinematic. |
+| [E8] | Newton II triplet; inertial-acceleration-material-object November redefine. | Captures D2[E21]; for one material object, this acceleration is net-force-material-object divided by inertial-mass-material-object. | inertial-acceleration-material-object; net-force-material-object; inertial-mass-material-object | Second and final inertial-acceleration-material-object definition. |
+| [E9] | Newton II triplet; net-force-material-object winter entry. | Captures D2[E22]. | net-force-material-object; inertial-mass-material-object; inertial-acceleration-material-object | Official headword fixed for NML2.1. |
+| [E10] | Newton II triplet; inertial-mass-material-object winter entry. | Captures D2[E23]. | inertial-mass-material-object; net-force-material-object; inertial-acceleration-material-object | Official headword fixed for NML2.1; distinct from the deferred outward-facing inertial-mass wall. |
+| [E11] | Newton II wall; net-force-material-object. |  | material-object; net-force-material-object; interacting-forces-set | Official headword fixed for NML2.1. |
+| [E12] | Newton II wall; inertial-mass (exact headword deferred). |  | material-object; inertial-mass | Deferred until NML2.2 supplies the target/address and persistence account. |
+| [E13] | Force-sum chimney; net-force. |  | material-object witness; net-force; interacting-forces-set |  |
+| [E14] | Force-sum triplet; net-force November redefine. | Captures D2[E24]. | material-object witness; net-force; interacting-forces-set; attached-force |  |
+| [E15] | Force-sum triplet; interacting-forces-set winter entry. | Captures D2[E25]. | material-object witness; interacting-forces-set; attached-force; net-force |  |
+| [E16] | Force-sum triplet; attached-force winter entry. | Captures D2[E26]. | attached-force; interacting-forces-set; net-force |  |
+| [E17] | Force-sum wall; IFS generator. | Supports one-at-a-time unfolding of attached-forces through mechanical-composition. | material-object witness; mechanical-composition_point-particle; acting-object; attached-force; interacting-forces-set |  |
+| [E18] | Force-sum wall; IFS closer / terminator. | Supports explicit closure when no more acting-objects are to be considered. | interacting-forces-set; generator state; no-more-acting-objects signal |  |
+| [E19] | Meta-typing chimney; raw-class. | Captures D2[E27]. | raw-class status |  |
+| [E20] | Meta-typing triplet; raw-class November redefine. | Captures D2[E28]. | raw-class; class-specific-features; instance-of |  |
+| [E21] | Meta-typing triplet; class-specific-features winter entry. | Captures D2[E29]. | raw-class; class-specific-features; instance-of |  |
+| [E22] | Meta-typing triplet; instance-of winter entry. | Captures D2[E30]. | entity identity; instance-of; raw-class; class-specific-features |  |
+| [E23] | Meta-typing wall; class-specific-features. |  | raw-class; class-specific-features |  |
+| [E24] | Meta-typing wall; instance-of. |  | entity identity; instance-of; raw-class |  |
+| [E25] | Action-reaction chimney; attached-force. |  | attached-force; action-or-reaction status |  |
+| [E26] | Action-reaction triplet; attached-force November redefine. | Captures D2[E31]. | attached-force; action-force_acting-object; reaction-force_acting-object |  |
+| [E27] | Action-reaction triplet; action-force_acting-object winter entry. | Captures D2[E32]. | acting-object; action-force; reaction-force; attached-force |  |
+| [E28] | Action-reaction triplet; reaction-force_acting-object winter entry. | Captures D2[E33]. | acting-object; reaction-force; action-force; attached-force |  |
+| [E29] | Action-reaction wall; action-force_acting-object. |  | acting-object; action-force; concrete action-force |  |
+| [E30] | Action-reaction wall; reaction-force_acting-object. |  | acting-object; reaction-force; paired material-object; action-force |  |
+| [E31] | Acting-object chimney; action-force_acting-object. |  | acting-object; action-force; activation-condition |  |
+| [E32] | Acting-object triplet; action-force_acting-object November redefine. | Captures D2[E36]. | acting-object; action-force; activation-condition; target material-object |  |
+| [E33] | Acting-object triplet; acting-object winter entry. | Captures D2[E34]. | acting-object; activation-condition; action-force |  |
+| [E34] | Acting-object triplet; activation-condition_acting-object winter entry. | Captures D2[E35]. | acting-object; activation-condition; action-force; target material-object |  |
+| [E35] | Acting-object wall; acting-object. | Peripheral meaning for acting-object. | acting-object identity; concrete type; paired material-object; participant slots | Unclear what should be here. |
+| [E36] | Acting-object wall; activation-condition_acting-object. | Physical circumstance under which a concrete acting-object's force contribution is coherent. | activation-condition; concrete activation-condition; concrete acting-object |  |
+| [E37] | Closure chimney; interaction-candidate. | Captures D2[E40]. | mechanical-system; force-accounting member particle; attached-force; interacting-forces-set |  |
+| [E38] | Closure triplet; interaction-candidate November redefine. | Captures D2[E41]. | interaction-candidate; interaction-pair; mechanically-closed-system |  |
+| [E39] | Closure triplet; interaction-pair winter entry. | Captures D2[E42]. | interaction-candidate; interaction-pair; mechanically-closed-system |  |
+| [E40] | Closure triplet; mechanically-closed-system winter entry. | Captures D2[E43]. | mechanical-system; interaction-candidate; interaction-pair |  |
+| [E41] | Closure wall; interaction-pair. | Captures D2[E44]. | two interaction-candidates; shared acting-object; canonical/reaction roles; paired material-object |  |
+| [E42] | Closure wall; mechanically-closed-system. | Captures D2[E45]. | mechanical-system; internal interactions; produced equations |  |
 
 ## Object Inventory
 

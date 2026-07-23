@@ -195,11 +195,11 @@ material-object represented as a point-particle, or a massless point-particle
 like a photon.
 ```
 
-### [E7] inertial-acceleration_point-particle
+### [E7] inertial-acceleration-material-object
 
 ```text
-inertial-acceleration_point-particle :=
+inertial-acceleration-material-object :=
 
-For a point-particle with a trajectory described in an inertial-frame,
+For a material-object with a trajectory described in an inertial-frame,
 the acceleration read from that trajectory at a selected time.
 ```

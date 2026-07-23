@@ -40,15 +40,21 @@ Read these first, in this order:
    - First-pass lesson notes for the Newton II / inertial-acceleration entry
      unit.
 
-10. `entry_packets/ENTRY_PACKET_E7_INERTIAL_ACCELERATION_POINT_PARTICLE.md`
-   - Current E7 packet reconciling the NML1 E7/E8 decision with the older
-     Newton II chimney notes. Treats E7 as the point-particle motion-sheet
-     getter and E8 as the material-object force-accounting link.
+10. `entry_packets/ENTRY_PACKET_E7_INERTIAL_ACCELERATION_MATERIAL_OBJECT.md`
+   - Current E7 chimney packet. Generic acceleration remains kinematic; the
+     narrower inertial-acceleration headword begins directly in the
+     massive/material-object domain.
 
-11. `DESIGN_2_1_DRAFT_1_ENTRIES.md`
+11. `entry_packets/ENTRY_PACKET_E8_INERTIAL_ACCELERATION_MATERIAL_OBJECT.md`
+    through `ENTRY_PACKET_E11_NET_FORCE_MATERIAL_OBJECT.md`
+   - Remaining NML2.1 packet set: E8-E10 complete the Newton-II triplet and E11
+     supplies the net-force wall. The inertial-mass wall at E12 is deferred to
+     NML2.2.
+
+12. `DESIGN_2_1_DRAFT_1_ENTRIES.md`
    - Active output file for the current Design 2.1 entry-drafting effort.
 
-12. `DESIGN_2_1_ENTRY_STRUCTURE.md`
+13. `DESIGN_2_1_ENTRY_STRUCTURE.md`
    - The forked entry ledger copied from Design 3 and renamed for Design 2.1.
 
 For drafting or revising an individual entry, use an **entry packet** from
