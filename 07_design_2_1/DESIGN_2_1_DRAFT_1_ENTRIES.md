@@ -203,3 +203,41 @@ inertial-acceleration-material-object :=
 For a material-object with a trajectory described in an inertial-frame,
 the acceleration read from that trajectory at a selected time.
 ```
+
+### [E8] inertial-acceleration-material-object
+
+```text
+inertial-acceleration-material-object[A] :=
+
+net-force-material-object[A] divided by
+inertial-mass-material-object[A].
+```
+
+### [E9] net-force-material-object
+
+```text
+net-force-material-object[A] :=
+
+inertial-mass-material-object[A] multiplied by
+inertial-acceleration-material-object[A].
+```
+
+### [E10] inertial-mass-material-object
+
+```text
+inertial-mass-material-object[A] :=
+
+the positive scalar coefficient that multiplies
+inertial-acceleration-material-object[A] to give
+net-force-material-object[A].
+```
+
+### [E11] net-force-material-object
+
+```text
+net-force-material-object :=
+
+For a material-object at a selected time or interval in an inertial-frame,
+the single vector assigned to that material-object for the Newton II relation,
+measured in newtons.
+```
