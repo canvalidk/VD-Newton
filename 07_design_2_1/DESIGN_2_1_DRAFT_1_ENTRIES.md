@@ -207,29 +207,28 @@ the acceleration read from that trajectory at a selected time.
 ### [E8] inertial-acceleration-material-object
 
 ```text
-inertial-acceleration-material-object[A] :=
+inertial-acceleration-material-object :=
 
-net-force-material-object[A] divided by
-inertial-mass-material-object[A].
+For one material-object, its net-force-material-object divided by
+its inertial-mass-material-object.
 ```
 
 ### [E9] net-force-material-object
 
 ```text
-net-force-material-object[A] :=
+net-force-material-object :=
 
-inertial-mass-material-object[A] multiplied by
-inertial-acceleration-material-object[A].
+For one material-object, its inertial-mass-material-object times
+its inertial-acceleration-material-object.
 ```
 
 ### [E10] inertial-mass-material-object
 
 ```text
-inertial-mass-material-object[A] :=
+inertial-mass-material-object :=
 
-the positive scalar coefficient that multiplies
-inertial-acceleration-material-object[A] to give
-net-force-material-object[A].
+For one material-object, the positive scalar that multiplies its
+inertial-acceleration-material-object to give its net-force-material-object.
 ```
 
 ### [E11] net-force-material-object

@@ -48,13 +48,26 @@ Read these first, in this order:
 11. `entry_packets/ENTRY_PACKET_E8_INERTIAL_ACCELERATION_MATERIAL_OBJECT.md`
     through `ENTRY_PACKET_E11_NET_FORCE_MATERIAL_OBJECT.md`
    - Remaining NML2.1 packet set: E8-E10 complete the Newton-II triplet and E11
-     supplies the net-force wall. The inertial-mass wall at E12 is deferred to
-     NML2.2.
+     supplies the net-force wall. The outward inertial-mass address wall at E12
+     is deferred to NML2.2; ownership of the later measurement/estimation
+     operation remains open.
 
-12. `DESIGN_2_1_DRAFT_1_ENTRIES.md`
+    For E10 specifically, first read
+    `notes/vd_docs_handoffs/why_the_mass_entry_must_be_long_joint_measurement_d3.md`,
+    then `entry_packets/ENTRY_PACKET_E10_INERTIAL_MASS_MATERIAL_OBJECT_d4.md`.
+    The handoff distinguishes independent measurement results from the joint
+    Newton-II-constrained fit; d4 is the current successor packet that applies
+    that correction. The d3 packet is retained as the pre-correction state. The
+    unversioned and d2 packets are still earlier reasoning states.
+
+12. `entry_writing_passes/README.md`
+   - Intake map for the E8-E10 independent writing passes and the versioned E10
+     packet line through the current d4 successor candidate.
+
+13. `DESIGN_2_1_DRAFT_1_ENTRIES.md`
    - Active output file for the current Design 2.1 entry-drafting effort.
 
-13. `DESIGN_2_1_ENTRY_STRUCTURE.md`
+14. `DESIGN_2_1_ENTRY_STRUCTURE.md`
    - The forked entry ledger copied from Design 3 and renamed for Design 2.1.
 
 For drafting or revising an individual entry, use an **entry packet** from
