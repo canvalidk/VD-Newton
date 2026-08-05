@@ -45,7 +45,7 @@ The design should be able to talk about structures such as:
 
 ```text
 list of acting-object candidates
-list of attached-force contributions
+list of contributing-force members
 interacting-forces-set as list-like accumulator or closed collection
 no-more-items / list closure signal
 empty list / zero-sum result where appropriate
@@ -76,4 +76,3 @@ Design 2.1 should prefer explicit placeholders over silent gaps.
 If a wall entry is needed but the exact final content is not ready, the entry
 should say what kind of content must eventually land there and what the current
 placeholder allows the trace to do.
-

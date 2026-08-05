@@ -1,6 +1,8 @@
 # NML2 Entry Renumbering Decision — 2026-07-23
 
-Status: current steering decision for the active Design 2.1 entry surface.
+Status: current for the NML2.1 sequence through E12. Its statement about all
+later entries moving up is superseded by
+`08_nm_lesson_drafts/nml3/NML3_ENTRY_SEQUENCE_DECISION_2026-08-02.md`.
 
 ## Decision
 

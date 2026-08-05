@@ -23,6 +23,14 @@ Future lesson drafts can follow the same shape:
 nml2/
   nm_l2_lesson_draft.md
   placement / boundary notes as needed
+
+nml3/
+  README.md
+  NML3_ENTRY_SEQUENCE_DECISION_2026-08-02.md
+  NML3_CONTRIBUTING_FORCE_TERMINOLOGY_DECISION_2026-08-02.md
+  NML3_FORCE_SUM_FOUNDATIONAL_UNDERSTANDING_2026-08-02.md
+  NML3_ENTRY_WORKING_PLAN.md
+  nm_l3_lesson_draft.md
 ```
 
 ## Preservation Rule

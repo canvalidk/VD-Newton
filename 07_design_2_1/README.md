@@ -52,23 +52,35 @@ Read these first, in this order:
      is deferred to NML2.2; ownership of the later measurement/estimation
      operation remains open.
 
-    For E10 specifically, first read
+    For the locally stored E10 packet history, first read
     `notes/vd_docs_handoffs/why_the_mass_entry_must_be_long_joint_measurement_d3.md`,
     then `entry_packets/ENTRY_PACKET_E10_INERTIAL_MASS_MATERIAL_OBJECT_d4.md`.
-    The handoff distinguishes independent measurement results from the joint
-    Newton-II-constrained fit; d4 is the current successor packet that applies
-    that correction. The d3 packet is retained as the pre-correction state. The
-    unversioned and d2 packets are still earlier reasoning states.
+    For the selected active wording, then read
+    `entry_writing_passes/E10_ENTRY_WRITING_PASS_2026-08-01_b.md`. The handoff
+    distinguishes independent measurement results from the joint
+    Newton-II-constrained fit; d4 is the latest packet stored locally, while the
+    selected pass records its later d5 source context. The d3 packet is retained
+    as the pre-correction state. The unversioned and d2 packets are still earlier
+    reasoning states.
 
 12. `entry_writing_passes/README.md`
-   - Intake map for the E8-E10 independent writing passes and the versioned E10
-     packet line through the current d4 successor candidate.
+   - Intake map for the E8-E11 independent writing passes, including the
+     selected E10 and E11 wording now used in the active draft.
 
 13. `DESIGN_2_1_DRAFT_1_ENTRIES.md`
    - Active output file for the current Design 2.1 entry-drafting effort.
 
 14. `DESIGN_2_1_ENTRY_STRUCTURE.md`
    - The forked entry ledger copied from Design 3 and renamed for Design 2.1.
+
+15. `../08_nm_lesson_drafts/nml3/NML3_ENTRY_SEQUENCE_DECISION_2026-08-02.md`
+   - Current authority for the E9 force-sum chimney overlap, the E13-E17
+     force-sum block, and the placement of meta-typing at E36-E41.
+
+16. `../08_nm_lesson_drafts/nml3/NML3_CONTRIBUTING_FORCE_TERMINOLOGY_DECISION_2026-08-02.md`
+   - Provisional record replacing `attached-force` with `contributing-force` on
+     the active surface while preserving predecessor terms in historical
+     evidence. Final naming is reopened by the foundational NML3 note.
 
 For drafting or revising an individual entry, use an **entry packet** from
 `../04_entry_design_guides/VD_NEW_ENTRY_TEMPLATE.md`. In this workspace,

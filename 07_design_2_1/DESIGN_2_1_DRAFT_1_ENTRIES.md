@@ -229,6 +229,10 @@ inertial-mass-material-object :=
 
 For one material-object, the positive scalar that multiplies its
 inertial-acceleration-material-object to give its net-force-material-object.
+If both are exact, check that they are codirectional and then divide the
+net-force magnitude by the inertial-acceleration magnitude; a zero-zero pair
+leaves the scalar undetermined. If either is measured, estimate two underlying
+codirectional vectors and then recover the positive scalar relating them.
 ```
 
 ### [E11] net-force-material-object
@@ -236,7 +240,6 @@ inertial-acceleration-material-object to give its net-force-material-object.
 ```text
 net-force-material-object :=
 
-For a material-object at a selected time or interval in an inertial-frame,
-the single vector assigned to that material-object for the Newton II relation,
-measured in newtons.
+For a material-object in an inertial-frame, its vector in newtons. There are
+exactly two ways to obtain this vector.
 ```

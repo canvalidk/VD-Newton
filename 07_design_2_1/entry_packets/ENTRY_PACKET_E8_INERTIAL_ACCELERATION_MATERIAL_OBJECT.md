@@ -73,7 +73,7 @@ Other structural qualifier:
 
 Forbidden headword mentions / hidden imports in the eventual entry wording:
   - trajectory / velocity construction — belongs to E7 and existing kinematics.
-  - interacting-forces-set / attached-force / force contribution — deferred.
+  - interacting-forces-set / contributing-force / force contribution — deferred.
   - scale / weight / gravitational mass / material-amount mass — unlicensed.
   - force causes acceleration — replaces a constraint with causal prose.
 

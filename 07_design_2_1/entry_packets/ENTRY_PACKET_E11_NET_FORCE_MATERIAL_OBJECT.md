@@ -73,7 +73,7 @@ Other headword mentions permitted if needed:
   - newton
 
 Forbidden headword mentions / hidden imports in the eventual entry wording:
-  - interacting-forces-set / attached-force / force-sum as completed machinery.
+  - interacting-forces-set / contributing-force / force-sum as completed machinery.
   - newton meter as a net-force instrument.
   - push or pull as an identity claim.
   - free-particle as a consequence of the zero vector.
@@ -131,7 +131,7 @@ IRIL - ideal residually imparted logic:
       contexts.
     - Accepting a scalar, a bare magnitude, or a directionless verbal answer in
       place of the required vector.
-    - Treating one push, pull, attached force, or newton-meter reading as the net
+    - Treating one push, pull, contributing force, or newton-meter reading as the net
       force without a licensed account connecting it to the single vector.
     - Generating the vector by silently inventing, accumulating, or closing an
       interacting-forces set.
