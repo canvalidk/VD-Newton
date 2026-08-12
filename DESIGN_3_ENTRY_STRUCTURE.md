@@ -12,15 +12,15 @@ Columns:
 - **Notes**: comments, routed changes, uncertainties, and links to Design 2
   where useful.
 
-## Naming Note
+## Ratified Force-Member Naming
 
-Design 3 uses `attached-force` for the force contribution that has been
-attached to a target particle's force account and can therefore enter that
-particle's `interacting-forces-set`. This is a human-engineering name, not an
-extra formal claim. The intended interpretive cue is relational attachment:
-the force is no longer a free-floating formula or merely a possible mechanism
-output, but has been matched to the target particle for trace-time force
-accounting.
+Design 3 uses `impressed-force` for an independently warranted force-action
+upon a target material object, keyed by its acting-object instance and eligible
+for the target's `interacting-forces-set`. The name follows Newton's *vis
+impressa*: it identifies the action on the target before any vector
+composition. A free-floating formula, possible mechanism output, or convenient
+summand is not thereby an impressed force. The naming authority is
+`08_nm_lesson_drafts/nml3/NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`.
 
 Design 3 uses `action-force` for the force returned on the action side of an
 acting-object's action/reaction structure. This replaces the colder earlier
@@ -68,10 +68,10 @@ sequential.
 | [E11] | Newton II wall; net-force. |  | material-object witness; net-force; interacting-forces-set |  |
 | [E12] | Newton II wall; inertial-mass. |  | material-object witness; inertial-mass |  |
 | [E13] | Force-sum chimney; net-force. |  | material-object witness; net-force; interacting-forces-set |  |
-| [E14] | Force-sum triplet; net-force November redefine. | Captures D2[E24]. | material-object witness; net-force; interacting-forces-set; attached-force |  |
-| [E15] | Force-sum triplet; interacting-forces-set winter entry. | Captures D2[E25]. | material-object witness; interacting-forces-set; attached-force; net-force |  |
-| [E16] | Force-sum triplet; attached-force winter entry. | Captures D2[E26]. | attached-force; interacting-forces-set; net-force |  |
-| [E17] | Force-sum wall; IFS generator. | Supports one-at-a-time unfolding of attached-forces through mechanical-composition. | material-object witness; mechanical-composition_point-particle; acting-object; attached-force; interacting-forces-set |  |
+| [E14] | Force-sum triplet; net-force November redefine. | Captures D2[E24]. | material-object witness; net-force; interacting-forces-set; impressed-force |  |
+| [E15] | Force-sum triplet; interacting-forces-set winter entry. | Captures D2[E25]. | material-object witness; interacting-forces-set; impressed-force; net-force |  |
+| [E16] | Force-sum triplet; impressed-force winter entry. | Captures D2[E26]. | impressed-force; interacting-forces-set; net-force |  |
+| [E17] | Force-sum wall; IFS generator. | Supports one-at-a-time unfolding of impressed-forces through mechanical-composition. | material-object witness; mechanical-composition_point-particle; acting-object; impressed-force; interacting-forces-set |  |
 | [E18] | Force-sum wall; IFS closer / terminator. | Supports explicit closure when no more acting-objects are to be considered. | interacting-forces-set; generator state; no-more-acting-objects signal |  |
 | [E19] | Meta-typing chimney; raw-class. | Captures D2[E27]. | raw-class status |  |
 | [E20] | Meta-typing triplet; raw-class November redefine. | Captures D2[E28]. | raw-class; class-specific-features; instance-of |  |
@@ -79,10 +79,10 @@ sequential.
 | [E22] | Meta-typing triplet; instance-of winter entry. | Captures D2[E30]. | entity identity; instance-of; raw-class; class-specific-features |  |
 | [E23] | Meta-typing wall; class-specific-features. |  | raw-class; class-specific-features |  |
 | [E24] | Meta-typing wall; instance-of. |  | entity identity; instance-of; raw-class |  |
-| [E25] | Action-reaction chimney; attached-force. |  | attached-force; action-or-reaction status |  |
-| [E26] | Action-reaction triplet; attached-force November redefine. | Captures D2[E31]. | attached-force; action-force_acting-object; reaction-force_acting-object |  |
-| [E27] | Action-reaction triplet; action-force_acting-object winter entry. | Captures D2[E32]. | acting-object; action-force; reaction-force; attached-force |  |
-| [E28] | Action-reaction triplet; reaction-force_acting-object winter entry. | Captures D2[E33]. | acting-object; reaction-force; action-force; attached-force |  |
+| [E25] | Action-reaction chimney; impressed-force. |  | impressed-force; action-or-reaction status |  |
+| [E26] | Action-reaction triplet; impressed-force November redefine. | Captures D2[E31]. | impressed-force; action-force_acting-object; reaction-force_acting-object |  |
+| [E27] | Action-reaction triplet; action-force_acting-object winter entry. | Captures D2[E32]. | acting-object; action-force; reaction-force; impressed-force |  |
+| [E28] | Action-reaction triplet; reaction-force_acting-object winter entry. | Captures D2[E33]. | acting-object; reaction-force; action-force; impressed-force |  |
 | [E29] | Action-reaction wall; action-force_acting-object. |  | acting-object; action-force; concrete action-force |  |
 | [E30] | Action-reaction wall; reaction-force_acting-object. |  | acting-object; reaction-force; paired material-object; action-force |  |
 | [E31] | Acting-object chimney; action-force_acting-object. |  | acting-object; action-force; activation-condition |  |
@@ -91,7 +91,7 @@ sequential.
 | [E34] | Acting-object triplet; activation-condition_acting-object winter entry. | Captures D2[E35]. | acting-object; activation-condition; action-force; target material-object |  |
 | [E35] | Acting-object wall; acting-object. | Peripheral meaning for acting-object. | acting-object identity; concrete type; paired material-object; participant slots | Unclear what should be here. |
 | [E36] | Acting-object wall; activation-condition_acting-object. | Physical circumstance under which a concrete acting-object's force contribution is coherent. | activation-condition; concrete activation-condition; concrete acting-object |  |
-| [E37] | Closure chimney; interaction-candidate. | Captures D2[E40]. | mechanical-system; force-accounting member particle; attached-force; interacting-forces-set |  |
+| [E37] | Closure chimney; interaction-candidate. | Captures D2[E40]. | mechanical-system; force-accounting member particle; impressed-force; interacting-forces-set |  |
 | [E38] | Closure triplet; interaction-candidate November redefine. | Captures D2[E41]. | interaction-candidate; interaction-pair; mechanically-closed-system |  |
 | [E39] | Closure triplet; interaction-pair winter entry. | Captures D2[E42]. | interaction-candidate; interaction-pair; mechanically-closed-system |  |
 | [E40] | Closure triplet; mechanically-closed-system winter entry. | Captures D2[E43]. | mechanical-system; interaction-candidate; interaction-pair |  |
@@ -113,7 +113,7 @@ recognise explicitly.
 | inertial-frame | Reference-frame accepted for inertial-acceleration / Newtonian force accounting. | D2[E16], D2[E18]. |
 | mechanical-system | Selected collection of particle objects. | D2[E39]. |
 | interacting-forces-set | Force-set witness for a particle at a time. | D2[E25], Design 3 generator/closer issue. |
-| attached-force | Force contribution attached to a target particle's force account. | D2[E26], D2[E31]. Renamed from `acting-force` for interpreter clarity. |
+| impressed-force | Independently warranted force-action upon a target material object, keyed by its acting-object instance and admitted to the target's force account. | Ratified replacement for all predecessor force-member names; see the 2026-08-12 terminology authority. |
 | acting-object | Force-producing or force-contributing callable object. | D2[E34], Design 3 stress point. |
 | concrete acting-object | Typed acting-object instance such as spring, gravity, contact, or string mechanism. | Needs later concrete clusters. |
 | interaction-candidate | Closure-side force candidate. | D2[E40], D2[E41]. |
@@ -135,11 +135,11 @@ each object kind before concrete entries are written.
 | reference-frame | identity token; origin; basis vectors; clock; coordinates assigned to events | D2[E2]. |
 | inertial-frame | identity token; reference-frame slots; inertial-frame commitment; free-particle / uniform-motion criterion | Frame commitment should land at the wall. |
 | mechanical-system | identity token; member particles; force-accounting member particles; interaction-candidates; mechanically-closed-system status | Selected by observer for analysis; closure only sees members with force-accounting structure. |
-| interacting-forces-set | target material-object; time; attached-force members; generator state; closer / no-more-acting-objects signal | Design 3 should not fill this as a batch. |
-| attached-force | identity token or derived identity; source acting-object; target material-object; force value/equation; action-or-reaction status | Force identity may derive from acting-object plus target. |
+| interacting-forces-set | target material-object; time; impressed-force members; generator state; closer / no-more-acting-objects signal | Design 3 should not fill this as a batch. |
+| impressed-force | identity token or derived identity; source acting-object; target material-object; force value/equation; action-or-reaction status | Force identity may derive from acting-object plus target. |
 | acting-object | identity token; concrete type; paired material-object; activation-condition; action-force; reaction-force; participant slots; modelling assumptions | Exact wall content still unclear. |
 | concrete acting-object | identity token; abstract acting-object slots; concrete activation-condition; concrete action-force; participant slots; constructs; parameters; force-accounting targets | Type hub should dispatch abstract slots to concrete entries. |
-| interaction-candidate | attached-force; target material-object; mechanical-system; time; pairability status | Closure-side view of forces. |
+| interaction-candidate | impressed-force; target material-object; mechanical-system; time; pairability status | Closure-side view of forces. |
 | interaction-pair | two interaction-candidates; shared acting-object; canonical/reaction roles; paired-particle target | D2[E44]. |
 | object witness / witness sheet | identity token; object kind; slot bindings; unbound slots; source of each binding | Trace artifact, not final entry machinery yet. |
 | attribute slot | slot name; owning witness kind; binding status; value or boundary | Later possible entry family. |

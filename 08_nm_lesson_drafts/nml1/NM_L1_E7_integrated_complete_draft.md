@@ -246,7 +246,7 @@ detailed force-accounting calculations
 E8 inertial-acceleration_massive-particle
 E9 Newton II force/mass/acceleration relation
 interacting-forces-set
-attached-force
+impressed-force
 acting-object
 ```
 
@@ -609,7 +609,7 @@ F = ma
 Force-sum later asks:
 
 ```text
-What acting-force contributions make up the net-force?
+What impressed-force contributions make up the net-force?
 ```
 
 Acting-object structure later asks:

@@ -24,6 +24,15 @@ documents are normally consumed as context rather than reorganized here.
 Local documents must not be removed merely because a similarly named managed
 copy exists; establish provenance and ingestion status first.
 
+## Ratified force-member terminology
+
+The sole active force-account member headword is `impressed-force`. Read
+`08_nm_lesson_drafts/nml3/NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`
+before using any older force-sum source. Earlier snapshots, PDFs, backups,
+conversation captures, handoff bundles, and dated writing passes may retain
+predecessor terminology; translate it to `impressed-force`. Historical wording
+does not reopen the decision.
+
 The current project goal is to move from Newton Design 2/v0.6 toward **Design 3**:
 
 - refine the meta-typing laws;

@@ -74,15 +74,15 @@ The inertial-acceleration of p is net-force(p) divided by inertial-mass(p).
 And that's because: inertial-acceleration is defined by the Newton II triplet
 as net-force divided by inertial-mass for a point-particle in an inertial-frame.
 
-The net-force on p is the vector sum of the acting-force elements in its
+The net-force on p is the vector sum of the impressed-force elements in its
 interacting-forces-set.
 And that's because: the force-sum triplet defines net-force through the
-interacting-forces-set and acting-force.
+interacting-forces-set and impressed-force.
 
 The spring force is included in the interacting-forces-set.
 And that's because: p's mechanical-composition contains a spring acting-object
 whose activation-condition is satisfied and whose canonical-force produces an
-acting-force on p.
+impressed-force on p.
 ```
 
 The raw because-trace may be clunky. That is acceptable. The first goal is

@@ -1,3 +1,8 @@
+# HISTORICAL TERMINOLOGY QUARANTINE
+
+> **Do not use this file as naming authority.** It preserves an earlier state and may use obsolete force-member names. The sole active headword is `impressed-force`, governed by `08_nm_lesson_drafts/nml3/NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`. Translate any predecessor force-member name to `impressed-force` before carrying content forward. Historical wording does not reopen the decision.
+
+---
 # External Notes Digest - 2026-05-20
 
 Status: quick digest of three notes from `VD docs/VD unsorted important`,

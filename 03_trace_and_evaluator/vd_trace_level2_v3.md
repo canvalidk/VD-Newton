@@ -124,7 +124,7 @@ BIND  inertial-mass(m₁)
 
 E22 (triplet): "The vector quantity satisfying **net-force** = **inertial-mass** × **inertial-acceleration**." — This is a type-definition, not a computation rule.
 
-E24 (Force Sum, triplet redefine): "**net-force** on particle p at time t is the vector sum of the **acting-force** elements in the **interacting-forces-set** for p at t." — This is the computation rule.
+E24 (Force Sum, triplet redefine): "**net-force** on particle p at time t is the vector sum of the **impressed-force** elements in the **interacting-forces-set** for p at t." — This is the computation rule.
 
 The evaluator applies E24:
 
@@ -136,27 +136,27 @@ EVAL: net-force(m₁, t) = Σ { f : f ∈ interacting-forces-set(m₁, t) }
 
 ### DEMAND 5: `interacting-forces-set(m₁, t)`
 
-**Resolve `interacting-forces-set`:** E25 — "The set of **acting-force** elements taken to be acting on particle p at time t, whose vector sum is the **net-force** on p at t."
+**Resolve `interacting-forces-set`:** E25 — "The set of **impressed-force** elements taken to be acting on particle p at time t, whose vector sum is the **net-force** on p at t."
 
 E25 declares the type but does not prescribe how to populate it. The evaluator must request the set contents:
 
 ```
 POPULATE  interacting-forces-set(m₁, t)
-  → human:    What acting-forces act on m₁?
+  → human:    What impressed-forces act on m₁?
   response := { F_gravity_1, F_tension_1 }
 ```
 
-Each element must satisfy the type `acting-force` (E26: "A vector force-contribution that appears as an element of some **interacting-forces-set** and thereby contributes to the **net-force**"). Both qualify.
+Each element must satisfy the type `impressed-force` (E26: "A vector force-contribution that appears as an element of some **interacting-forces-set** and thereby contributes to the **net-force**"). Both qualify.
 
 ---
 
-### DEMAND 6: numerical values of each `acting-force`
+### DEMAND 6: numerical values of each `impressed-force`
 
-The evaluator needs to sum the acting-forces. Each must reduce to a vector value.
+The evaluator needs to sum the impressed-forces. Each must reduce to a vector value.
 
 **F_gravity_1:** The evaluator needs a numerical value for this force.
 
-The Action-Reaction law (E31) tells us every acting-force is either a `canonical-force_acting-object` or a `reaction-force_acting-object`. The Acting Object architecture (E34–E36) tells us each comes from an `acting-object` with an `activation-condition` and a `canonical-force`.
+The Action-Reaction law (E31) tells us every impressed-force is either a `canonical-force_acting-object` or a `reaction-force_acting-object`. The Acting Object architecture (E34–E36) tells us each comes from an `acting-object` with an `activation-condition` and a `canonical-force`.
 
 ```
 EVAL: F_gravity_1
@@ -177,14 +177,14 @@ EVAL: F_gravity_1
 
   DEMAND: activation-condition per E35
     "If a point-particle fulfills the activation-condition, the canonical-force
-     of that acting-object will be an acting-force on the point-particle."
+     of that acting-object will be an impressed-force on the point-particle."
     → human:  What is the activation-condition?
     response: "m₁ has nonzero mass and is in Earth's gravitational field"
     → human:  Does m₁ satisfy it?
     response: YES
 
   DEMAND: canonical-force per E36
-    "The canonical-force is the acting-force that an acting-object exerts on a
+    "The canonical-force is the impressed-force that an acting-object exerts on a
      point-particle that fulfills the activation-condition."
     → human:  What is the force value?
     response: F_gravity_1 = −m₁g ŷ = −29.4 N ŷ  (empirical: gravitational force law)
@@ -293,7 +293,7 @@ Two equations, three unknowns (a₁, a₂, T). The VD program has been reduced a
 
 ### Why is the evaluator stuck?
 
-The evaluator is stuck because the two Newton II calls share a free variable (T) that is not determined by any entry in the VD. The Force Sum law (E24) decomposes net-force into a sum of acting-forces, and the Acting Object architecture (E34–E37) traces each force to its source — but the *magnitude* of the tension is not given by any force law entry. Unlike gravity (where the human supplied F = −mg from empirical knowledge), the tension is a *constraint force* whose value is determined by the coupled dynamics, not by an independent force law.
+The evaluator is stuck because the two Newton II calls share a free variable (T) that is not determined by any entry in the VD. The Force Sum law (E24) decomposes net-force into a sum of impressed-forces, and the Acting Object architecture (E34–E37) traces each force to its source — but the *magnitude* of the tension is not given by any force law entry. Unlike gravity (where the human supplied F = −mg from empirical knowledge), the tension is a *constraint force* whose value is determined by the coupled dynamics, not by an independent force law.
 
 The physicist recognises this and asks: *why* are the equations underdetermined? Is something missing from the force accounting, or is the system fundamentally open?
 
@@ -311,7 +311,7 @@ This is a new evaluation root — a separate question from the original goal. Th
 DEFINE  S = {m₁, m₂}    (the physicist's choice)
 ```
 
-**Invoke E39** (chimney for `interaction-candidate`): "For a particle p in a **mechanical-system** S at time t, an **interaction-candidate** is any **acting-force** in the **interacting-forces-set** for p at t."
+**Invoke E39** (chimney for `interaction-candidate`): "For a particle p in a **mechanical-system** S at time t, an **interaction-candidate** is any **impressed-force** in the **interacting-forces-set** for p at t."
 
 ```
 ENUMERATE  interaction-candidates for S:
@@ -518,7 +518,7 @@ The physicist invokes closure not because the program demands it, but because th
 
 The blockage is not "I don't know what `tension` means" — it's "I know what tension is (a canonical-force from a string-contact acting-object) but I don't know its numerical value." The VD has successfully reduced the expression as far as the *definitions* allow. What's missing is *data*: the value of T, which depends on constraints external to S.
 
-This is a clean separation. The VD provides the *algebraic structure* (every force is an acting-force from an acting-object; the net-force is their sum; the acceleration is net-force / mass). The external inputs provide the *numerical content* (the force law for gravity, the constraint equations for the string). The evaluator reduces the algebra and then blocks on the numerics.
+This is a clean separation. The VD provides the *algebraic structure* (every force is an impressed-force from an acting-object; the net-force is their sum; the acceleration is net-force / mass). The external inputs provide the *numerical content* (the force law for gravity, the constraint equations for the string). The evaluator reduces the algebra and then blocks on the numerics.
 
 ### 4. Closure failure produces the missing constraints
 

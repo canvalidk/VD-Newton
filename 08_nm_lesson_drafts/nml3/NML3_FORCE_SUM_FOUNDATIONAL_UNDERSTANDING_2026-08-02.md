@@ -1,10 +1,10 @@
 # NML3 Force-Sum Foundational Understanding — 2026-08-02
 
 Status: current conceptual starting note for NML3. This note identifies the
-problem the lesson and entries must solve; it does not yet select the detailed
-mechanism or final force-member headword.
+problem the lesson and entries must solve. Its previously open naming question
+was resolved by `NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`.
 
-`contributing-force` is used below as a provisional working term.
+`impressed-force` is the ratified force-member headword.
 
 ## Goal
 
@@ -30,9 +30,9 @@ formed as a complete force account.
 Vector addition is a binary operation. The first discovered force therefore
 needs an initiator: operationally, it is added to the zero vector. The trace
 must accommodate that beginning without mistaking the zero vector for a
-contributing force.
+impressed force.
 
-### 2. Beginning and ending with contributing forces
+### 2. Beginning and ending with impressed forces
 
 For a nonempty account, the exposed force identity should have contributing
 forces at both ends:
@@ -46,7 +46,7 @@ termination signal as though it were another term in the sum.
 
 ### 3. Preventing duplicate contributions
 
-The same contributing force must not be admitted twice. A construction such as
+The same impressed force must not be admitted twice. A construction such as
 
 ```text
 F_1 + F_1 + F_2
@@ -61,7 +61,7 @@ two distinct forces may have equal vectors without being duplicates.
 
 ### 4. Producing the zero vector for an empty account
 
-When there are no contributing forces, the completed force account must still
+When there are no impressed forces, the completed force account must still
 produce a result:
 
 ```text
@@ -90,7 +90,7 @@ F_net = A + B
 ```
 
 The existence of any such decomposition does not establish that its summands
-are contributing forces. Algebra alone cannot turn `A`, `B`, or either
+are impressed forces. Algebra alone cannot turn `A`, `B`, or either
 half-vector into members of a material object's force account.
 
 The direction of dependence must therefore remain one-way:
@@ -108,7 +108,8 @@ NML3 must teach the difference between enumerating forces and decomposing a
 vector. The right-hand side of the force-sum identity is licensed by the force
 account, not by the mere fact that its vectors add to the desired result.
 
-This distinction also reopens the force-member name. `contributing-force` may
-suggest that appearing as a summand is enough to grant force status. The final
-headword should be chosen only after the entries make clear what establishes
-membership independently of the sum.
+This distinction is why the predecessor name `contributing-force` was rejected:
+it could suggest that appearing as a summand grants force status. The ratified
+name `impressed-force` instead identifies the prior action upon the target body.
+The entries must still make explicit what warrants that impressed action and
+establishes its membership independently of the sum.

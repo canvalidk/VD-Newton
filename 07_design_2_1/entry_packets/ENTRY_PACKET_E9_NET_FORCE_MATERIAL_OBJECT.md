@@ -70,7 +70,7 @@ Other structural qualifier:
   - the same material-object address must govern all three values.
 
 Forbidden headword mentions / hidden imports in the eventual entry wording:
-  - interacting-forces-set / contributing-force / force-sum — later block.
+  - interacting-forces-set / impressed-force / force-sum — later block.
   - newton meter / pull / push — not identical to the net-force value.
   - free-particle — zero net force does not establish that status.
   - force causes motion — causal overclaim.

@@ -110,7 +110,7 @@ inertial-mass
 net-force
 Newton II
 interacting-forces-set
-attached-force
+impressed-force
 acting-object
 ```
 

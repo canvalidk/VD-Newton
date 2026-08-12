@@ -98,7 +98,7 @@ Success is not just returning `a = -kx/m`. The trace must show:
 - where `k` enters as a parameter;
 - where equilibrium/displacement enters as a construct;
 - where the canonical-force rule produces an attributed force;
-- how that acting-force enters the IFS and then the net-force sum.
+- how that impressed-force enters the IFS and then the net-force sum.
 
 ## Locked-In Later Goal
 

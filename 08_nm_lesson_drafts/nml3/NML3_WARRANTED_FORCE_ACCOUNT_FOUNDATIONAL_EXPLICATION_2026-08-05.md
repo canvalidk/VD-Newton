@@ -174,6 +174,18 @@ This identity distinction is needed both to prevent duplicate admission of one
 force and to preserve two genuinely distinct forces that happen to have the
 same magnitude and direction.
 
+The acting-object instance supplies the warranted force's identity key, not
+merely its provenance. Set uniqueness therefore permits at most one member
+keyed by a given acting-object instance in a fixed target's IFS. Later
+action/reaction classification must admit that member in one role or the other;
+the same acting-object instance cannot enter the set a second time merely under
+the other role.
+
+The material object cannot replace the acting-object instance as the key. It
+owns or is the target of the IFS and may have several forces acting on it from
+several acting-object instances. Keying members by the material object would
+collapse all of those legitimate forces into one set member.
+
 ### 3.3 Vector values
 
 Let
@@ -315,6 +327,12 @@ one element. The IFS must preserve force-instance identity, ownership, and the
 relevant interaction attachment; the vector-sum operation then maps each
 member to its vector value.
 
+The IFS's member keys are acting-object instances. This deliberately makes
+action and reaction exclusive roles for one such key within a fixed target's
+IFS. Target, time, vector value, and force role qualify or describe the keyed
+member; they do not create a second member when the acting-object-instance key
+is already present.
+
 The central relation is therefore:
 
 $$
@@ -351,7 +369,7 @@ force-sum law self-confirming.
 
 ---
 
-## 6. What `warranted-force` must mean, and what remains open
+## 6. What warrant for an `impressed-force` must mean
 
 A bare symbol such as \(\mathbf F_1\) is cheap: it can be created by naming any
 part of any algebraic decomposition. A warranted force \(W_1\) is expensive:
@@ -406,11 +424,12 @@ relational dependence, and invariance may help establish a warrant, but listing
 those ingredients does not complete the theory. The exact human-executable
 route belongs in the force-sum walls.
 
-The name `warranted-force` is conceptually informative because it foregrounds
-the missing admission step. It remains provisional entry terminology. The
-current working headword `contributing-force` is vulnerable precisely because
-it can sound as though appearing in a successful vector sum is enough to earn
-force status.
+The expression `warranted force` remains conceptually informative because it
+foregrounds the missing admission step, but it is now an explanatory status,
+not a competing entry headword. The ratified headword is `impressed-force`:
+Newton's name identifies the prior action upon the target body rather than the
+member's later algebraic role. Warrant determines whether a candidate action is
+licensed for admission as an impressed-force member.
 
 ---
 
@@ -434,7 +453,7 @@ newly admitted / winter:
     interacting-forces-set
 
 co-admitted / winter:
-    warranted-force
+    impressed-force
 ```
 
 The ternary commitment can be represented schematically as
@@ -443,7 +462,7 @@ $$
 T\big(
 \text{net-force-material-object},
 \text{interacting-forces-set},
-\text{warranted-force}
+\text{impressed-force}
 \big).
 $$
 
@@ -543,6 +562,24 @@ vector.
 This wall must also preserve force identity so that the same instance cannot be
 admitted twice while distinct equal-valued instances remain admissible.
 
+Its recursive form is a successor rule:
+
+$$
+R(N)=\{W_N\}\cup R(N+1).
+$$
+
+By itself this structure is endless. After determining any member it exposes
+another remainder. After any finite number of successful generations, the
+licensed conclusion is only
+
+$$
+\{W_0,W_1,\ldots,W_n\}\subseteq\operatorname{IFS}(M),
+$$
+
+not that these members equal the complete IFS. Positive determination of any
+number of forces contains no determination that the latest one is the final
+force on the object.
+
 ### Closer wall: warrant completeness
 
 The closer or terminator wall must explain when the investigator is licensed to
@@ -561,6 +598,31 @@ Without the generator, the IFS is an unexplained human-supplied list. Without
 the closer, it is an indefinitely extendable partial list rather than a
 determined force account. The two walls operationalize the two halves of “all
 and only.”
+
+The closer supplies the base case absent from the successor rule:
+
+$$
+R(K)=\varnothing.
+$$
+
+This no-further-member determination cannot be inferred from the number of
+members already found or from their current resultant. For example, warranted
+spring and gravity members may already give
+
+$$
+\mathbf F_{\mathrm{net}}=-kx+mg,
+$$
+
+while an additional nonempty warranted collection \(C\) remains, with
+
+$$
+\sum_{W\in C}\operatorname{vec}(W)=\mathbf 0.
+$$
+
+The extra members could form a cancelling pair or a larger cancelling
+collection. Their omission is invisible to the current sum. Equality between
+the current sum and the measured net force therefore cannot determine that the
+account has reached its final member.
 
 ---
 
@@ -600,7 +662,10 @@ because it resembles a familiar equation named “Hooke's law.”
 ### Stage 4: close the account
 
 The closer must warrant that no further force-instance belongs in the account
-for the specified target, interval, and conditions. Only then may one write
+for the specified target, interval, and conditions. Discovering the spring
+member, or even obtaining a current sum equal to the measured net force, does
+not supply that termination judgment. Only after the independent closer
+succeeds may one write
 
 $$
 \operatorname{IFS}(M)=\{W_S\}.
@@ -696,6 +761,16 @@ must remain members because force identity is not vector-value identity.
 The same warranted force-instance must not be entered twice, even if repeating
 it would produce a desired sum.
 
+### Shared acting object across force roles
+
+Two candidates keyed by the same acting-object instance are the same potential
+set member, even if one is labelled action and the other reaction. Set
+uniqueness permits only one and forces an action-or-reaction choice. By
+contrast, two different acting-object instances may key two different members
+of the same material object's IFS. The evaluator must compare acting-object
+instances, not material-object targets or force-role labels, when detecting
+duplicates.
+
 ### Empty force account
 
 An empty, successfully closed IFS must produce the zero vector as the empty
@@ -706,6 +781,19 @@ absence must be warranted.
 
 A nonempty IFS whose members cancel must produce zero net force without being
 mistaken for the empty IFS.
+
+### Matching partial sum without closure
+
+Warranted spring and gravity members may produce the currently measured
+relation
+
+$$
+\mathbf F_{\mathrm{net}}=-kx+mg
+$$
+
+without exhausting the IFS. The evaluator must still fail closure unless an
+independent no-further-member determination excludes additional warranted
+cancelling pairs or collections.
 
 ### Unknown cardinality
 
@@ -731,10 +819,10 @@ forces. Introducing the phrase `interacting-forces-set` alone would be word
 magic unless the theory also introduced the member-status by which the correct
 set differs from arbitrary sum-equivalent collections.
 
-Conversely, introducing `warranted-force` alone would leave the theory without
-the complete collection whose resultant role gives those instances their
-force-account significance. The IFS and its warranted member-kind are therefore
-co-admitted relative to the already available net-force quantity.
+Conversely, introducing `impressed-force` alone would leave the theory without
+the complete collection whose resultant role gives those warranted instances
+their force-account significance. The IFS and its impressed-force member-kind
+are therefore co-admitted relative to the already available net-force quantity.
 
 The triplet records the constitutive commitment. The walls record how its new
 terms become independently usable. In the language of the broader admission
@@ -760,19 +848,24 @@ This explication identifies what the force-sum triplet must commit to. It does
 not yet settle the mechanisms required to fulfil that commitment. The next work
 must determine:
 
-1. the exact headword for a warranted force-instance;
+1. the exact entry wording for the ratified `impressed-force` headword;
 2. the owner, time, interval, and state qualifications carried by every IFS;
-3. the identity conditions for one force-instance;
+3. how the acting-object-instance member key is represented and preserved
+   through generation, accumulation, and later refinement;
 4. the exact evidential operation that warrants attachment to another material
    object or interaction condition;
 5. how that operation avoids using net-force agreement as its own premise;
-6. whether one material interaction can yield more than one relevant
-   force-instance in the same account;
+6. how later action-reaction pairing represents the reciprocal sides while
+   preserving the rule that one acting-object instance cannot key both roles in
+   the same IFS;
 7. how the generator records provenance and prevents duplicate admission;
-8. how the closer warrants that no eligible force-instance remains undiscovered;
+8. how the closer warrants the base case that no eligible force-instance
+   remains undiscovered, without using the known member count or agreement of
+   the current sum with the measured net force;
 9. how uncertainty and revisable evidence affect current warranted membership;
 10. how later action-reaction and concrete force-law blocks refine the
-    interaction attachment without being imported prematurely into NML3; and
+    interaction attachment without being imported prematurely into NML3 or
+    changing the force-member identity rule after the fact; and
 11. how the evaluator distinguishes a closed warranted account from a merely
     successful vector fit.
 
@@ -821,14 +914,19 @@ represent at all.
 
 ## Source and scope note
 
-Primary source: the 2026-08-05 discussion developing the spring example, the
+Primary sources: the 2026-08-05 discussion developing the spring example, the
 unlimited-decomposition objection, the symbol \(W\), and the IFS interpretation
-of the force-sum triplet.
+of the force-sum triplet; and the 2026-08-08 observation about acting-object
+association, set uniqueness, and action/reaction exclusivity, followed by the
+observation that the positive generator has no final-member determination and
+cannot exclude further cancelling members.
 
 Local active sources consulted:
 
 - `NML3_FORCE_SUM_FOUNDATIONAL_UNDERSTANDING_2026-08-02.md`;
-- `NML3_CONTRIBUTING_FORCE_TERMINOLOGY_DECISION_2026-08-02.md`;
+- `NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`;
+- `NML3_ACTING_OBJECT_FORCE_ROLE_SET_CONSTRAINT_2026-08-08.md`;
+- `NML3_GENERATOR_NONTERMINATION_CLOSURE_CONSTRAINT_2026-08-08.md`;
 - `nm_l3_lesson_draft.md`; and
 - `../../07_design_2_1/notes/vd_docs_handoffs/why_the_triplet_rule_is_needed_d2.md`.
 

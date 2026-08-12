@@ -45,7 +45,7 @@ The design should be able to talk about structures such as:
 
 ```text
 list of acting-object candidates
-list of contributing-force members
+list of impressed-force members
 interacting-forces-set as list-like accumulator or closed collection
 no-more-items / list closure signal
 empty list / zero-sum result where appropriate

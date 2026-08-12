@@ -5,6 +5,12 @@ Status: active local drafting evidence. The first three files were imported
 2026-08-02 from the active VD Folders workspace. These files are not
 managed-context copies and are not a replacement for the VD-docs collection.
 
+Terminology boundary: these dated passes preserve their authored wording and
+are not naming authorities. Where they use an older name for the Newton
+force-account member-kind, translate it to `impressed-force` before carrying
+content forward. The controlling decision is
+`../../08_nm_lesson_drafts/nml3/NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`.
+
 | File | Disposition |
 |---|---|
 | `E8_ENTRY_WRITING_PASS_2026-07-25.md` | Retained as the rationale for the E8 candidate wording now used in the active Design 2.1 draft. It contests parts of the existing E8 packet rather than replacing the full packet. |

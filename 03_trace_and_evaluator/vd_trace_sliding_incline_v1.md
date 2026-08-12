@@ -138,7 +138,7 @@ computation rule:
 
 ```
 net-force(block, t) =
-    sum of acting-force elements in interacting-forces-set(block, t)
+    sum of impressed-force elements in interacting-forces-set(block, t)
 ```
 
 So the evaluator demands the interacting-forces-set.
@@ -232,7 +232,7 @@ HUMAN INPUT
             to the plane
 ```
 
-## EVAL acting-force elements
+## EVAL impressed-force elements
 
 ### 1. Gravity contribution from `G_Earth`
 

@@ -77,10 +77,10 @@ Read these first, in this order:
    - Current authority for the E9 force-sum chimney overlap, the E13-E17
      force-sum block, and the placement of meta-typing at E36-E41.
 
-16. `../08_nm_lesson_drafts/nml3/NML3_CONTRIBUTING_FORCE_TERMINOLOGY_DECISION_2026-08-02.md`
-   - Provisional record replacing `attached-force` with `contributing-force` on
-     the active surface while preserving predecessor terms in historical
-     evidence. Final naming is reopened by the foundational NML3 note.
+16. `../08_nm_lesson_drafts/nml3/NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`
+   - Ratified authority making `impressed-force` the sole active force-member
+     headword. It also supplies the mandatory translation rule for historical
+     sources that retain predecessor terminology.
 
 For drafting or revising an individual entry, use an **entry packet** from
 `../04_entry_design_guides/VD_NEW_ENTRY_TEMPLATE.md`. In this workspace,

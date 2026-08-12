@@ -45,4 +45,4 @@ silently rewritten. Their E-numbers identify the architectures they recorded.
 This decision governs the active Design 2.1/NML3 surface.
 
 The active force-member headword is governed separately by
-`NML3_CONTRIBUTING_FORCE_TERMINOLOGY_DECISION_2026-08-02.md`.
+`NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`.

@@ -176,7 +176,7 @@ Forbidden headword mentions / hidden imports in the eventual entry wording:
   - scale / weight / gravitational mass / amount of matter / density mass;
   - mass additivity;
   - target construction / trackability / lumping;
-  - interacting-forces-set / attached-force;
+  - interacting-forces-set / impressed-force;
   - constancy or persistence across trials;
   - a particular estimator, covariance model, or fitting formula.
 

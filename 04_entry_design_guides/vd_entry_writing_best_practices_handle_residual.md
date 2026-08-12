@@ -151,7 +151,7 @@ Demand interacting-forces-set(p)
   -> dispatch concrete type
   -> evaluate activation-condition
   -> produce canonical-force
-  -> add acting-force to the set
+  -> add impressed-force to the set
 ```
 
 ## Scoped Symbols
@@ -271,7 +271,7 @@ point-particle witness
   -> concrete type hub
   -> activation-condition
   -> canonical-force
-  -> acting-force
+  -> impressed-force
   -> interacting-forces-set
   -> net-force
 ```

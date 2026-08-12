@@ -1,54 +1,26 @@
-# NML3 Contributing-Force Terminology Decision — 2026-08-02
+# Superseded NML3 Force-Member Terminology Record — 2026-08-02
 
-Status: provisional active naming record. Reopened by
-`NML3_FORCE_SUM_FOUNDATIONAL_UNDERSTANDING_2026-08-02.md` because the term may
-blur force-account membership with arbitrary vector decomposition.
+Status: **SUPERSEDED — HISTORICAL TOMBSTONE — DO NOT USE AS ACTIVE CONTEXT.**
 
-## Decision
+The provisional decision formerly stored in this file has been withdrawn. Its
+force-member name and its instruction to keep using that name are no longer
+valid.
 
-The current working force-member headword is:
-
-```text
-contributing-force
-```
-
-Use `contributing-forces` for the plural when referring to headword instances.
-In ordinary explanatory prose, “contributing force” and “contributing forces”
-may be written without code formatting.
-
-This supersedes the active term `attached-force`. The historical terminology
-line is:
+The ratified authority is:
 
 ```text
-acting-force -> attached-force -> contributing-force
+NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md
 ```
 
-## Intended role
+The sole active force-member headword is `impressed-force`.
 
-A `contributing-force` is one force contribution admitted to the force account
-of a target material object and therefore eligible to be a member of that
-target's `interacting-forces-set`.
+For historical interpretation only, this file previously selected
+`contributing-force` after the still earlier names `attached-force` and
+`acting-force`. All three now mean “the predecessor spelling for the
+member-kind currently named `impressed-force`” unless an historical source
+explicitly establishes a different semantic distinction.
 
-The name describes what the item does in the force-sum law. It does not by
-itself settle:
-
-- how the contribution is generated;
-- which acting object is its source;
-- whether it is the action or reaction side of an interaction;
-- whether its activation condition holds;
-- whether the interacting-forces-set is complete and closed.
-
-Those remain entry and trace questions for NML3.
-
-## Migration rule
-
-Until the reopened naming question is settled, use `contributing-force`
-consistently when referring to the current active surface, but do not treat the
-name as ratified final entry wording.
-
-Preserved writing passes, versioned historical packets, Design 2/3 ledgers,
-old traces, lesson drafts, and conversation captures are not silently rewritten.
-When they use `attached-force` or `acting-force` for this same role, translate
-the predecessor term to `contributing-force` when carrying the content forward.
-Record a genuine semantic distinction if later work discovers one; do not infer
-one merely from the old name.
+Do not quote this tombstone as evidence that the naming question remains open.
+Do not copy its predecessor names into a new entry, packet, trace, lesson,
+template, design ledger, or evaluator. Translate them to `impressed-force` when
+carrying substantive content forward.

@@ -107,7 +107,7 @@ Forbidden headword mentions / hidden imports in the eventual entry wording:
   - scale / weight / gravitational mass / amount of matter / density mass.
   - mass additivity — no additivity licence is granted here.
   - target construction / trackability / lumping — NML2.2.
-  - interacting-forces-set / attached-force — later force-sum machinery.
+  - interacting-forces-set / impressed-force — later force-sum machinery.
   - constancy or persistence of the value across trials — deferred E12.
 
 Question or trace moment this helps with:

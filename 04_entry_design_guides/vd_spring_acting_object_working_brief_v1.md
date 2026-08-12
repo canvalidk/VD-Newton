@@ -80,10 +80,10 @@ E34 acting-object:
 E35 activation-condition_acting-object:
   If a point-particle fulfills the activation-condition_acting-object of an
   acting-object, the canonical-force_acting-object of that acting-object will
-  be an acting-force on the point-particle.
+  be an impressed-force on the point-particle.
 
 E36 canonical-force_acting-object:
-  The canonical-force_acting-object is the acting-force that an acting-object
+  The canonical-force_acting-object is the impressed-force that an acting-object
   exerts on a point-particle that fulfills the
   activation-condition_acting-object.
 ```
@@ -267,8 +267,8 @@ DEMAND: interacting-forces-set(p, t)
   -> evaluate canonical-force_spring
   -> demand k
   -> demand displacement-from-equilibrium or endpoint separation
-  -> produce spring acting-force
-  -> add acting-force to force sum
+  -> produce spring impressed-force
+  -> add impressed-force to force sum
 ```
 
 The force being in the interacting-forces-set and the activation condition

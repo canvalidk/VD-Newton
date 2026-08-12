@@ -6,7 +6,7 @@ tokeniser-compatible headword conventions:
 
   - Hyphen glues compound names: `point-particle`, `inertial-frame`
   - Underscore attaches qualifiers: `canonical-force_acting-object`
-  - Pipe marks plurals: `acting-force|s` matches headword `acting-force`
+  - Pipe marks plurals: `impressed-force|s` matches headword `impressed-force`
   - Arguments dropped from headwords: `net force(p,t)` → `net-force`
   - References are opt-in: hyphenated = reference, spaced = prose
 
@@ -163,24 +163,26 @@ NEWTON_ENTRIES = [
      "The positive scalar coefficient m such that net-force = m times inertial-acceleration for a point-particle."),
 
     # ── 2.5 Force Sum triplet ──────────────────────────────────────
-    # Trio: {net-force, interacting-forces-set, acting-force}
+    # Trio: {net-force, interacting-forces-set, impressed-force}
     # November: net-force (PD from E22)
-    # Winter: interacting-forces-set, acting-force
+    # Winter: interacting-forces-set, impressed-force
 
     # E24 — November redefine
     ("net-force",
-     "net-force on particle p at time t is the vector sum of the acting-force element|s "
-     "in the interacting-forces-set for p at t."),
+     "net-force on particle p at time t is the vector sum of all and only the impressed-force "
+     "element|s in the closed interacting-forces-set for p at t."),
 
     # E25 — Winter 1
     ("interacting-forces-set",
-     "The set of acting-force element|s taken to be acting on particle p at time t, "
-     "whose vector sum is the net-force on p at t."),
+     "The closed set of all and only the independently warranted impressed-force element|s "
+     "acting on particle p at time t, whose vector sum is the net-force on p at t."),
 
     # E26 — Winter 2
-    ("acting-force",
-     "A vector force-contribution that appears as an element of some interacting-forces-set "
-     "and thereby contributes to the net-force."),
+    ("impressed-force",
+     "An independently warranted force-action upon a target particle in a fixed context, "
+     "keyed by the acting-object instance from which it arises and eligible as an element of "
+     "the target interacting-forces-set; only after that set is closed does its vector value "
+     "participate in the net-force."),
 
     # ── 2.6 Meta-typing chimney ────────────────────────────────────
 
@@ -209,23 +211,23 @@ NEWTON_ENTRIES = [
      "class-specific-features of C."),
 
     # ── 2.7 Action-Reaction triplet ────────────────────────────────
-    # Trio: {acting-force, canonical-force_acting-object, reaction-force_acting-object}
-    # November: acting-force (PD from E26)
+    # Trio: {impressed-force, canonical-force_acting-object, reaction-force_acting-object}
+    # November: impressed-force (PD from E26)
     # Winter: canonical-force_acting-object, reaction-force_acting-object
 
     # E31 — November redefine
-    ("acting-force",
-     "An acting-force is a force-contribution that is either a canonical-force_acting-object "
+    ("impressed-force",
+     "An impressed-force is a force-contribution that is either a canonical-force_acting-object "
      "or a reaction-force_acting-object."),
 
     # E32 — Winter 1
     ("canonical-force_acting-object",
-     "A canonical-force_acting-object is an acting-force designated as canonical; the "
-     "corresponding reaction-force_acting-object is the acting-force defined as the negative of it."),
+     "A canonical-force_acting-object is an impressed-force designated as canonical; the "
+     "corresponding reaction-force_acting-object is the impressed-force defined as the negative of it."),
 
     # E33 — Winter 2
     ("reaction-force_acting-object",
-     "A reaction-force_acting-object is an acting-force defined as the negative of "
+     "A reaction-force_acting-object is an impressed-force defined as the negative of "
      "canonical-force_acting-object."),
 
     # ── 2.8 Acting Object triplet ──────────────────────────────────
@@ -241,11 +243,11 @@ NEWTON_ENTRIES = [
     # E35 — activation-condition (first definition; Winter 2)
     ("activation-condition_acting-object",
      "If a point-particle fulfills the activation-condition_acting-object of an acting-object, "
-     "the canonical-force_acting-object of that acting-object will be an acting-force on the point-particle."),
+     "the canonical-force_acting-object of that acting-object will be an impressed-force on the point-particle."),
 
     # E36 — canonical-force redefine (November redefine)
     ("canonical-force_acting-object",
-     "The canonical-force_acting-object is the acting-force that an acting-object exerts on a "
+     "The canonical-force_acting-object is the impressed-force that an acting-object exerts on a "
      "point-particle that fulfills the activation-condition_acting-object."),
 
     # ── 2.8b Mechanical composition + paired particle ──────────────
@@ -274,7 +276,7 @@ NEWTON_ENTRIES = [
     # E40 (was E39) — chimney for Closure
     ("interaction-candidate",
      "For a particle p in a mechanical-system S at time t, an interaction-candidate is any "
-     "acting-force in the interacting-forces-set for p at t."),
+     "impressed-force in the interacting-forces-set for p at t."),
 
     # ── 2.10 Mechanical Closure triplet ────────────────────────────
     # Trio: {interaction-candidate, interaction-pair, mechanically-closed-system}

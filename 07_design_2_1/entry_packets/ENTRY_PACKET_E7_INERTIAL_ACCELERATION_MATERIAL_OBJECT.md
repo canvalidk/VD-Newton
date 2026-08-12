@@ -96,7 +96,7 @@ Forbidden headword mentions / hidden imports in the eventual entry wording:
   - inertial-acceleration_point-particle — superseded headword.
   - net-force-material-object — belongs to the triplet beginning at E8.
   - inertial-mass-material-object — belongs to the triplet beginning at E8.
-  - interacting-forces-set / contributing-force — later force-sum machinery.
+  - interacting-forces-set / impressed-force — later force-sum machinery.
   - scale, weight, amount of matter — unlicensed mass identifications.
 
 Question or trace moment this helps with:

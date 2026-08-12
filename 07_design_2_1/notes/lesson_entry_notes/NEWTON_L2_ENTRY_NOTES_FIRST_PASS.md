@@ -131,7 +131,7 @@ solve full free-body diagrams
 Those belong to the next block, probably NML3:
 
 ```text
-Force-sum / interacting-forces-set / attached-force
+Force-sum / interacting-forces-set / impressed-force
 ```
 
 ## [E7] Newton II Chimney - `inertial-acceleration`
@@ -346,7 +346,7 @@ operational source. The next old `net-force` entry is the force-sum November
 entry:
 
 ```text
-net-force on particle p at time t is the vector sum of the acting-force
+net-force on particle p at time t is the vector sum of the impressed-force
 element|s in the interacting-forces-set for p at t.
 ```
 
@@ -499,5 +499,5 @@ The likely final entry style is:
 Then NML3 can take up:
 
 ```text
-[E13]-[E18] force-sum / interacting-forces-set / attached-force / list closure
+[E13]-[E18] force-sum / interacting-forces-set / impressed-force / list closure
 ```

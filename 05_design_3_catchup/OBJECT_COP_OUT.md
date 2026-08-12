@@ -196,7 +196,7 @@ For example:
 
 ```text
 F acts on p1
-  -> F is an acting-force
+  -> F is an impressed-force
   -> F is supplied by canonical-force_acting-object(a1)
   -> a1 is an acting-object
   -> a1 has participant / paired / source structure
