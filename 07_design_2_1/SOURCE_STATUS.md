@@ -6,6 +6,9 @@ This file records which notes should steer Design 2.1.
 
 | Source | Status | Use |
 |---|---|---|
+| `07_design_2_1/DESIGN_2_1_BUG_REPORT_AGGREGATE_VS_MEMBER_CONSTRAINT.md` | Confirmed structural bug authority | Use to prevent an aggregate constraint from being reused as an individual membership predicate. It leaves the E13-and-later structure under correction without invalidating completed NML2 work. |
+| `07_design_2_1/FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md` | Adopted Design 2.1 design authority | Use for the corrected Force-Sum abstraction boundary: identity-bearing IFS members are constructed before aggregation and evaluated by `impressed-force` `V(f)`. Transferred from `canvalidk/VD-docs@cae6cd109c1dfcae4f6c1f57c89c5b91660351b2:Newton/Design 3/FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md`; Design 2.1 now owns maintenance. Its provisional historical names do not override the ratified `impressed-force` terminology. |
+| `07_design_2_1/CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md` | Active downstream discovery note | Use for the result that equal-and-opposite pairing does not select a canonical recipient or quoted force. The canonical-orientation convention is a genuine runtime input behind `V(f)`, while the sign branch is derived. |
 | `07_design_2_1/DESIGN_2_1_DRAFT_1_ENTRIES.md` | Active output draft | Use as the current written output of the Design 2.1 entry-drafting effort. |
 | `07_design_2_1/DESIGN_2_1_ENTRY_STRUCTURE.md` | Working ledger | Edit this as the Design 2.1 entry structure. |
 | `07_design_2_1/CURRENT_STATE.md` | Current branch orientation | Use to remember why Design 2.1 exists. |

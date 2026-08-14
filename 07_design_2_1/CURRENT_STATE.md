@@ -7,6 +7,43 @@ structure more complete and usable by adding list machinery, cleaning wording,
 and filling missing wall entries without fully implementing objects or witness
 sheets.
 
+## Confirmed Structural Bug — 2026-08-12
+
+`DESIGN_2_1_BUG_REPORT_AGGREGATE_VS_MEMBER_CONSTRAINT.md` is the active design
+authority for a confirmed error in the force-accounting structure. A condition
+on the aggregate produced by a collection cannot, in general, determine whether
+one candidate belongs to that collection.
+
+Accordingly, the E13-and-later force-sum, IFS, and dependent action/reaction
+structure is under correction. Design work must first distinguish the candidate
+universe, impressed-force identity/equality, an individual membership rule, the
+constructed and closed IFS, and only then vector aggregation. This does not
+invalidate the completed NML2 entry work, whose packets explicitly defer force
+enumeration and force-sum production.
+
+## Adopted Force-Sum Abstraction Boundary — 2026-08-14
+
+`FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md` is now owned and
+maintained by Design 2.1. Its active structural result is the candidate
+Force-Sum triplet
+
+```text
+net-force / interacting-forces-set (IFS) / impressed-force V(f)
+```
+
+Force-Sum consumes an already constructed, identity-bearing IFS and evaluates
+each member through `V(f)`. Individual membership and closure remain behind the
+IFS wall; force-member construction and the action/reaction orientation remain
+behind the `impressed-force` wall. Aggregate equality cannot perform any of
+those member-level jobs.
+
+The note was transferred from the managed VD-docs snapshot
+`canvalidk/VD-docs@cae6cd109c1dfcae4f6c1f57c89c5b91660351b2`, formerly at
+`Newton/Design 3/FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md`.
+Its original chronological language is retained as historical evidence, but
+all predecessor force-member names translate to the sole active headword
+`impressed-force`.
+
 ## Starting Point
 
 The starting artifact is:

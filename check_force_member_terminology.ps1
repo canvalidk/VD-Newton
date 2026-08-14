@@ -22,6 +22,7 @@ $allowedGlobs = @(
     '!07_design_2_1/notes/conversation_captures/**',
     '!07_design_2_1/notes/vd_docs_handoffs/**',
     '!07_design_2_1/entry_writing_passes/**',
+    '!07_design_2_1/FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md',
     '!08_nm_lesson_drafts/nml3/NML3_CONTRIBUTING_FORCE_TERMINOLOGY_DECISION_2026-08-02.md',
     '!08_nm_lesson_drafts/nml3/NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md',
     '!08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_FOUNDATIONAL_UNDERSTANDING_2026-08-02.md'
@@ -99,6 +100,7 @@ $historicalFiles = @(
     $(Get-ChildItem (Join-Path $repoRoot '07_design_2_1\notes\conversation_captures') -File -Filter '*.md')
     $(Get-ChildItem (Join-Path $repoRoot '07_design_2_1\notes\vd_docs_handoffs') -Recurse -File -Filter '*.md')
     $(Get-ChildItem (Join-Path $repoRoot '07_design_2_1\entry_writing_passes') -File -Filter '*.md')
+    $(Get-Item (Join-Path $repoRoot '07_design_2_1\FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md') -ErrorAction SilentlyContinue)
     $(Get-ChildItem $repoRoot -File -Filter '*.backup-*.md')
 ) | Where-Object {
     Select-String -LiteralPath $_.FullName -Pattern $pattern -Quiet

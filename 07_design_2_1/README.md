@@ -8,6 +8,19 @@ implementation burden.
 
 ## Fast Reading Order
 
+Before using the entry ledger, read
+`DESIGN_2_1_BUG_REPORT_AGGREGATE_VS_MEMBER_CONSTRAINT.md`. It records a
+confirmed structural bug in the E13-and-later force-accounting design: an
+aggregate constraint cannot supply the individual membership predicate for the
+collection being aggregated. The affected structure remains under correction.
+Then read `FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md`, the adopted
+Design 2.1 source for the positive correction: the IFS is constructed before
+Force-Sum, its members retain occurrence identity, and `V(f)` evaluates each
+occurrence as an `impressed-force`. Finally read
+`CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md`, which records
+the further evaluator result and the newly exposed human convention selecting
+which member of an equal-and-opposite pair is canonical.
+
 Read these first, in this order:
 
 1. `CURRENT_STATE.md`
