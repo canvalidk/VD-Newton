@@ -258,22 +258,24 @@ HUMAN INPUT: forces on mass are {spring force}
 It should instead unfold the force:
 
 ```text
-DEMAND: interacting-forces-set(p, t)
+DEMAND: interaction-set(p, t)
   -> demand next acting-object from mechanical-composition(p)
   -> spring acting-object instance enters
   -> dispatch/classify as spring
   -> check spring modelling assumptions
   -> evaluate activation condition
+  -> warrant the spring interaction for p
+  -> add the interaction to interaction-set(p, t)
   -> evaluate canonical-force_spring
   -> demand k
   -> demand displacement-from-equilibrium or endpoint separation
-  -> produce spring impressed-force
+  -> produce impressed-force(spring interaction -> p)
   -> add impressed-force to force sum
 ```
 
-The force being in the interacting-forces-set and the activation condition
-being satisfied should be two faces of one definitional commitment, not two
-separate human declarations.
+The spring interaction being in the interaction-set and the activation
+condition being satisfied should be linked parts of one warranted account, not
+two separate human declarations.
 
 ## Equilibrium Construct: The Hard Part
 

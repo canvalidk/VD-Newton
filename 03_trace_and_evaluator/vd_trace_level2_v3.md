@@ -1,5 +1,12 @@
 # VD Program Trace — Level 2 (v3, Lazy Evaluation)
 
+> **Force-Sum compatibility notice — 2026-08-26:** this trace predates the
+> ratified `net-force / impressed-force / interaction-set` naming and still
+> models the old set as containing impressed-force elements. Use it for trace
+> mechanics only. Its Force-Sum passages require a later semantic rewrite in
+> which the interaction set contains interactions and each interaction supplies
+> a target-directed impressed force.
+
 ## Exercise
 
 An Atwood machine: two masses m₁ = 3 kg and m₂ = 5 kg are connected by a massless, inextensible string over a frictionless pulley. Find the acceleration of each mass and the tension in the string.

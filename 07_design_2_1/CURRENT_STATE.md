@@ -7,6 +7,29 @@ structure more complete and usable by adding list machinery, cleaning wording,
 and filling missing wall entries without fully implementing objects or witness
 sheets.
 
+## Ratified Force-Sum Triplet Names — 2026-08-26
+
+The three Force-Sum headwords are settled:
+
+```text
+net-force / impressed-force / interaction-set
+```
+
+The `interaction-set` contains the target particle's relevant interactions.
+Each indexed interaction supplies a target-directed `impressed-force`, and the
+vector sum of those impressed forces is the target's `net-force`:
+
+```text
+net-force(p | C)
+    = sum of impressed-force(i -> p | C)
+      for i in interaction-set(p | C)
+```
+
+This fixes the names and minimum typed relation only. Entry numbers, wall and
+chimney assignments, interaction membership and closure, action/reaction, and
+the rest of the NML3 cut remain open. The authority is
+`../08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md`.
+
 ## Confirmed Structural Bug — 2026-08-12
 
 `DESIGN_2_1_BUG_REPORT_AGGREGATE_VS_MEMBER_CONSTRAINT.md` is the active design
@@ -14,35 +37,35 @@ authority for a confirmed error in the force-accounting structure. A condition
 on the aggregate produced by a collection cannot, in general, determine whether
 one candidate belongs to that collection.
 
-Accordingly, the E13-and-later force-sum, IFS, and dependent action/reaction
-structure is under correction. Design work must first distinguish the candidate
-universe, impressed-force identity/equality, an individual membership rule, the
-constructed and closed IFS, and only then vector aggregation. This does not
+Accordingly, the E13-and-later Force-Sum and dependent action/reaction structure
+is under correction. Design work must distinguish the interaction candidate
+universe, interaction identity/equality, an individual membership rule, the
+constructed and closed `interaction-set`, the target-directed
+`impressed-force`, and only then vector aggregation. This does not
 invalidate the completed NML2 entry work, whose packets explicitly defer force
 enumeration and force-sum production.
 
 ## Adopted Force-Sum Abstraction Boundary — 2026-08-14
 
 `FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md` is now owned and
-maintained by Design 2.1. Its active structural result is the candidate
-Force-Sum triplet
+maintained by Design 2.1. Its active structural result supplied the distinction
+that the 2026-08-26 naming decision now expresses as
 
 ```text
-net-force / interacting-forces-set (IFS) / impressed-force V(f)
+net-force / interaction-set / impressed-force
 ```
 
-Force-Sum consumes an already constructed, identity-bearing IFS and evaluates
-each member through `V(f)`. Individual membership and closure remain behind the
-IFS wall; force-member construction and the action/reaction orientation remain
-behind the `impressed-force` wall. Aggregate equality cannot perform any of
-those member-level jobs.
+Force-Sum consumes an already constructed, identity-bearing `interaction-set`
+and obtains a target-directed `impressed-force` from each interaction.
+Individual membership and closure remain outside the aggregate equality, which
+cannot perform those member-level jobs.
 
 The note was transferred from the managed VD-docs snapshot
 `canvalidk/VD-docs@cae6cd109c1dfcae4f6c1f57c89c5b91660351b2`, formerly at
 `Newton/Design 3/FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md`.
-Its original chronological language is retained as historical evidence, but
-all predecessor force-member names translate to the sole active headword
-`impressed-force`.
+Its original chronological language is retained as historical evidence. Its
+provisional `IFS` and `V(f)` notation translates under the 2026-08-26 decision
+to `interaction-set` and target-directed `impressed-force`.
 
 ## Starting Point
 
@@ -82,8 +105,8 @@ The design should be able to talk about structures such as:
 
 ```text
 list of acting-object candidates
-list of impressed-force members
-interacting-forces-set as list-like accumulator or closed collection
+list of interaction candidates
+interaction-set as list-like accumulator or closed collection
 no-more-items / list closure signal
 empty list / zero-sum result where appropriate
 ```

@@ -1,5 +1,11 @@
 # VD Newton Trace - Sliding Block on Incline (v1)
 
+> **Force-Sum compatibility notice — 2026-08-26:** this worked trace predates
+> the ratified `net-force / impressed-force / interaction-set` naming and still
+> models the old set as containing impressed-force elements. It remains
+> historical test material until its Force-Sum path is rewritten around
+> interactions that supply target-directed impressed forces.
+
 ## Exercise
 
 A block of inertial mass `m` slides down a fixed incline of angle `theta`.

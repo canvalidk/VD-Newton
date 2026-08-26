@@ -186,7 +186,7 @@ natural-language question
   -> point-particle and inertial-frame commitments
   -> Newton II expansion
   -> net-force demand
-  -> interacting-forces-set demand
+  -> interaction-set demand
   -> mechanical-composition / acting-object witnesses
   -> activation conditions
   -> canonical forces
@@ -219,4 +219,3 @@ At what point in the demand chain is the interpreter exposed to it?
 Does it route the interpreter toward the answer or toward an uncontrolled
 physics habit?
 ```
-

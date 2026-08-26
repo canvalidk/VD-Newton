@@ -163,26 +163,26 @@ NEWTON_ENTRIES = [
      "The positive scalar coefficient m such that net-force = m times inertial-acceleration for a point-particle."),
 
     # ── 2.5 Force Sum triplet ──────────────────────────────────────
-    # Trio: {net-force, interacting-forces-set, impressed-force}
+    # Trio: {net-force, impressed-force, interaction-set}
     # November: net-force (PD from E22)
-    # Winter: interacting-forces-set, impressed-force
+    # Winter: interaction-set, impressed-force
 
     # E24 — November redefine
     ("net-force",
-     "net-force on particle p at time t is the vector sum of all and only the impressed-force "
-     "element|s in the closed interacting-forces-set for p at t."),
+     "net-force on particle p at time t is the vector sum of the impressed-force "
+     "contribution supplied to p by every interaction in the closed interaction-set for p at t."),
 
     # E25 — Winter 1
-    ("interacting-forces-set",
-     "The closed set of all and only the independently warranted impressed-force element|s "
-     "acting on particle p at time t, whose vector sum is the net-force on p at t."),
+    ("interaction-set",
+     "The closed set of all and only the independently warranted interaction|s relevant to "
+     "particle p at time t; each member interaction supplies a target-directed impressed-force "
+     "on p."),
 
     # E26 — Winter 2
     ("impressed-force",
-     "An independently warranted force-action upon a target particle in a fixed context, "
-     "keyed by the acting-object instance from which it arises and eligible as an element of "
-     "the target interacting-forces-set; only after that set is closed does its vector value "
-     "participate in the net-force."),
+     "The target-directed vector force-action that an interaction in a particle's "
+     "interaction-set supplies to that particle in a fixed context; it is the contribution "
+     "summed to obtain the particle's net-force."),
 
     # ── 2.6 Meta-typing chimney ────────────────────────────────────
 
@@ -276,7 +276,7 @@ NEWTON_ENTRIES = [
     # E40 (was E39) — chimney for Closure
     ("interaction-candidate",
      "For a particle p in a mechanical-system S at time t, an interaction-candidate is any "
-     "impressed-force in the interacting-forces-set for p at t."),
+     "interaction in the interaction-set for p at t."),
 
     # ── 2.10 Mechanical Closure triplet ────────────────────────────
     # Trio: {interaction-candidate, interaction-pair, mechanically-closed-system}

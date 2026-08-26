@@ -1,7 +1,13 @@
 # NML3 Entry Sequence Decision — 2026-08-02
 
-Status: current steering decision for NML3 and for the active Design 2.1 ledger
-after E12.
+> **Retired-cut notice — 2026-08-26:** the managed NML3 reset of 2026-08-17
+> retired the E13–E17 allocation recorded here and did not install replacement
+> numbering. Preserve this file as historical routing evidence. The current
+> triplet names are `net-force / impressed-force / interaction-set` under
+> `NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md`; that naming decision
+> does not reinstate this sequence.
+
+Status: historical steering decision for the cut retired on 2026-08-17.
 
 ## Decision
 

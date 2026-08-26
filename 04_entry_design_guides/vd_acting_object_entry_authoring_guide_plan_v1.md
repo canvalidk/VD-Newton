@@ -190,7 +190,8 @@ Also include:
 - `impressed-force`
 - `canonical-force_acting-object`
 - `reaction-force_acting-object`
-- `interacting-forces-set`
+- `interaction`
+- `interaction-set`
 
 The guide should teach LLMs to reason from the exact entry wording, not from
 summaries.

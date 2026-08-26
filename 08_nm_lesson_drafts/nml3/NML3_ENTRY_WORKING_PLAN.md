@@ -1,69 +1,70 @@
 # NML3 Entry Working Plan
 
-Status: scaffold only. No NML3 entry wording has been selected.
+Status: naming fixed; entry cut, numbering, walls, and final wording open.
 
-## First block
+## Settled Force-Sum triplet
 
-The first writing target is the force-sum house:
+The three headwords are fixed by
+`NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md`:
 
 ```text
-E9   chimney already present: net-force-material-object
-E13  triplet: net-force-material-object November redefine
-E14  triplet: interacting-forces-set winter entry
-E15  triplet: impressed-force winter entry
-E16  wall: interacting-forces-set generator
-E17  wall: interacting-forces-set closer / terminator
+net-force / impressed-force / interaction-set
 ```
 
-## Decisions to settle before entry wording
+Their minimum inward relation is:
 
-The member name is settled: E15 uses the ratified headword `impressed-force`
-under `NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`. Do not treat
-terminology as a remaining entry decision.
+```text
+for target particle p in context C:
+    interaction-set(p | C) supplies the relevant interactions i
+    each i supplies impressed-force(i -> p | C)
+    net-force(p | C) is the vector sum of those impressed forces
+```
 
-The force-member identity constraint is already settled:
+The `interaction-set` contains interactions. It does not contain anonymous
+vectors or impressed-force values. `impressed-force` names the target-directed
+contribution obtained from an indexed interaction.
 
-- Each impressed-force member is keyed by one acting-object instance.
-- A material object owns or is the target of its IFS; it is not the member key.
-- One acting-object instance can occur at most once in a fixed IFS and therefore
-  cannot be admitted once as action and again as reaction.
-- The generator's duplicate test must compare acting-object-instance keys.
+## Retired numbering
 
-The generator/closer division is also settled:
+The former plan assigned the Force-Sum triplet and two walls to E13–E17. The
+managed NML3 reset of 2026-08-17 retired that cut without selecting a
+replacement. This plan does not reinstate it.
 
-- Repeated generator success establishes only a warranted subset of the IFS.
-- The successor form `R(N) = {W_N} union R(N + 1)` has no terminal case.
-- Neither a known number of forces nor a current sum equal to the measured net
-  force determines that the final member has been reached; further warranted
-  members may form cancelling pairs or collections.
-- E17 must supply an independent no-further-member determination as the base
-  case that closes the account.
+The existing E13–E17 rows and references remain historical routing evidence
+until a separate entry-structure decision either reuses or replaces them.
 
-Remaining decisions:
+## Decisions still to settle
 
-- Whether `interacting-forces-set` remains the exact headword despite its
-  generator/closer behaviour being list-like.
-- The owner and time/interval qualifications shared by the net-force vector,
-  collection, and each impressed force.
-- The exact executable warrant procedure by which a candidate earns
-  `impressed-force` membership; the headword and its action-on-target meaning
-  are already fixed.
-- How generator state records one-at-a-time unfolding from
-  `mechanical-composition_point-particle`.
-- How the generator preserves the acting-object-instance key while adding the
-  member's target, vector value, and later action-or-reaction classification.
-- What exact evidence and state representation let E17 warrant its independent
-  no-further-member determination, including closure at the initial state for
-  the valid empty collection.
+- Whether the new cut reuses E13–E17 or advances to fresh numbers.
+- Which of the three headwords is the November redefine and which two are the
+  winter entries, if the ordinary triplet pattern is retained.
+- Which outward walls are required and what each wall owns.
+- The owner and time/interval/context qualifications shared by net force, the
+  interaction set, and each impressed force.
+- The identity criterion for one interaction.
+- The executable warrant procedure by which an interaction enters a target's
+  `interaction-set`.
+- The evidence and representation that certify the interaction set complete,
+  including the valid empty-set case.
+- Whether construction is one-at-a-time, list-like, relational, or represented
+  another way.
+- How an indexed interaction supplies its target-directed `impressed-force`.
+- How action/reaction structure relates the impressed forces supplied to the
+  participants in one interaction.
 - How the force-sum route interacts with E11's currently counted provenance
   statement.
 
-## Suggested production order
+Agreement between a current vector sum and an independently determined net
+force must not by itself establish interaction-set closure; further
+interactions may supply cancelling impressed forces.
 
-Develop E14 and E15 together first, because the collection/member boundary
-controls the rest of the block. Then develop E16 and E17, followed by E13 once
-the complete force-sum route is known.
+## Suggested next production step
 
-For each entry: create an entry packet, run an independent writing pass, place
-the selected wording in `07_design_2_1/DESIGN_2_1_DRAFT_1_ENTRIES.md`, and add a
-trace/evaluator acceptance check before treating it as active.
+Develop the `interaction-set` and `impressed-force` entry-facing meanings
+together, because their index/result boundary controls the Force-Sum equation.
+Then decide the walls and numbering before writing final entries.
+
+For each selected entry: create an entry packet, run an independent writing
+pass, place the chosen wording in
+`07_design_2_1/DESIGN_2_1_DRAFT_1_ENTRIES.md`, and add a trace/evaluator
+acceptance check before treating it as active.

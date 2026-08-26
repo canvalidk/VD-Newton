@@ -13,10 +13,13 @@ Before using the entry ledger, read
 confirmed structural bug in the E13-and-later force-accounting design: an
 aggregate constraint cannot supply the individual membership predicate for the
 collection being aggregated. The affected structure remains under correction.
-Then read `FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md`, the adopted
-Design 2.1 source for the positive correction: the IFS is constructed before
-Force-Sum, its members retain occurrence identity, and `V(f)` evaluates each
-occurrence as an `impressed-force`. Finally read
+Then read
+`../08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md`,
+which fixes `net-force / impressed-force / interaction-set` while leaving the
+rest of the cut open. The older
+`FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md` supplies the underlying
+identity/value and construction/aggregation reasoning; translate its `IFS` and
+`V(f)` notation under the naming decision. Finally read
 `CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md`, which records
 the further evaluator result and the newly exposed human convention selecting
 which member of an equal-and-opposite pair is canonical.
@@ -86,14 +89,17 @@ Read these first, in this order:
 14. `DESIGN_2_1_ENTRY_STRUCTURE.md`
    - The forked entry ledger copied from Design 3 and renamed for Design 2.1.
 
-15. `../08_nm_lesson_drafts/nml3/NML3_ENTRY_SEQUENCE_DECISION_2026-08-02.md`
-   - Current authority for the E9 force-sum chimney overlap, the E13-E17
-     force-sum block, and the placement of meta-typing at E36-E41.
+15. `../08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md`
+   - Ratified authority for `net-force / impressed-force / interaction-set`.
+     It deliberately leaves numbering and the rest of the cut open.
 
 16. `../08_nm_lesson_drafts/nml3/NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`
-   - Ratified authority making `impressed-force` the sole active force-member
-     headword. It also supplies the mandatory translation rule for historical
-     sources that retain predecessor terminology.
+   - Ratified word-choice authority for `impressed-force`, as semantically
+     refined by the 2026-08-26 triplet decision.
+
+17. `../08_nm_lesson_drafts/nml3/NML3_ENTRY_SEQUENCE_DECISION_2026-08-02.md`
+   - Historical record of the E13–E17 cut retired by the managed NML3 reset of
+     2026-08-17. It is not current numbering authority.
 
 For drafting or revising an individual entry, use an **entry packet** from
 `../04_entry_design_guides/VD_NEW_ENTRY_TEMPLATE.md`. In this workspace,

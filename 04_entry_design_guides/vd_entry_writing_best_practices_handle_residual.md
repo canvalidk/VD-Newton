@@ -145,13 +145,12 @@ At E25, human supplies: forces on p are {gravity, tension}.
 Better:
 
 ```text
-Demand interacting-forces-set(p)
+Demand interaction-set(p)
   -> consult mechanical-composition_point-particle(p)
-  -> unfold acting-object instances one at a time
-  -> dispatch concrete type
-  -> evaluate activation-condition
-  -> produce canonical-force
-  -> add impressed-force to the set
+  -> identify and warrant interaction candidates
+  -> add the interactions, preserving their identities
+  -> certify the interaction-set closed
+  -> obtain impressed-force(i -> p) from each indexed interaction i
 ```
 
 ## Scoped Symbols
@@ -271,8 +270,9 @@ point-particle witness
   -> concrete type hub
   -> activation-condition
   -> canonical-force
-  -> impressed-force
-  -> interacting-forces-set
+  -> interaction
+  -> interaction-set
+  -> impressed-force(interaction -> target)
   -> net-force
 ```
 
@@ -336,4 +336,3 @@ Before accepting an entry, ask:
 - Are symbols scoped to the relevant object or model regime?
 - Are slots, constructs, and parameters separated?
 - Does the entry help produce the answer, not merely explain it afterwards?
-

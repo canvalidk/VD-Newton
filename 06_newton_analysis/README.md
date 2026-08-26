@@ -59,6 +59,15 @@ Force objects, composition, and closure:
 
 Ontology boundaries and cross-theory pressure:
 
+- `STATIC_ELECTRIC_ACTING_OBJECT_RESULT_2026-08-19.md`
+  - Develops the opaque magnetic-conveyor tube as a Galilean-covariant
+    static-electric acting object without electric source charge.
+  - Argues that Coulomb, Ampere, and Biot-Savart are not acting-object
+    complete for Newtonian EM statics under stable source-kind and IFS
+    membership requirements.
+  - Separates the known relativistic physical effect from the potentially new
+    VD source-warrant and no-reduction result.
+
 - `prediction_sets.md`
   - Newtonian mechanics as producing structured null-hypothesis sets, not only
     point predictions.
