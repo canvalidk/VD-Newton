@@ -114,13 +114,11 @@ Current orientation over the mixed Design 3 chronology:
 Newton analysis insight shelf:
 
 - `README.md`
-- `randomness_declarative_boundary.md`
 - `newton_first_law_article.md`
 - `vd_design_3_newton_i_correction.md`
 - `vd_composition_discovery_note.md`
 - `abstract_interaction_candidate.md`
 - `nothing_vs_zero_somethings.md`
-- `newton_vs_gibbs.md`
 
 `90_theory_reference/`
 
