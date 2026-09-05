@@ -23,7 +23,7 @@ Read these first, in this order:
 
 Then read the original sources only as needed:
 
-1. `vd_design_3_newton_i_correction.md`
+1. [VD-docs: Newton-analysis/vd_design_3_newton_i_correction.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/vd_design_3_newton_i_correction.md)
 2. `vd_acting_object_architecture_consolidation.md`
 3. `vd_design_3_todo.md`
 4. `vd_design_3_oop_discussion.md`
@@ -34,7 +34,7 @@ Then read the original sources only as needed:
 
 The two most important late corrections are:
 
-- `vd_design_3_newton_i_correction.md`
+- [VD-docs: Newton-analysis/vd_design_3_newton_i_correction.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/vd_design_3_newton_i_correction.md)
   - Supersedes the Nothing/Maybe branch idea and the `ao0` proposal.
   - Establishes that Newton I is a frame bridge, not the free-particle branch.
 

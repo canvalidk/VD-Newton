@@ -24,9 +24,9 @@ SHA256 CDF57C4FA573F869CE7AC7F9CA10A2F294E1B1A162206B1614BAF408F3C9BA98
 
 Integrated E7 complete draft, imported 2026-06-18:
 
-```text
-NM_L1_E7_integrated_complete_draft.md
-```
+[VD-docs: Newton/nml/nml1/NM_L1_E7_integrated_complete_draft_d2.md](https://github.com/canvalidk/VD-docs/blob/main/Newton/nml/nml1/NM_L1_E7_integrated_complete_draft_d2.md)
+
+Local copy deleted on 2026-09-05 under the returned 2026-08-26 checklist. The source path and hash below record the historical import, not the managed copy.
 
 Source path:
 
@@ -42,9 +42,9 @@ SHA256 21DD7CD32D6C800C1AF7EDBD95962B915230A8552893E747C63A869BAF80F9B9
 
 E7/E8 decision note, imported 2026-06-18:
 
-```text
-NM_L1_E7_E8_decision_note.md
-```
+[VD-docs: Newton/nml/nml1/NM_L1_E7_E8_decision_note.md](https://github.com/canvalidk/VD-docs/blob/main/Newton/nml/nml1/NM_L1_E7_E8_decision_note.md)
+
+Local copy deleted on 2026-09-05 under the returned 2026-08-26 checklist. The source path and hash below record the historical import, not the managed copy.
 
 Source path:
 

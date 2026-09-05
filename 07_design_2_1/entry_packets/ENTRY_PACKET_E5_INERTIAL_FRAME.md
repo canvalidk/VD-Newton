@@ -28,11 +28,11 @@ Source audit:
     supplies the direct E5 Design 2.1 note: the wall carries the frame
     modelling commitment, the fictitious-force warning, and the classroom
     lab/Earth-frame convention.
-  - `06_newton_analysis/vd_design_3_newton_i_correction.md` supplies the
+  - [VD-docs: Newton-analysis/vd_design_3_newton_i_correction.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/vd_design_3_newton_i_correction.md) supplies the
     correction that Newton I is a bridge between raw `acceleration` and
     `inertial-acceleration`; in already-inertial-frame questions, E18/E5 carries
     the modelling input while the triplet sits behind it as justification.
-  - `06_newton_analysis/newton_first_law_article.md` supplies the strongest
+  - [VD-docs: Newton-analysis/newton_first_law_article.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/newton_first_law_article.md) supplies the strongest
     form of the human-input claim: the frame commitment starts the Newtonian
     programme and is presupposed by the later checking machinery, not audited by
     that machinery itself.

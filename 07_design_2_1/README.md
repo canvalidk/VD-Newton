@@ -20,7 +20,7 @@ rest of the cut open. The older
 `FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md` supplies the underlying
 identity/value and construction/aggregation reasoning; translate its `IFS` and
 `V(f)` notation under the naming decision. Finally read
-`CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md`, which records
+[VD-docs: Newton-analysis/_dscn_entry_structure/canonical_force_orientation/CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/_dscn_entry_structure/canonical_force_orientation/CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md), which records
 the further evaluator result and the newly exposed human convention selecting
 which member of an equal-and-opposite pair is canonical.
 

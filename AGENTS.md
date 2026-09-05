@@ -91,3 +91,52 @@ Active entry packets, drafts, engine/code, and evaluator work remain on their
 normal production surfaces. Apply this handoff policy to new documents and
 documents the user identifies for transfer; do not bulk-move historical
 handoffs solely because the new policy exists.
+
+## 2026-08-26 pass closed — 2026-09-05
+
+Applied the VD-docs checklist returned 2026-09-02 and re-issued 2026-09-05.
+The returned checklist and the user's instruction authorize the managed copies
+below, including the recorded terminology maps. The return was made against
+the VD-docs working tree; no managed commit was supplied. Links use `main`.
+This is a custody/deletion record, not a fresh content comparison.
+
+All 13 Delete rulings are applied. Ten originals were deleted in this closure;
+rows 3, 5 and 6 were already absent. The source column below is a historical
+deletion ledger, not a list of local files to read.
+
+| Row | Former local original | Disposition | Authoritative VD-docs copy |
+|---:|---|---|---|
+| 1 | `06_newton_analysis/abstract_interaction_candidate.md` | Deleted 2026-09-05 | [VD-docs: Newton-analysis/abstract_interaction_candidate/abstract_interaction_candidate_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/abstract_interaction_candidate/abstract_interaction_candidate_d1.md) |
+| 2 | `06_newton_analysis/newton_first_law_article.md` | Deleted 2026-09-05 | [VD-docs: Newton-analysis/newton_first_law_article.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/newton_first_law_article.md) |
+| 3 | `06_newton_analysis/newton_vs_gibbs.md` | Already absent; Delete confirmed | [VD-docs: Newton-analysis/newton_vs_gibbs/newton_vs_gibbs_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/newton_vs_gibbs/newton_vs_gibbs_d1.md) |
+| 4 | `06_newton_analysis/nothing_vs_zero_somethings.md` | Deleted 2026-09-05 | [VD-docs: Newton-analysis/nothing_vs_zero_somethings/nothing_vs_zero_somethings (2)_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/nothing_vs_zero_somethings/nothing_vs_zero_somethings%20%282%29_d1.md) |
+| 5 | `06_newton_analysis/prediction_sets.md` | Already absent; Delete confirmed | [VD-docs: Theory/actually_there_prediction_sets/prediction_sets.md](https://github.com/canvalidk/VD-docs/blob/main/Theory/actually_there_prediction_sets/prediction_sets.md) |
+| 6 | `06_newton_analysis/randomness_declarative_boundary.md` | Already absent; Delete confirmed | [VD-docs: Newton-analysis/randomness_declarative_boundary.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/randomness_declarative_boundary.md) |
+| 7 | `06_newton_analysis/STATIC_ELECTRIC_ACTING_OBJECT_RESULT_2026-08-19.md` | Deleted 2026-09-05 | [VD-docs: Newton-analysis/_dscn_acting_object_primitives/STATIC_ELECTRIC_ACTING_OBJECT_RESULT_2026-08-19_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/_dscn_acting_object_primitives/STATIC_ELECTRIC_ACTING_OBJECT_RESULT_2026-08-19_d1.md) |
+| 8 | `06_newton_analysis/vd_composition_discovery_note.md` | Deleted 2026-09-05 | [VD-docs: Newton-analysis/composition_discovery/vd_composition_discovery_note_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/composition_discovery/vd_composition_discovery_note_d1.md) |
+| 9 | `06_newton_analysis/vd_design_3_newton_i_correction.md` | Deleted 2026-09-05 | [VD-docs: Newton-analysis/vd_design_3_newton_i_correction.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/vd_design_3_newton_i_correction.md) |
+| 10 | `07_design_2_1/CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md` | Deleted 2026-09-05 | [VD-docs: Newton-analysis/_dscn_entry_structure/canonical_force_orientation/CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/_dscn_entry_structure/canonical_force_orientation/CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md) |
+| 12 | `07_design_2_1/FORCE_SUM_TRIPLET_IFS_VALUE_RELATIONAL_NECESSITY_2026-08-18.md` | Deleted 2026-09-05 | [VD-docs: Newton-analysis/_dscn_entry_structure/force_sum_member_value/FORCE_SUM_TRIPLET_IFS_VALUE_RELATIONAL_NECESSITY_2026-08-18.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/_dscn_entry_structure/force_sum_member_value/FORCE_SUM_TRIPLET_IFS_VALUE_RELATIONAL_NECESSITY_2026-08-18.md) |
+| 13 | `08_nm_lesson_drafts/nml1/NM_L1_E7_E8_decision_note.md` | Deleted 2026-09-05 | [VD-docs: Newton/nml/nml1/NM_L1_E7_E8_decision_note.md](https://github.com/canvalidk/VD-docs/blob/main/Newton/nml/nml1/NM_L1_E7_E8_decision_note.md) |
+| 14 | `08_nm_lesson_drafts/nml1/NM_L1_E7_integrated_complete_draft.md` | Deleted 2026-09-05 | [VD-docs: Newton/nml/nml1/NM_L1_E7_integrated_complete_draft_d2.md](https://github.com/canvalidk/VD-docs/blob/main/Newton/nml/nml1/NM_L1_E7_integrated_complete_draft_d2.md) |
+
+All six Keep originals remain unchanged:
+
+- Row 11: `07_design_2_1/FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md` — UNDECIDED; both sides hold.
+- Row 15: `08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_FOUNDATIONAL_UNDERSTANDING_2026-08-02.md` — UNDECIDED; both sides hold.
+- Row 16: `08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md` — steering.
+- Row 17: `08_nm_lesson_drafts/nml3/NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md` — steering.
+- Row 18: `08_nm_lesson_drafts/nml3/NML3_LOGICAL_CONSEQUENCES_CONSOLIDATED_2026-08-08.md` — UNDECIDED; both sides hold.
+- Row 19: `08_nm_lesson_drafts/nml3/NML3_WARRANTED_FORCE_ACCOUNT_FOUNDATIONAL_EXPLICATION_2026-08-05.md` — UNDECIDED; both sides hold.
+
+No Keep document was reconciled or merged. The Design-3 steering copy at
+`05_design_3_catchup/RANDOMNESS_DECLARATIVE_BOUNDARY.md` also remains unchanged.
+The completed `pass to folders/2026-08-26/` bundle, including its original and
+returned checklists, was deleted. This is the surviving closure record.
+The separate 2026-09-05 receipt batch in `pass to VD-docs/` is outside this
+08-26 cleanup and remains unchanged.
+
+Local source references now point to the returned VD-docs paths. The user
+explicitly authorized changing only the two source references in the E5
+inertial-frame entry packet. All other packet content, passes, engine and
+evaluator work remain unchanged.

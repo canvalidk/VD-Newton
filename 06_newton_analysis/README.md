@@ -1,20 +1,20 @@
 # Newton Analysis
 
-This folder retains only analysis that directly informs Newton entry writing:
-entry content, entry routing, entry ontology, or a correction to an active
-entry structure. Broader theory comparisons and cross-theory observations
-belong with the folders branches rather than on this production surface.
+This folder indexes managed VD-docs analysis that informs Newton entry writing.
+The 2026-08-26 pass is closed: its Delete-row originals were removed on
+2026-09-05 under the returned checklist. Read the authoritative managed copies
+linked below; the complete disposition is recorded in the workspace AGENTS.md.
 
 ## Entry-Writing Sources
 
 Frame and Newton I:
 
-- `newton_first_law_article.md`
+- [VD-docs: Newton-analysis/newton_first_law_article.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/newton_first_law_article.md)
   - Newton I as the gatekeeper for inertial-frame force accounting.
   - Explains why fictitious forces break the acting-object and closure
     machinery.
 
-- `vd_design_3_newton_i_correction.md`
+- [VD-docs: Newton-analysis/vd_design_3_newton_i_correction.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/vd_design_3_newton_i_correction.md)
   - Corrects earlier Newton I routing claims.
   - Treats Newton I as the bridge between raw `acceleration` and
     `inertial-acceleration`, not as a branch that all free particles route
@@ -22,19 +22,19 @@ Frame and Newton I:
 
 Force objects, composition, and closure:
 
-- `vd_composition_discovery_note.md`
+- [VD-docs: Newton-analysis/composition_discovery/vd_composition_discovery_note_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/composition_discovery/vd_composition_discovery_note_d1.md)
   - Mechanical-composition as the particle-owned set of acting objects.
   - Connects Newtonian acting-object structure to the computer-science
     "has-a" meaning of composition.
 
-- `abstract_interaction_candidate.md`
+- [VD-docs: Newton-analysis/abstract_interaction_candidate/abstract_interaction_candidate_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/abstract_interaction_candidate/abstract_interaction_candidate_d1.md)
   - Interaction candidate as a theory-independent structural object.
   - Keeps the abstract idea of interaction separate from conservation
     assumptions.
 
 Candidate entry content and boundary cases:
 
-- `STATIC_ELECTRIC_ACTING_OBJECT_RESULT_2026-08-19.md`
+- [VD-docs: Newton-analysis/_dscn_acting_object_primitives/STATIC_ELECTRIC_ACTING_OBJECT_RESULT_2026-08-19_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/_dscn_acting_object_primitives/STATIC_ELECTRIC_ACTING_OBJECT_RESULT_2026-08-19_d1.md)
   - Develops the opaque magnetic-conveyor tube as a Galilean-covariant
     static-electric acting object without electric source charge.
   - Argues that Coulomb, Ampere, and Biot-Savart are not acting-object
@@ -43,11 +43,11 @@ Candidate entry content and boundary cases:
   - Separates the known relativistic physical effect from the potentially new
     VD source-warrant and no-reduction result.
 
-- `nothing_vs_zero_somethings.md`
+- [VD-docs: Newton-analysis/nothing_vs_zero_somethings/nothing_vs_zero_somethings (2)_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/nothing_vs_zero_somethings/nothing_vs_zero_somethings%20%282%29_d1.md)
   - Historical but still useful.
   - Shows how zero-force handling, massless particles, and force-pipeline
     domain limits expose structural boundaries.
-  - Read alongside `vd_design_3_newton_i_correction.md`, which supersedes its
+  - Read alongside [VD-docs: Newton-analysis/vd_design_3_newton_i_correction.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/vd_design_3_newton_i_correction.md), which supersedes its
     Newton I routing claim.
 
 ## Status Notes
