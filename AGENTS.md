@@ -78,3 +78,16 @@ When an entry task consumes VD-docs context, record the repository commit and
 source paths in the entry packet or handoff. Store locally the entry-facing
 interpretation and decisions, not another maintained copy of the source
 collection.
+
+## Outbound handoffs to VD-docs
+
+User policy established 2026-09-05: save new records and handoff documents
+intended for VD-docs in the workspace-root folder `pass to VD-docs/`.
+This is the local staging location for documents awaiting transfer to the
+managed collection. Keep their source references and submission status in
+the document; saving there does not itself mean VD-docs has received it.
+
+Active entry packets, drafts, engine/code, and evaluator work remain on their
+normal production surfaces. Apply this handoff policy to new documents and
+documents the user identifies for transfer; do not bulk-move historical
+handoffs solely because the new policy exists.
