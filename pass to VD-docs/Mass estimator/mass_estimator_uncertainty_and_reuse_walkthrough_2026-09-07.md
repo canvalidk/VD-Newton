@@ -17,10 +17,10 @@ retains, what it loses, and which uncertainty belongs in a downstream operation.
 
 New executable work:
 
-- [Experiments](../03_trace_and_evaluator/mass_estimator/uncertainty_walkthrough.py)
-- [Interpretation and propagation tests](../03_trace_and_evaluator/mass_estimator/test_uncertainty_walkthrough.py)
-- [Saved results](../03_trace_and_evaluator/mass_estimator/results/uncertainty_walkthrough.json)
-- [Suite verification](../03_trace_and_evaluator/mass_estimator/results/tests.json)
+- [Experiments](../../03_trace_and_evaluator/mass_estimator/uncertainty_walkthrough.py)
+- [Interpretation and propagation tests](../../03_trace_and_evaluator/mass_estimator/test_uncertainty_walkthrough.py)
+- [Saved results](../../03_trace_and_evaluator/mass_estimator/results/uncertainty_walkthrough.json)
+- [Suite verification](../../03_trace_and_evaluator/mass_estimator/results/tests.json)
 
 ## 1. Begin with an experiment, not the expression 0/0
 

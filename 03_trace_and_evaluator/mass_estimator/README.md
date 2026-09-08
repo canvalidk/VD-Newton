@@ -3,7 +3,7 @@
 **Current purpose, clarified by the user 2026-09-07:** investigate what follows
 assuming Newton II is correct. For this conditional investigation, large error
 scores describe unlikely measurement discrepancies; they do not terminate the
-reconciliation. See the [steering record](../../pass%20to%20VD-docs/mass_estimator_law_assumed_correct_steering_2026-09-07.md).
+reconciliation. See the [steering record](../../pass%20to%20VD-docs/Mass%20estimator/mass_estimator_law_assumed_correct_steering_2026-09-07.md).
 Existing rejection/withholding tests reproduce the older working specification;
 they are not acceptance requirements for the clarified purpose. The distinction
 between likelihood-weighted averaging and selecting the minimum-error pair
@@ -13,10 +13,10 @@ This is an executable test suite and numerical reference for the current VD
 mass readout, `E[f] / E[alpha]`, dated 2026-09-06. It tests behavior; it does
 not attempt another uniqueness proof or install a new production policy.
 
-Read the [behavior walkthrough](../../pass%20to%20VD-docs/mass_estimator_behavior_test_report_2026-09-06.md)
+Read the [behavior walkthrough](../../pass%20to%20VD-docs/Mass%20estimator/mass_estimator_behavior_test_report_2026-09-06.md)
 for the interpretation, counterexamples, and source record.
 
-The [September 7 uncertainty walkthrough](../../pass%20to%20VD-docs/mass_estimator_uncertainty_and_reuse_walkthrough_2026-09-07.md)
+The [September 7 uncertainty walkthrough](../../pass%20to%20VD-docs/Mass%20estimator/mass_estimator_uncertainty_and_reuse_walkthrough_2026-09-07.md)
 continues with the meaning of the null law, dependence when reusing the original
 inputs, prediction under a newly specified acceleration, and continuous paths
 through weak excitation and angular disagreement. Run
@@ -27,7 +27,7 @@ by `run_suite.py`; the original 40-test report remains a dated first-pass record
 ## Run
 
 For the compact formulas, convergence proofs, and a usable reporting recipe,
-read [Practical limits and uncertainty](../../pass%20to%20VD-docs/mass_estimator_practical_limits_and_uncertainty_2026-09-07.md).
+read [Practical limits and uncertainty](../../pass%20to%20VD-docs/Mass%20estimator/mass_estimator_practical_limits_and_uncertainty_2026-09-07.md).
 `practical_formulas.py` adds a known-direction closed readout, a local aligned
 uncertainty calculation with full covariance, and `summarize(estimate(...))`.
 The summary supplies the existing mass point, an equal-tail probability
@@ -64,7 +64,7 @@ Results use seed 20260906. Test-specific simulations use their own fixed seeds.
 The first published-data comparison is `air_track_experiment.py`, with numerical
 source transcription in `air_track_source.json`. Run it separately to regenerate
 `results/air_track.json` and `results/air_track_per_run.csv`. The
-[trial report](../../pass%20to%20VD-docs/mass_estimator_air_track_trial_2026-09-06.md)
+[trial report](../../pass%20to%20VD-docs/Mass%20estimator/mass_estimator_air_track_trial_2026-09-06.md)
 explains its scalar mechanical reduction, assumed uncertainty scenarios, and
 the identical-input comparison. It is not part of the synthetic behavior suite.
 
@@ -132,7 +132,7 @@ compares ordinary vector least squares and a same-covariance profile fit.
 Raw inputs and metadata are preserved under `raw/`; checksums and results are
 in `results/robot_cart.json`, `results/robot_cart_examples.csv`, and
 `results/robot_full_vector.json`. The report is
-`../../pass to VD-docs/mass_estimator_robot_cart_trials_2026-09-06.md`.
+`../../pass to VD-docs/Mass estimator/mass_estimator_robot_cart_trials_2026-09-06.md`.
 Uncertainty budgets are provisional. A finite weak-signal readout does not
 establish mass identification, and these trials do not show improved accuracy.
 

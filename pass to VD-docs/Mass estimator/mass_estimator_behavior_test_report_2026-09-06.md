@@ -13,10 +13,10 @@ measure, admission rule, or correction to managed sources.
 **Request:** stop trying to prove the estimator and test its behavior at zeros,
 aligned and anti-aligned vectors, and under uncertainty.
 
-**Executable laboratory:** [README and commands](../03_trace_and_evaluator/mass_estimator/README.md).
-**Numerical results:** [cases](../03_trace_and_evaluator/mass_estimator/results/cases.csv),
-[complete experiment data](../03_trace_and_evaluator/mass_estimator/results/experiments.json),
-[automated verification](../03_trace_and_evaluator/mass_estimator/results/tests.json).
+**Executable laboratory:** [README and commands](../../03_trace_and_evaluator/mass_estimator/README.md).
+**Numerical results:** [cases](../../03_trace_and_evaluator/mass_estimator/results/cases.csv),
+[complete experiment data](../../03_trace_and_evaluator/mass_estimator/results/experiments.json),
+[automated verification](../../03_trace_and_evaluator/mass_estimator/results/tests.json).
 
 ## 1. What exactly is being tested?
 
@@ -402,7 +402,7 @@ for the current readout or exhaustively reread.
 **Local active/unsubmitted scope:** filename and text searches excluding
 `VDfirst/`, using mass/estimator/readout, zero-zero, 0/0, uncertainty, and
 anti-alignment terms. Inspected the full local
-`pass to VD-docs/mass_readout_composition_uniqueness_2026-09-06.md` and the
+`pass to VD-docs/Mass estimator/mass_readout_composition_uniqueness_2026-09-06.md` and the
 source/drafting record `mass_estimation_introduction_candidate_sources_2026-09-06.md`;
 scoped search excerpts from the other September 6 introduction/development and
 shared-quantity notes supplied active context. These are newer local authoring
