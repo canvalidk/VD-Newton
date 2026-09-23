@@ -98,16 +98,15 @@ Success is not just returning `a = -kx/m`. The trace must show:
 - where `k` enters as a parameter;
 - where equilibrium/displacement enters as a construct;
 - where the canonical-force rule produces an attributed force;
-- how that acting-force enters the IFS and then the net-force sum.
+- how that impressed-force enters the IFS and then the net-force sum.
 
 ## Locked-In Later Goal
 
 After Design 3 can produce accountable Newtonian traces, use those traces to
 test whether the VD can generate Newtonian prediction sets.
 
-The target is described in `06_newton_analysis/prediction_sets.md`.
-
-In brief: a Newtonian point prediction is only one branch of the honest
+The target is summarized here rather than retained on the active Newton
+entry-writing analysis shelf. A Newtonian point prediction is only one branch of the honest
 prediction set. The VD should be able to expose the other Newton-licensed
 branches too: trace-production error, bad inputs, bad frame commitment,
 unclosed system, unaccounted acting objects, external influences, approximation

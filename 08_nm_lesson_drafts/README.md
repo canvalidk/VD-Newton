@@ -12,18 +12,40 @@ develop alongside them.
 ```text
 nml1/
   nm_l1_lesson_draft.md
-  NM_L1_E7_integrated_complete_draft.md
-  NM_L1_E7_E8_decision_note.md
   E7_INERTIAL_ACCELERATION_PLACEMENT_NOTE.md
 ```
 
-Future lesson drafts can follow the same shape:
+The E7/E8 note and integrated E7 draft are held in VD-docs following closure of the 2026-08-26 pass:
+
+- [VD-docs: Newton/nml/nml1/NM_L1_E7_E8_decision_note.md](https://github.com/canvalidk/VD-docs/blob/main/Newton/nml/nml1/NM_L1_E7_E8_decision_note.md)
+- [VD-docs: Newton/nml/nml1/NM_L1_E7_integrated_complete_draft_d2.md](https://github.com/canvalidk/VD-docs/blob/main/Newton/nml/nml1/NM_L1_E7_integrated_complete_draft_d2.md)
+
+Later lesson working areas can follow the same shape. NML4–NML6 are currently
+README-only route-planning placeholders; their numbering and ownership are not
+ratified:
 
 ```text
 nml2/
   nm_l2_lesson_draft.md
   placement / boundary notes as needed
+
+nml3/
+  README.md
+  NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md
+  nm_l3_lesson_draft.md
+
+nml4/
+  README.md  # provisional action-reaction route
+
+nml5/
+  README.md  # provisional acting-object refinement route
+
+nml6/
+  README.md  # provisional mechanical-closure route
 ```
+
+The cross-lesson dependency and movable-definition questions are recorded in
+`NML3_TO_NML6_PROVISIONAL_FORWARD_MAP_2026-08-08.md`.
 
 ## Preservation Rule
 

@@ -131,7 +131,7 @@ For example:
 ```text
 Particle p1 accelerates.
   -> net-force(p1) is nonzero.
-  -> some acting-force is present.
+  -> some impressed-force is present.
   -> some acting-object witness must be involved.
   -> if that witness is outside the system, the system is open.
 ```

@@ -80,10 +80,10 @@ E34 acting-object:
 E35 activation-condition_acting-object:
   If a point-particle fulfills the activation-condition_acting-object of an
   acting-object, the canonical-force_acting-object of that acting-object will
-  be an acting-force on the point-particle.
+  be an impressed-force on the point-particle.
 
 E36 canonical-force_acting-object:
-  The canonical-force_acting-object is the acting-force that an acting-object
+  The canonical-force_acting-object is the impressed-force that an acting-object
   exerts on a point-particle that fulfills the
   activation-condition_acting-object.
 ```
@@ -258,22 +258,24 @@ HUMAN INPUT: forces on mass are {spring force}
 It should instead unfold the force:
 
 ```text
-DEMAND: interacting-forces-set(p, t)
+DEMAND: interaction-set(p, t)
   -> demand next acting-object from mechanical-composition(p)
   -> spring acting-object instance enters
   -> dispatch/classify as spring
   -> check spring modelling assumptions
   -> evaluate activation condition
+  -> warrant the spring interaction for p
+  -> add the interaction to interaction-set(p, t)
   -> evaluate canonical-force_spring
   -> demand k
   -> demand displacement-from-equilibrium or endpoint separation
-  -> produce spring acting-force
-  -> add acting-force to force sum
+  -> produce impressed-force(spring interaction -> p)
+  -> add impressed-force to force sum
 ```
 
-The force being in the interacting-forces-set and the activation condition
-being satisfied should be two faces of one definitional commitment, not two
-separate human declarations.
+The spring interaction being in the interaction-set and the activation
+condition being satisfied should be linked parts of one warranted account, not
+two separate human declarations.
 
 ## Equilibrium Construct: The Hard Part
 

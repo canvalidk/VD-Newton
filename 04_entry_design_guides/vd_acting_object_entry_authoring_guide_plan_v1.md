@@ -187,10 +187,11 @@ Also include:
 
 - `mechanical-composition_point-particle`
 - `paired-particle_acting-object`
-- `acting-force`
+- `impressed-force`
 - `canonical-force_acting-object`
 - `reaction-force_acting-object`
-- `interacting-forces-set`
+- `interaction`
+- `interaction-set`
 
 The guide should teach LLMs to reason from the exact entry wording, not from
 summaries.
@@ -408,7 +409,7 @@ The trace should show:
 - where constructs were resolved;
 - where canonical-force was evaluated;
 - where reaction-force followed;
-- where net-force consumed the acting-force.
+- where net-force consumed the impressed-force.
 
 If the trace needs a human input at a triplet entry, the entry set is probably
 missing a wall or dispatch destination.

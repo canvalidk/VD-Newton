@@ -24,6 +24,15 @@ documents are normally consumed as context rather than reorganized here.
 Local documents must not be removed merely because a similarly named managed
 copy exists; establish provenance and ingestion status first.
 
+## Ratified force-member terminology
+
+The sole active force-account member headword is `impressed-force`. Read
+`08_nm_lesson_drafts/nml3/NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`
+before using any older force-sum source. Earlier snapshots, PDFs, backups,
+conversation captures, handoff bundles, and dated writing passes may retain
+predecessor terminology; translate it to `impressed-force`. Historical wording
+does not reopen the decision.
+
 The current project goal is to move from Newton Design 2/v0.6 toward **Design 3**:
 
 - refine the meta-typing laws;
@@ -141,16 +150,14 @@ Current orientation over the mixed Design 3 chronology:
 
 `06_newton_analysis/`
 
-Newton analysis insight shelf:
+Newton analysis source index (managed documents are in VD-docs):
 
 - `README.md`
-- `randomness_declarative_boundary.md`
-- `newton_first_law_article.md`
-- `vd_design_3_newton_i_correction.md`
-- `vd_composition_discovery_note.md`
-- `abstract_interaction_candidate.md`
-- `nothing_vs_zero_somethings.md`
-- `newton_vs_gibbs.md`
+- [VD-docs: Newton-analysis/newton_first_law_article.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/newton_first_law_article.md)
+- [VD-docs: Newton-analysis/vd_design_3_newton_i_correction.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/vd_design_3_newton_i_correction.md)
+- [VD-docs: Newton-analysis/composition_discovery/vd_composition_discovery_note_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/composition_discovery/vd_composition_discovery_note_d1.md)
+- [VD-docs: Newton-analysis/abstract_interaction_candidate/abstract_interaction_candidate_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/abstract_interaction_candidate/abstract_interaction_candidate_d1.md)
+- [VD-docs: Newton-analysis/nothing_vs_zero_somethings/nothing_vs_zero_somethings (2)_d1.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/nothing_vs_zero_somethings/nothing_vs_zero_somethings%20%282%29_d1.md)
 
 `90_theory_reference/`
 

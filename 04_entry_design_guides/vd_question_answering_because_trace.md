@@ -57,10 +57,10 @@ What is the acceleration of p?
   -> inertial-acceleration(p)
 
 Why does a free massive particle have zero acceleration in an inertial frame?
-  -> inertial-acceleration(p) under empty interacting-forces-set
+  -> inertial-acceleration(p) under empty interaction-set
 
 Describe the forces on p.
-  -> interacting-forces-set(p)
+  -> interaction-set(p), then impressed-force(i -> p) for each member i
 ```
 
 Different normalisations produce different explanation chains.
@@ -74,15 +74,14 @@ The inertial-acceleration of p is net-force(p) divided by inertial-mass(p).
 And that's because: inertial-acceleration is defined by the Newton II triplet
 as net-force divided by inertial-mass for a point-particle in an inertial-frame.
 
-The net-force on p is the vector sum of the acting-force elements in its
-interacting-forces-set.
+The net-force on p is the vector sum of the impressed forces supplied by the
+interactions in its interaction-set.
 And that's because: the force-sum triplet defines net-force through the
-interacting-forces-set and acting-force.
+interaction-set and impressed-force.
 
-The spring force is included in the interacting-forces-set.
-And that's because: p's mechanical-composition contains a spring acting-object
-whose activation-condition is satisfied and whose canonical-force produces an
-acting-force on p.
+The spring interaction is included in the interaction-set.
+And that's because: the interaction is independently warranted for p in the
+stated context; it then supplies an impressed-force on p.
 ```
 
 The raw because-trace may be clunky. That is acceptable. The first goal is
@@ -122,4 +121,3 @@ It can produce:
 
 In this sense, the VD's question-answering capacity is one of the strongest
 tests of whether the entries really encode the theory.
-

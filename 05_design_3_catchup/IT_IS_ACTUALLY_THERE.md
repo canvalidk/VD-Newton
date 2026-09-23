@@ -132,7 +132,7 @@ Demand headword A
 
 In Newton, the clean example is the action-reaction structure.
 
-If the trace accepts an `acting-force` as arising from an acting-object, the
+If the trace accepts an `impressed-force` as arising from an acting-object, the
 Newtonian action-reaction entries do not leave that force as an isolated vector.
 The structure relates:
 
@@ -169,7 +169,7 @@ Entry-forced does give a structural commitment.
 It can say:
 
 ```text
-If this is a Newtonian acting force from this interaction structure, then the
+If this is a Newtonian impressed force from this interaction structure, then the
 reaction-side force belongs to the theory's account.
 ```
 
@@ -223,7 +223,7 @@ The trace has now committed to `cup` as the kind of object for which
 For force attribution the effect is stronger:
 
 ```text
-Demand gravitational attached-force on cup
+Demand gravitational impressed-force on cup
   -> consult cup mechanical-composition
   -> find or demand Earth-gravity acting-object witness
   -> acting-object witness has participant/source structure
@@ -266,7 +266,7 @@ inertial-acceleration(cup)
   -> Newton II
   -> net-force(cup)
   -> interacting-forces-set(cup)
-  -> attached-force from near-earth-gravity acting-object
+  -> impressed-force from near-earth-gravity acting-object
 ```
 
 At this point the trace needs an acting-object witness:

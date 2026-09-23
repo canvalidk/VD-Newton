@@ -85,8 +85,8 @@ Question or trace moment this helps with:
 
 Witness kind:
   point-particle | material-object | free-particle | reference-frame |
-  inertial-frame | mechanical-system | interacting-forces-set |
-  attached-force | acting-object | interaction-candidate |
+  inertial-frame | mechanical-system | interaction-set | interaction |
+  impressed-force | acting-object | interaction-candidate |
   interaction-pair | other:
 
 Slots read:

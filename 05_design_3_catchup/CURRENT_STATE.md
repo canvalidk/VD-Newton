@@ -130,7 +130,7 @@ mechanical-composition(p) supplies an acting-object instance
 dispatch resolves its concrete type
 activation-condition is exhibited and evaluated
 canonical-force is produced
-acting-force joins the interacting-forces-set
+impressed-force joins the interacting-forces-set
 repeat until explicit no-more input closes the list
 ```
 
