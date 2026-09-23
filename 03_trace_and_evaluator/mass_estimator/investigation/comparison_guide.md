@@ -873,6 +873,50 @@ condition, method, paired MCSE, simultaneous bounds and target classification.
 Changing the requested factors or success targets changes the analysis rather
 than the fitted estimates; supported factors must exist in the saved scores.
 
+### Prior factors, switch rules, dominance and sequential updating
+
+These 23 September modules are documented, with results, in
+[working contribution 12](prior_factors_and_sequential_updating.md). They read
+verified trial archives and never refit an archived method:
+
+- **`paired_dominance.py`** finds cells where a focal rule beats every other
+  saved rule. It uses paired differences and a two-sided Bonferroni normal
+  bound over cells × factors × rules.
+- **`switch_rules.py`** rescores two-branch pretest rules and their true-cell
+  oracle.
+- **`prior_weight_study.py`** recomputes ratio-of-means points from saved
+  observations under declared mass factors (`sech`, `lognormal_factor`,
+  `lognormal_prior`), then scores, fits (mean over factors of the largest cell
+  regret) and summarizes them. Options: `--half first|second` for disjoint
+  replicate halves, `--cells` for subsets, and `--min-snr` in `fit` and
+  `summarize`.
+- **`sequential_update.py`** splits a saved cell into consecutive series and
+  compares the symmetric, eq. (18) and eq. (20) rules for combining readings.
+
+`weighted_posterior.py` supplies the weighted law and its continuous
+summaries; `archive_rescoring.py` supplies the shared loading and paired
+statistics. The fresh studies are
+[`studies/prior_update_validation_grid.json`](studies/prior_update_validation_grid.json),
+[`studies/prior_update_offgrid_shifted.json`](studies/prior_update_offgrid_shifted.json)
+and [`studies/prior_update_mass_ladder.json`](studies/prior_update_mass_ladder.json).
+
+```powershell
+$S = "03_trace_and_evaluator/mass_estimator/investigation"
+$RUN = ".tools/mass_estimator_studies/prior-update-validation-20260923/experiments/validation_snr_grid/attempt-001"
+python -B $S/paired_dominance.py --run $RUN --exclude tube_joint --output .tools/my-analysis/dominance.json
+python -B $S/switch_rules.py --run $RUN --output .tools/my-analysis/switch.json
+python -B $S/prior_weight_study.py sweep --run $RUN --family sech --lams 0 0.35 --output .tools/my-analysis/sweep.json
+python -B $S/prior_weight_study.py summarize --sweep .tools/my-analysis/sweep.json --output .tools/my-analysis/summary.json
+python -B $S/sequential_update.py --run <attempt directory> --cells 07_mass_excitation --output .tools/my-analysis/series.json
+```
+
+Outputs refuse to overwrite existing files. Sweep, dominance, switch and
+sequential outputs record source hashes, runtime and archive manifests; fit
+and summarize outputs record their input sweeps and source hashes. A sweep over 64 cells of 10,000 readings takes about a
+minute; a sequential analysis about 14 s per cell. Every result is conditional
+on the isotropic known-noise Gaussian model, and the modules reject
+anisotropic supplied SDs.
+
 ## Context provenance
 
 Managed derivation and steering remain pinned to

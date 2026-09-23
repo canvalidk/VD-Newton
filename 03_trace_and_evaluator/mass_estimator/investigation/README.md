@@ -1,12 +1,15 @@
 # Mass estimator investigation
 
-**Current synthesis — 21 September 2026.** We have a defined conditional
+**Current synthesis — 21 September 2026; extended 23 September.** We have a defined conditional
 estimator, mathematical limits on what it can claim, and a reusable simulation
 tester. A fresh operating-range study now distinguishes its relative gains
 from absolute accuracy: its clearly demonstrated advantages over the norm
 ratio occur in conditions that still fail the chosen 90% accuracy benchmarks.
 Strong signals make it accurate, with similar performance from simpler
 alternatives. This is a scoped result, not a universal ordering of estimators.
+The [23 September contribution](prior_factors_and_sequential_updating.md)
+scopes it further and makes two choices in the law explicit; see
+[readout regimes, prior factors and updating](#readout-regimes-prior-factors-and-updating).
 
 Start here for the argument, evidence and next question. Use the
 [comparison guide](comparison_guide.md) for equations, assumptions and running
@@ -234,6 +237,46 @@ The linked results are local scratch evidence and may be absent in a fresh
 checkout. The protocols and [running instructions](comparison_guide.md#run-checkpoint-and-resume-a-study)
 are the route to reproduction; a run also records the execution source and
 runtime, since later code may differ.
+
+### Readout regimes, prior factors and updating
+
+[Working contribution 12](prior_factors_and_sequential_updating.md) reanalyzes
+the operating-range archive and three fresh studies (R = 10,000 per cell) with
+new reusable modules. It keeps the readout and changes no estimator or earlier
+result. Instead it makes two choices in the law explicit: a prior factor on
+mass, and the per-reading nuisance used when readings are combined.
+
+- **An unbeaten band, with edges.** With a paired Bonferroni bound over all
+  eleven archived rules, the ratio of means beats every rule except its tube
+  sibling where the weaker channel's effective SNR is 1, or 2 with the other
+  channel strong. At factor 1.5, 15 of 16 archive cells reappear on fresh
+  draws. On grids with both SNRs ≥ 1 it also has the smallest worst-case
+  regret of the eleven rules (4.7–6.8 pp), although the floored norm ratio is
+  narrowly ahead in about half the cells. With one channel at SNR 0.5 and the
+  other at 2.5 or more, the same law's reciprocal-root point leads the ratio
+  of means by up to 23 pp. The flat-law median and geometric points then
+  become the minimax rules, and the ratio of means drops to 5th of 11.
+- **Switch rules lose somewhere at every threshold.** Choosing |F|/|a| above an
+  observed-SNR threshold and a fallback below is clearly worse than the ratio
+  of means in 12–45 of 64 cells at every tested threshold. The largest gain
+  in any cell is 7.0 pp. Per-reading switching can beat both branches in a
+  cell, so the true-cell choice between branches (4.7–6.8 pp) is a reference,
+  not a ceiling.
+- **The tilt λ is a fitted prior factor on mass,** centred at σ_F/σ_a. Fitted
+  by a declared criterion on the archive (λ\* = 0.35), it cuts worst-case
+  regret by a third to a half on fresh draws with both SNRs ≥ 1 and worsens
+  it below the fitted range. The hindsight-optimal value moves with the test
+  set. A tilt with a free centre moves that centre towards the masses when
+  both SNRs are at least 1.
+- **Weak-signal points shrink towards σ_F/σ_a.** The median m̂/m is 3.6 for
+  m = s/4 at acceleration SNR 1.
+- **Declared log-normal priors are priced.** An overconfident prior is
+  catastrophic. An honest wide prior that tempers the flat law helps slightly.
+  An exact wide log-normal prior is worse than the flat default.
+- **As an update rule,** contribution 11's eq. (18) settles below the true
+  mass and eq. (20) between the truth and σ_F/σ_a. A symmetric rule that
+  counts the prior once converges to the truth, although its 80% intervals
+  undercover. Exact angle identities relate the three rules.
 
 ## How the tester should support the next question
 
