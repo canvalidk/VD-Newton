@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Physics Lab Cart | EF105</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" type="image/png" href="/ef105-2021-01/grav/user/themes/ef-lms/images/logo.png" />
+    <link rel="canonical" href="https://efcms.engr.utk.edu/ef105-2021-01/grav/datasets/physics-cart" />
+
+                        
+                
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<link href="https://efcms.engr.utk.edu/c/sys/31/css/ef.css" type="text/css" rel="stylesheet">
+<link href="https://efcms.engr.utk.edu/c/sys/31/bolt/bolt.css" type="text/css" rel="stylesheet">
+<link href="/ef105-2021-01/grav/user/themes/ef-lms/css/site.css" type="text/css" rel="stylesheet">
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet">
+<link href="/ef105-2021-01/grav/user/plugins/markdown-notices/assets/notices.css" type="text/css" rel="stylesheet">
+<link href="/ef105-2021-01/grav/user/plugins/markdown-spoilers/assets/spoilers.css" type="text/css" rel="stylesheet">
+<link href="/ef105-2021-01/grav/user/plugins/form/assets/form-styles.css" type="text/css" rel="stylesheet">
+<link href="/ef105-2021-01/grav/user/plugins/image-captions/css/image-captions.css" type="text/css" rel="stylesheet">
+<link href="/ef105-2021-01/grav/user/plugins/mathjax/assets/css/mathjax.css" type="text/css" rel="stylesheet">
+<link href="/ef105-2021-01/grav/user/plugins/highlight/css/learn.css" type="text/css" rel="stylesheet">
+<link href="/ef105-2021-01/grav/user/plugins/highlight/css/highlightjs-line-numbers.css" type="text/css" rel="stylesheet">
+<style>
+.presentation-iframe {
+            width: 100%;
+            width: -moz-available;
+            width: -webkit-fill-available;
+            width: fill-available;
+            height: 100%;
+            height: -moz-available;
+            height: -webkit-fill-available;
+            height: fill-available;
+          }
+</style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://efcms.engr.utk.edu/c/sys/31/inc/header.inc.js?v=20210120"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="/ef105-2021-01/grav/user/plugins/markdown-collapsible/js/collapsible.js"></script>
+<script src="/ef105-2021-01/grav/user/plugins/anchors/js/anchor.min.js"></script>
+<script src="/ef105-2021-01/grav/user/plugins/mathjax/assets/js/mathjax.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="/ef105-2021-01/grav/user/data/highlight/highlight.pack.js"></script>
+<script src="/ef105-2021-01/grav/user/plugins/highlight/js/highlightjs-line-numbers.min.js"></script>
+<script>
+$(document).ready(function() {
+                                anchors.options = {
+                                    visible: 'hover',
+                                    placement: 'right',
+                                    
+                                    
+                                    truncate: 64
+                                };
+                                anchors.add('h1,h2,h3,h4');
+                             });
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+hljs.initLineNumbersOnLoad();
+</script>
+
+    <style>
+        #gbomenu { background-color: #ffaa55; }
+        #gbomenu { color:  #323232; }
+        #gbomenu .top-nav ul li a { background-color: #ffaa55; }
+        #gbomenu .main-nav ul li a { background-color: #ffffff; }
+        #gbomenu .main-nav ul li a { color: #000000; }
+        #gbomenu .main-nav ul li a:hover { background-color: #ffaa00; }
+        #gbomenu .main-nav ul li a:hover { color: #ffffff; }
+        .gboheadermenu li a { color: #f77f00; }
+        .gboheadermenu li  { background-color: #f77f00 }
+        .gboheadermenu li a:hovercolor { color: #3c3d3f}
+        .gboheadermenu li a:hover { background-color: #f77f00 }
+    </style>  
+
+</head>
+<body class="">
+<div id="gbosite">
+<script>
+$(function() {
+mediaCheck({
+    media: '(max-width: 800px)',
+    entry: function() { showmenu(true); },
+    exit: function() { showmenu(false); }
+  });
+});
+
+function showmenu(s) {
+	if (s==undefined) s = $('#gbomenu').css('display')!='none';
+	if (s) {
+		// menu is hidden
+		$('#gbomenu').hide();
+		$('#burger_main').show();
+		$('#burger_left').hide();
+		$('#gbopage').css('left','0px');	
+	} else {
+		// menu is shown
+		$('#burger_main').hide();
+		$('#burger_left').show();
+		$('#gbomenu').show();
+		$('#gbopage').css('left','260px');	
+	}
+}
+</script>
+
+<div id="gbomenu">
+    <nav class="top-nav">
+        <ul>
+        <li><span class="hide-print" id="burger_left">
+            <a href='' onclick='showmenu(); return false;' title='Menu'><img height=18 width=24 src='https://efcms.engr.utk.edu/c/sys/31/img/menu-icon.png' border=0 alt='Toggle Menu'></a>
+        </span></li>
+        <li><a href='http://utk.edu' title='The University of Tennessee, Knoxville' target=_blank><img src="https://efcms.engr.utk.edu/c/sys/31/img/powert.svg"  height=30px alt='University of Tennessee, Knoxville'></a></li>
+        <li><a href='http://www.engr.utk.edu' title='Tickle College of Engineering' target=_blank><img src="https://efcms.engr.utk.edu/c/sys/31/img/tickle-bridge.png" height=30px alt='Tickle College of Engineering'></a></li>
+        <li><a href='https://efcms.engr.utk.edu/efp' title='Engineering Fundamentals Program' target=_blank><img src="https://efcms.engr.utk.edu/c/sys/31/img/engage-100.png" height=30px alt='Engineering Fundamentals Program'></a></li>
+        <li><a href='http://utk.instructure.com/' title='Online@UTK (Canvas)' target=_blank><img src='https://efcms.engr.utk.edu/c/sys/31/img/canvas-login.png' height=30px alt='UTK Canvas'></a></li>
+        </ul>
+    </nav>
+    <div class="site-info">
+        <div class="site-name">EF105 Spring, 2021</div>
+	    </div>
+    <nav class="main-nav">
+        
+<ul>
+                <li><a href="/ef105-2021-01/sys.php?f=login">Login</a></li>
+    </ul>
+
+<ul>
+    <li><a href="/ef105-2021-01/index.php">Announcements</a></li>
+    <li><a href="/ef105-2021-01/sys.php?f=calendar/main">Calendar</a></li>
+    <li><a href="/ef105-2021-01/grav/syllabus">Syllabus</a></li>
+    <li><a href="/ef105-2021-01/sys.php?f=faculty">Instructors/GTAs</a></li>
+    <li><a href="/ef105-2021-01/sys.php?f=section-sched">Section Info</a></li>
+</ul>
+
+<ul>
+                    <li class="">
+            <a href="/ef105-2021-01/grav/procedures">
+                                Procedures
+            </a>
+        </li>
+                    <li class="">
+            <a href="/ef105-2021-01/grav/prep-quizzes">
+                                Prep Quizzes
+            </a>
+        </li>
+                    <li class="">
+            <a href="/ef105-2021-01/grav/labs">
+                                Labs
+            </a>
+        </li>
+                    <li class="">
+            <a href="/ef105-2021-01/grav/drop-box">
+                                Drop Box
+            </a>
+        </li>
+                    <li class="selected">
+            <a href="/ef105-2021-01/grav/datasets">
+                                Datasets
+            </a>
+        </li>
+                    <li class="">
+            <a href="/ef105-2021-01/grav/tutorials">
+                                Tutorials
+            </a>
+        </li>
+                    <li class="">
+            <a href="/ef105-2021-01/grav/examples">
+                                Examples
+            </a>
+        </li>
+                    <li class="">
+            <a href="/ef105-2021-01/grav/help">
+                                Help!
+            </a>
+        </li>
+                    <li class="">
+            <a href="/ef105-2021-01/grav/exams">
+                                Exams
+            </a>
+        </li>
+                    <li class="">
+            <a href="/ef105-2021-01/grav/concepts">
+                                Concepts
+            </a>
+        </li>
+                    <li class="">
+            <a href="/ef105-2021-01/grav/exercises">
+                                Exercises
+            </a>
+        </li>
+    
+</ul>
+
+
+<strong>Resources</strong>
+<ul>
+    <li><a href="/ef105-2021-01/grav/resources/software">Computer Setup</a></li>
+    <li><a href="/ef105-2021-01/grav/resources/zoom-recordings">Zoom Recordings</a></li>
+    <li><a href="/ef105-2021-01/grav/resources/faq-semester-start">FAQ</a></li>
+    <li><a href="/ef105-2021-01/grav/resources/discussion-board">Discussion Board</a></li>
+    <li><a href="/ef105-2021-01/grav/resources/oit">OIT</a></li>
+    <li><a href="/ef105-2021-01/grav/resources/calculator-tips">Calculator Tips</a></li>
+    <li><a href="/ef105-2021-01/grav/resources/physics-review">Physics Review</a></li>
+    <li><a href="/ef105-2021-01/grav/resources/honor-code">EF 105 Academic Integrity</a></li>
+    <li><a href="/ef105-2021-01/grav/resources/test">resource test</a></li>
+    <li><a href="/ef105-2021-01/grav/resources/matlab-faq">MATLAB FAQ</a></li>
+    <li><a href="/ef105-2021-01/grav/resources/matlab-rubrics">MATLAB Rubrics</a></li>
+    <li><a href="/ef105-2021-01/grav/resources/matlab-grader">MATLAB Grader</a></li>
+</ul>
+    </nav>
+</div>
+
+    <div id="gbopage" valign="top">
+    <h1><span class="hide-print" id="burger_main">
+    <a href="" onclick="showmenu(); return false;" title="Menu"><img height="18" width="24" src="https://efcms.engr.utk.edu/c/sys/31/img/menu-icon.png" border="0" alt="Toggle Menu"></a>
+    </span><span id="pagetitle">Physics Lab Cart </span>
+    </h1>
+    <section id="gbocontent">
+        <div class="wrapper padding">
+                            
+                                        <h2>Data Dictionary</h2>
+<dl>
+<dt>Time (s)</dt>
+<dd>numeric, time in seconds since start of experiment.</dd>
+<dt>Force (N)</dt>
+<dd>numeric, force in newtons measured by the bumper</dd>
+<dt>Position (m)</dt>
+<dd>numeric, calculated position, relative to start of experiment</dd>
+<dt>Velocity (m/s)</dt>
+<dd>numeric, calculated velocity in meters per second in the direction of motion</dd>
+<dt>Acceleration (m/s²)</dt>
+<dd>numeric, measured acceleration in meters per second squared in the direction of motion</dd>
+<dt>K_e (J)</dt>
+<dd>numeric, calculated kinetic energy in Joules.</dd>
+<dt>U_g (J)</dt>
+<dd>numeric, calculated gravitational potential energy in Joules.</dd>
+<dt>E (J)</dt>
+<dd>numeric, total mechanic energy (<var>U_g + K_e</var>) in Joules.</dd>
+</dl>
+<h2>The Experiments</h2>
+<input class="collapsible" id="horizontal-track"  type="radio" name="exp"><label class="collapsible" for="horizontal-track">Horizontal Track</label><div class="collapsible">
+<ul>
+<li>A wheeled cart with a spring bumper on one side is placed on a horizontal track.</li>
+<li>The cart is given a push. It coasts until its bumper collides with a stopper at one end of the track and reverses direction.</li>
+<li>The process repeats until the cart comes to a stop.</li>
+</ul>
+<p><video controls="1" alt="Video of cart rolling on a horizontal track"><source src="/ef105-2021-01/grav/user/pages/09.datasets/02.physics-cart/01.horizontal-track/cart_flat.mp4">Your browser does not support the video tag.</source></video></p>
+</div>
+<input class="collapsible" id="inclined-track"  type="radio" name="exp"><label class="collapsible" for="inclined-track">Inclined Track</label><div class="collapsible">
+<ul>
+<li>A wheeled cart with a spring bumper on one end is placed at the top of an inclined ramp.</li>
+<li>When released, the cart accelerates in the downward direction.</li>
+<li>At the bottom of the ramp, the cart's spring bumper collides with a stopper, the cart reverses direction up the ramp until it slows and begins moving down again.</li>
+<li>The process continues until the carts speed reaches 0.</li>
+</ul>
+<p><video controls="1" alt="Video of cart rolling on a horizontal track"><source src="/ef105-2021-01/grav/user/pages/09.datasets/02.physics-cart/02.incline-track/cart_incline.mp4">Your browser does not support the video tag.</source></video></p>
+</div>
+<h2>Files</h2>
+<div class="notices blue">
+<p>Check out the last <a href="/ef105-2021-01/grav/tutorials/file-organization">file management tutorial</a> to see how to extrac the files out of a zip archive.</p>
+</div>
+<ul>
+<li><a href="/ef105-2021-01/grav/datasets/physics-cart/cart_data.zip">cart_data.zip</a>, zip archive containing two files associated with an experiment:
+<ul>
+<li>cart_flat.csv, data recorded while cart was in motion on a flat track</li>
+<li>cart_incline.csv, data recorded while cart was in motion on an inclined track</li>
+</ul></li>
+<li><a href="/ef105-2021-01/grav/datasets/physics-cart/cart_incline_energy.csv">cart_incline_energy.csv</a>, data file from energy experiment. </li>
+<li><a href="/ef105-2021-01/grav/datasets/physics-cart/cart_incline_tiny.csv">cart_incline_tiny.csv</a>, a tiny version of cart incline data for demos and learning.</li>
+</ul>
+<h2>Instrumentation</h2>
+<p>The cart has built in accelerometers, a kind of sensor that measure the <var>force</var> exerted by a known <var>mass</var>. This information is sufficient to calculate <var>acceleration =  force / mass</var>. All other data, such as <var>velocity</var> and <var>position</var>, are calculated by the software running the experiment before outputing to the data file.</p>
+
+    
+            </div>
+    </section>
+    </div>
+
+</div>
+
+    <script src="/ef105-2021-01/grav/user/themes/ef-lms/js/efui.js"></script>
+
+</body>
+</html>

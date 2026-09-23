@@ -1,0 +1,1386 @@
+{
+  "status": "candidate operational encoding; not ratified entries",
+  "code_repository": "canvalidk/VDfirst",
+  "code_commit": "11bfd8df1d27a5c7f2190aade2470a8a8801dc1f",
+  "source_sha256": {
+    "application.py": "13f70772dfd7d2c7423c0d9e0f7ce7a632e493f0f78bf72af14ecd3844890099",
+    "engine.py": "9ce153a0dc53bcdbc0557976ae7f49e0970accda8652df87ddd5b2f4cda94eca",
+    "simulator.py": "cf20d093d2ecb94ec8399ca9fea269177aac53f1d8794f96a0a92d0a656d06b8",
+    "repl.py": "cbd42ab45c5da2f720f9583599dc303ff47bfa3a4ff9228100c90dfa4faba4e8",
+    "demand.py": "0d65a145e2b174458587577abb326e50ba3450607114501a4464cc02906b1dd1",
+    "definiens.py": "972536e42692e41f982a50d4303e3bb224ef38da80e1b004ed22dfbe3e928e7f",
+    "residual.py": "4045a0c323b141e4778bc7d9ca4027842ef5bfd34b06e93fbebbe25f958ad48f"
+  },
+  "cases": [
+    {
+      "case": "spring-and-gravity",
+      "supplied_members": [
+        "spring-pull",
+        "gravity-pull"
+      ],
+      "entries": [
+        [
+          "sum-interactions_l_p_c",
+          "0 l_emit-force_p_c"
+        ],
+        [
+          "emit-force_i_tail_p_c",
+          "+ impressed-force_i_p_c tail_emit-force_p_c"
+        ],
+        [
+          "list-end_step_p_c",
+          ""
+        ],
+        [
+          "impressed-force_i_p_c",
+          "i_p_c"
+        ],
+        [
+          "spring-pull_p_c",
+          "(-k*x)"
+        ],
+        [
+          "gravity-pull_p_c",
+          "(m*g)"
+        ],
+        [
+          "spring-pull-b_p_c",
+          "(-k*x)"
+        ],
+        [
+          "cell-0_step_p_c",
+          "step_spring-pull_cell-1_p_c"
+        ],
+        [
+          "cell-1_step_p_c",
+          "step_gravity-pull_list-end_p_c"
+        ]
+      ],
+      "iterations": [
+        {
+          "iteration": 1,
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "cell-1_emit-force_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "iteration": 2,
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0} {list-end_emit-force_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0} {list-end_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "impressed-force_gravity-pull_P_C0",
+            "list-end_emit-force_P_C0"
+          ],
+          "degree": 3
+        }
+      ],
+      "intermediate": {
+        "raw_text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0} ",
+        "text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0}",
+        "open_calls": [
+          "impressed-force_spring-pull_P_C0",
+          "impressed-force_gravity-pull_P_C0"
+        ],
+        "degree": 2
+      },
+      "final": {
+        "raw_text": "0 + (-k*x) + (m*g) ",
+        "text": "0 + (-k*x) + (m*g)",
+        "open_calls": [],
+        "degree": 0
+      },
+      "expansions": [
+        {
+          "phase": "emit",
+          "call": "sum-interactions_cell-0_P_C0",
+          "raw_text": "0 {cell-0_emit-force_P_C0}",
+          "text": "0 {cell-0_emit-force_P_C0}",
+          "open_calls": [
+            "cell-0_emit-force_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "emit",
+          "call": "cell-0_emit-force_P_C0",
+          "raw_text": "0 {emit-force_spring-pull_cell-1_P_C0}",
+          "text": "0 {emit-force_spring-pull_cell-1_P_C0}",
+          "open_calls": [
+            "emit-force_spring-pull_cell-1_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "emit",
+          "call": "emit-force_spring-pull_cell-1_P_C0",
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "cell-1_emit-force_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "emit",
+          "call": "cell-1_emit-force_P_C0",
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} {emit-force_gravity-pull_list-end_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} {emit-force_gravity-pull_list-end_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "emit-force_gravity-pull_list-end_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "emit",
+          "call": "emit-force_gravity-pull_list-end_P_C0",
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0} {list-end_emit-force_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0} {list-end_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "impressed-force_gravity-pull_P_C0",
+            "list-end_emit-force_P_C0"
+          ],
+          "degree": 3
+        },
+        {
+          "phase": "emit",
+          "call": "list-end_emit-force_P_C0",
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0} ",
+          "text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "impressed-force_gravity-pull_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "force",
+          "call": "impressed-force_spring-pull_P_C0",
+          "raw_text": "0 + {spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0} ",
+          "text": "0 + {spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0}",
+          "open_calls": [
+            "spring-pull_P_C0",
+            "impressed-force_gravity-pull_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "force",
+          "call": "spring-pull_P_C0",
+          "raw_text": "0 + (-k*x) + {impressed-force_gravity-pull_P_C0} ",
+          "text": "0 + (-k*x) + {impressed-force_gravity-pull_P_C0}",
+          "open_calls": [
+            "impressed-force_gravity-pull_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "force",
+          "call": "impressed-force_gravity-pull_P_C0",
+          "raw_text": "0 + (-k*x) + {gravity-pull_P_C0} ",
+          "text": "0 + (-k*x) + {gravity-pull_P_C0}",
+          "open_calls": [
+            "gravity-pull_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "force",
+          "call": "gravity-pull_P_C0",
+          "raw_text": "0 + (-k*x) + (m*g) ",
+          "text": "0 + (-k*x) + (m*g)",
+          "open_calls": [],
+          "degree": 0
+        }
+      ],
+      "events": [
+        {
+          "kind": "trace",
+          "detail": "started from 'sum-interactions_cell-0_P_C0'"
+        },
+        {
+          "kind": "expand",
+          "detail": "E0 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E7 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E1 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E8 at position 1"
+        },
+        {
+          "kind": "expand",
+          "detail": "E1 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E2 at position 1"
+        },
+        {
+          "kind": "expand",
+          "detail": "E3 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E4 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E3 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E5 at position 0"
+        },
+        {
+          "kind": "return",
+          "detail": "E5 to E3"
+        },
+        {
+          "kind": "return",
+          "detail": "E3 to E1"
+        },
+        {
+          "kind": "return",
+          "detail": "E1 to E8"
+        },
+        {
+          "kind": "return",
+          "detail": "E8 to E1"
+        },
+        {
+          "kind": "return",
+          "detail": "E1 to E7"
+        },
+        {
+          "kind": "return",
+          "detail": "E7 to E0"
+        },
+        {
+          "kind": "return",
+          "detail": "E0 to root"
+        }
+      ],
+      "transcript": [
+        "> set reduce off",
+        "reduce policy: off.",
+        "> set cleanup off",
+        "cleanup policy: off.",
+        "> trace sum-interactions_cell-0_P_C0",
+        "trace started.",
+        "at: root",
+        "{sum-interactions_cell-0_P_C0}",
+        "open positions: 0",
+        "> goto 0",
+        "moved to root.",
+        "> expand 0",
+        "expanded E0 at position 0; now at child.",
+        "> goto 0",
+        "moved to E0.",
+        "> expand 0",
+        "expanded E7 at position 0; now at child.",
+        "> goto 0",
+        "moved to E7.",
+        "> expand 0",
+        "expanded E1 at position 0; now at child.",
+        "> goto 1",
+        "moved to E1.",
+        "> expand 1",
+        "expanded E8 at position 1; now at child.",
+        "> goto 1",
+        "moved to E8.",
+        "> expand 0",
+        "expanded E1 at position 0; now at child.",
+        "> goto 2",
+        "moved to E1.",
+        "> expand 1",
+        "expanded E2 at position 1; now at child.",
+        "> goto 0",
+        "moved to E1.",
+        "> expand 0",
+        "expanded E3 at position 0; now at child.",
+        "> goto 0",
+        "moved to E3.",
+        "> expand 0",
+        "expanded E4 at position 0; now at child.",
+        "> goto 0",
+        "moved to E1.",
+        "> expand 0",
+        "expanded E3 at position 0; now at child.",
+        "> goto 0",
+        "moved to E3.",
+        "> expand 0",
+        "expanded E5 at position 0; now at child.",
+        "trace complete.",
+        "0 + (-k*x) + (m*g) ",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> state",
+        "at: root",
+        "0 + (-k*x) + (m*g) ",
+        "open positions: none",
+        "> worklist",
+        "no open holes; trace is complete."
+      ],
+      "complete": true
+    },
+    {
+      "case": "empty",
+      "supplied_members": [],
+      "entries": [
+        [
+          "sum-interactions_l_p_c",
+          "0 l_emit-force_p_c"
+        ],
+        [
+          "emit-force_i_tail_p_c",
+          "+ impressed-force_i_p_c tail_emit-force_p_c"
+        ],
+        [
+          "list-end_step_p_c",
+          ""
+        ],
+        [
+          "impressed-force_i_p_c",
+          "i_p_c"
+        ],
+        [
+          "spring-pull_p_c",
+          "(-k*x)"
+        ],
+        [
+          "gravity-pull_p_c",
+          "(m*g)"
+        ],
+        [
+          "spring-pull-b_p_c",
+          "(-k*x)"
+        ]
+      ],
+      "iterations": [],
+      "intermediate": {
+        "raw_text": "0 ",
+        "text": "0",
+        "open_calls": [],
+        "degree": 0
+      },
+      "final": {
+        "raw_text": "0 ",
+        "text": "0",
+        "open_calls": [],
+        "degree": 0
+      },
+      "expansions": [
+        {
+          "phase": "emit",
+          "call": "sum-interactions_list-end_P_C0",
+          "raw_text": "0 {list-end_emit-force_P_C0}",
+          "text": "0 {list-end_emit-force_P_C0}",
+          "open_calls": [
+            "list-end_emit-force_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "emit",
+          "call": "list-end_emit-force_P_C0",
+          "raw_text": "0 ",
+          "text": "0",
+          "open_calls": [],
+          "degree": 0
+        }
+      ],
+      "events": [
+        {
+          "kind": "trace",
+          "detail": "started from 'sum-interactions_list-end_P_C0'"
+        },
+        {
+          "kind": "expand",
+          "detail": "E0 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E2 at position 0"
+        },
+        {
+          "kind": "return",
+          "detail": "E2 to E0"
+        },
+        {
+          "kind": "return",
+          "detail": "E0 to root"
+        }
+      ],
+      "transcript": [
+        "> set reduce off",
+        "reduce policy: off.",
+        "> set cleanup off",
+        "cleanup policy: off.",
+        "> trace sum-interactions_list-end_P_C0",
+        "trace started.",
+        "at: root",
+        "{sum-interactions_list-end_P_C0}",
+        "open positions: 0",
+        "> goto 0",
+        "moved to root.",
+        "> expand 0",
+        "expanded E0 at position 0; now at child.",
+        "> goto 0",
+        "moved to E0.",
+        "> expand 0",
+        "expanded E2 at position 0; now at child.",
+        "trace complete.",
+        "0 ",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> state",
+        "at: root",
+        "0 ",
+        "open positions: none",
+        "> worklist",
+        "no open holes; trace is complete."
+      ],
+      "complete": true
+    },
+    {
+      "case": "singleton",
+      "supplied_members": [
+        "spring-pull"
+      ],
+      "entries": [
+        [
+          "sum-interactions_l_p_c",
+          "0 l_emit-force_p_c"
+        ],
+        [
+          "emit-force_i_tail_p_c",
+          "+ impressed-force_i_p_c tail_emit-force_p_c"
+        ],
+        [
+          "list-end_step_p_c",
+          ""
+        ],
+        [
+          "impressed-force_i_p_c",
+          "i_p_c"
+        ],
+        [
+          "spring-pull_p_c",
+          "(-k*x)"
+        ],
+        [
+          "gravity-pull_p_c",
+          "(m*g)"
+        ],
+        [
+          "spring-pull-b_p_c",
+          "(-k*x)"
+        ],
+        [
+          "cell-0_step_p_c",
+          "step_spring-pull_list-end_p_c"
+        ]
+      ],
+      "iterations": [
+        {
+          "iteration": 1,
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} {list-end_emit-force_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} {list-end_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "list-end_emit-force_P_C0"
+          ],
+          "degree": 2
+        }
+      ],
+      "intermediate": {
+        "raw_text": "0 + {impressed-force_spring-pull_P_C0} ",
+        "text": "0 + {impressed-force_spring-pull_P_C0}",
+        "open_calls": [
+          "impressed-force_spring-pull_P_C0"
+        ],
+        "degree": 1
+      },
+      "final": {
+        "raw_text": "0 + (-k*x) ",
+        "text": "0 + (-k*x)",
+        "open_calls": [],
+        "degree": 0
+      },
+      "expansions": [
+        {
+          "phase": "emit",
+          "call": "sum-interactions_cell-0_P_C0",
+          "raw_text": "0 {cell-0_emit-force_P_C0}",
+          "text": "0 {cell-0_emit-force_P_C0}",
+          "open_calls": [
+            "cell-0_emit-force_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "emit",
+          "call": "cell-0_emit-force_P_C0",
+          "raw_text": "0 {emit-force_spring-pull_list-end_P_C0}",
+          "text": "0 {emit-force_spring-pull_list-end_P_C0}",
+          "open_calls": [
+            "emit-force_spring-pull_list-end_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "emit",
+          "call": "emit-force_spring-pull_list-end_P_C0",
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} {list-end_emit-force_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} {list-end_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "list-end_emit-force_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "emit",
+          "call": "list-end_emit-force_P_C0",
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} ",
+          "text": "0 + {impressed-force_spring-pull_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "force",
+          "call": "impressed-force_spring-pull_P_C0",
+          "raw_text": "0 + {spring-pull_P_C0} ",
+          "text": "0 + {spring-pull_P_C0}",
+          "open_calls": [
+            "spring-pull_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "force",
+          "call": "spring-pull_P_C0",
+          "raw_text": "0 + (-k*x) ",
+          "text": "0 + (-k*x)",
+          "open_calls": [],
+          "degree": 0
+        }
+      ],
+      "events": [
+        {
+          "kind": "trace",
+          "detail": "started from 'sum-interactions_cell-0_P_C0'"
+        },
+        {
+          "kind": "expand",
+          "detail": "E0 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E7 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E1 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E2 at position 1"
+        },
+        {
+          "kind": "expand",
+          "detail": "E3 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E4 at position 0"
+        },
+        {
+          "kind": "return",
+          "detail": "E4 to E3"
+        },
+        {
+          "kind": "return",
+          "detail": "E3 to E1"
+        },
+        {
+          "kind": "return",
+          "detail": "E1 to E7"
+        },
+        {
+          "kind": "return",
+          "detail": "E7 to E0"
+        },
+        {
+          "kind": "return",
+          "detail": "E0 to root"
+        }
+      ],
+      "transcript": [
+        "> set reduce off",
+        "reduce policy: off.",
+        "> set cleanup off",
+        "cleanup policy: off.",
+        "> trace sum-interactions_cell-0_P_C0",
+        "trace started.",
+        "at: root",
+        "{sum-interactions_cell-0_P_C0}",
+        "open positions: 0",
+        "> goto 0",
+        "moved to root.",
+        "> expand 0",
+        "expanded E0 at position 0; now at child.",
+        "> goto 0",
+        "moved to E0.",
+        "> expand 0",
+        "expanded E7 at position 0; now at child.",
+        "> goto 0",
+        "moved to E7.",
+        "> expand 0",
+        "expanded E1 at position 0; now at child.",
+        "> goto 1",
+        "moved to E1.",
+        "> expand 1",
+        "expanded E2 at position 1; now at child.",
+        "> goto 0",
+        "moved to E1.",
+        "> expand 0",
+        "expanded E3 at position 0; now at child.",
+        "> goto 0",
+        "moved to E3.",
+        "> expand 0",
+        "expanded E4 at position 0; now at child.",
+        "trace complete.",
+        "0 + (-k*x) ",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> state",
+        "at: root",
+        "0 + (-k*x) ",
+        "open positions: none",
+        "> worklist",
+        "no open holes; trace is complete."
+      ],
+      "complete": true
+    },
+    {
+      "case": "equal-values-distinct-interactions",
+      "supplied_members": [
+        "spring-pull",
+        "spring-pull-b"
+      ],
+      "entries": [
+        [
+          "sum-interactions_l_p_c",
+          "0 l_emit-force_p_c"
+        ],
+        [
+          "emit-force_i_tail_p_c",
+          "+ impressed-force_i_p_c tail_emit-force_p_c"
+        ],
+        [
+          "list-end_step_p_c",
+          ""
+        ],
+        [
+          "impressed-force_i_p_c",
+          "i_p_c"
+        ],
+        [
+          "spring-pull_p_c",
+          "(-k*x)"
+        ],
+        [
+          "gravity-pull_p_c",
+          "(m*g)"
+        ],
+        [
+          "spring-pull-b_p_c",
+          "(-k*x)"
+        ],
+        [
+          "cell-0_step_p_c",
+          "step_spring-pull_cell-1_p_c"
+        ],
+        [
+          "cell-1_step_p_c",
+          "step_spring-pull-b_list-end_p_c"
+        ]
+      ],
+      "iterations": [
+        {
+          "iteration": 1,
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "cell-1_emit-force_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "iteration": 2,
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_spring-pull-b_P_C0} {list-end_emit-force_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_spring-pull-b_P_C0} {list-end_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "impressed-force_spring-pull-b_P_C0",
+            "list-end_emit-force_P_C0"
+          ],
+          "degree": 3
+        }
+      ],
+      "intermediate": {
+        "raw_text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_spring-pull-b_P_C0} ",
+        "text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_spring-pull-b_P_C0}",
+        "open_calls": [
+          "impressed-force_spring-pull_P_C0",
+          "impressed-force_spring-pull-b_P_C0"
+        ],
+        "degree": 2
+      },
+      "final": {
+        "raw_text": "0 + (-k*x) + (-k*x) ",
+        "text": "0 + (-k*x) + (-k*x)",
+        "open_calls": [],
+        "degree": 0
+      },
+      "expansions": [
+        {
+          "phase": "emit",
+          "call": "sum-interactions_cell-0_P_C0",
+          "raw_text": "0 {cell-0_emit-force_P_C0}",
+          "text": "0 {cell-0_emit-force_P_C0}",
+          "open_calls": [
+            "cell-0_emit-force_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "emit",
+          "call": "cell-0_emit-force_P_C0",
+          "raw_text": "0 {emit-force_spring-pull_cell-1_P_C0}",
+          "text": "0 {emit-force_spring-pull_cell-1_P_C0}",
+          "open_calls": [
+            "emit-force_spring-pull_cell-1_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "emit",
+          "call": "emit-force_spring-pull_cell-1_P_C0",
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "cell-1_emit-force_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "emit",
+          "call": "cell-1_emit-force_P_C0",
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} {emit-force_spring-pull-b_list-end_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} {emit-force_spring-pull-b_list-end_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "emit-force_spring-pull-b_list-end_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "emit",
+          "call": "emit-force_spring-pull-b_list-end_P_C0",
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_spring-pull-b_P_C0} {list-end_emit-force_P_C0}",
+          "text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_spring-pull-b_P_C0} {list-end_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "impressed-force_spring-pull-b_P_C0",
+            "list-end_emit-force_P_C0"
+          ],
+          "degree": 3
+        },
+        {
+          "phase": "emit",
+          "call": "list-end_emit-force_P_C0",
+          "raw_text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_spring-pull-b_P_C0} ",
+          "text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_spring-pull-b_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0",
+            "impressed-force_spring-pull-b_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "force",
+          "call": "impressed-force_spring-pull_P_C0",
+          "raw_text": "0 + {spring-pull_P_C0} + {impressed-force_spring-pull-b_P_C0} ",
+          "text": "0 + {spring-pull_P_C0} + {impressed-force_spring-pull-b_P_C0}",
+          "open_calls": [
+            "spring-pull_P_C0",
+            "impressed-force_spring-pull-b_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "force",
+          "call": "spring-pull_P_C0",
+          "raw_text": "0 + (-k*x) + {impressed-force_spring-pull-b_P_C0} ",
+          "text": "0 + (-k*x) + {impressed-force_spring-pull-b_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull-b_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "force",
+          "call": "impressed-force_spring-pull-b_P_C0",
+          "raw_text": "0 + (-k*x) + {spring-pull-b_P_C0} ",
+          "text": "0 + (-k*x) + {spring-pull-b_P_C0}",
+          "open_calls": [
+            "spring-pull-b_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "force",
+          "call": "spring-pull-b_P_C0",
+          "raw_text": "0 + (-k*x) + (-k*x) ",
+          "text": "0 + (-k*x) + (-k*x)",
+          "open_calls": [],
+          "degree": 0
+        }
+      ],
+      "events": [
+        {
+          "kind": "trace",
+          "detail": "started from 'sum-interactions_cell-0_P_C0'"
+        },
+        {
+          "kind": "expand",
+          "detail": "E0 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E7 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E1 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E8 at position 1"
+        },
+        {
+          "kind": "expand",
+          "detail": "E1 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E2 at position 1"
+        },
+        {
+          "kind": "expand",
+          "detail": "E3 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E4 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E3 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E6 at position 0"
+        },
+        {
+          "kind": "return",
+          "detail": "E6 to E3"
+        },
+        {
+          "kind": "return",
+          "detail": "E3 to E1"
+        },
+        {
+          "kind": "return",
+          "detail": "E1 to E8"
+        },
+        {
+          "kind": "return",
+          "detail": "E8 to E1"
+        },
+        {
+          "kind": "return",
+          "detail": "E1 to E7"
+        },
+        {
+          "kind": "return",
+          "detail": "E7 to E0"
+        },
+        {
+          "kind": "return",
+          "detail": "E0 to root"
+        }
+      ],
+      "transcript": [
+        "> set reduce off",
+        "reduce policy: off.",
+        "> set cleanup off",
+        "cleanup policy: off.",
+        "> trace sum-interactions_cell-0_P_C0",
+        "trace started.",
+        "at: root",
+        "{sum-interactions_cell-0_P_C0}",
+        "open positions: 0",
+        "> goto 0",
+        "moved to root.",
+        "> expand 0",
+        "expanded E0 at position 0; now at child.",
+        "> goto 0",
+        "moved to E0.",
+        "> expand 0",
+        "expanded E7 at position 0; now at child.",
+        "> goto 0",
+        "moved to E7.",
+        "> expand 0",
+        "expanded E1 at position 0; now at child.",
+        "> goto 1",
+        "moved to E1.",
+        "> expand 1",
+        "expanded E8 at position 1; now at child.",
+        "> goto 1",
+        "moved to E8.",
+        "> expand 0",
+        "expanded E1 at position 0; now at child.",
+        "> goto 2",
+        "moved to E1.",
+        "> expand 1",
+        "expanded E2 at position 1; now at child.",
+        "> goto 0",
+        "moved to E1.",
+        "> expand 0",
+        "expanded E3 at position 0; now at child.",
+        "> goto 0",
+        "moved to E3.",
+        "> expand 0",
+        "expanded E4 at position 0; now at child.",
+        "> goto 0",
+        "moved to E1.",
+        "> expand 0",
+        "expanded E3 at position 0; now at child.",
+        "> goto 0",
+        "moved to E3.",
+        "> expand 0",
+        "expanded E6 at position 0; now at child.",
+        "trace complete.",
+        "0 + (-k*x) + (-k*x) ",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> state",
+        "at: root",
+        "0 + (-k*x) + (-k*x) ",
+        "open positions: none",
+        "> worklist",
+        "no open holes; trace is complete."
+      ],
+      "complete": true
+    },
+    {
+      "case": "reversed-traversal",
+      "supplied_members": [
+        "gravity-pull",
+        "spring-pull"
+      ],
+      "entries": [
+        [
+          "sum-interactions_l_p_c",
+          "0 l_emit-force_p_c"
+        ],
+        [
+          "emit-force_i_tail_p_c",
+          "+ impressed-force_i_p_c tail_emit-force_p_c"
+        ],
+        [
+          "list-end_step_p_c",
+          ""
+        ],
+        [
+          "impressed-force_i_p_c",
+          "i_p_c"
+        ],
+        [
+          "spring-pull_p_c",
+          "(-k*x)"
+        ],
+        [
+          "gravity-pull_p_c",
+          "(m*g)"
+        ],
+        [
+          "spring-pull-b_p_c",
+          "(-k*x)"
+        ],
+        [
+          "cell-0_step_p_c",
+          "step_gravity-pull_cell-1_p_c"
+        ],
+        [
+          "cell-1_step_p_c",
+          "step_spring-pull_list-end_p_c"
+        ]
+      ],
+      "iterations": [
+        {
+          "iteration": 1,
+          "raw_text": "0 + {impressed-force_gravity-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "text": "0 + {impressed-force_gravity-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_gravity-pull_P_C0",
+            "cell-1_emit-force_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "iteration": 2,
+          "raw_text": "0 + {impressed-force_gravity-pull_P_C0} + {impressed-force_spring-pull_P_C0} {list-end_emit-force_P_C0}",
+          "text": "0 + {impressed-force_gravity-pull_P_C0} + {impressed-force_spring-pull_P_C0} {list-end_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_gravity-pull_P_C0",
+            "impressed-force_spring-pull_P_C0",
+            "list-end_emit-force_P_C0"
+          ],
+          "degree": 3
+        }
+      ],
+      "intermediate": {
+        "raw_text": "0 + {impressed-force_gravity-pull_P_C0} + {impressed-force_spring-pull_P_C0} ",
+        "text": "0 + {impressed-force_gravity-pull_P_C0} + {impressed-force_spring-pull_P_C0}",
+        "open_calls": [
+          "impressed-force_gravity-pull_P_C0",
+          "impressed-force_spring-pull_P_C0"
+        ],
+        "degree": 2
+      },
+      "final": {
+        "raw_text": "0 + (m*g) + (-k*x) ",
+        "text": "0 + (m*g) + (-k*x)",
+        "open_calls": [],
+        "degree": 0
+      },
+      "expansions": [
+        {
+          "phase": "emit",
+          "call": "sum-interactions_cell-0_P_C0",
+          "raw_text": "0 {cell-0_emit-force_P_C0}",
+          "text": "0 {cell-0_emit-force_P_C0}",
+          "open_calls": [
+            "cell-0_emit-force_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "emit",
+          "call": "cell-0_emit-force_P_C0",
+          "raw_text": "0 {emit-force_gravity-pull_cell-1_P_C0}",
+          "text": "0 {emit-force_gravity-pull_cell-1_P_C0}",
+          "open_calls": [
+            "emit-force_gravity-pull_cell-1_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "emit",
+          "call": "emit-force_gravity-pull_cell-1_P_C0",
+          "raw_text": "0 + {impressed-force_gravity-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "text": "0 + {impressed-force_gravity-pull_P_C0} {cell-1_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_gravity-pull_P_C0",
+            "cell-1_emit-force_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "emit",
+          "call": "cell-1_emit-force_P_C0",
+          "raw_text": "0 + {impressed-force_gravity-pull_P_C0} {emit-force_spring-pull_list-end_P_C0}",
+          "text": "0 + {impressed-force_gravity-pull_P_C0} {emit-force_spring-pull_list-end_P_C0}",
+          "open_calls": [
+            "impressed-force_gravity-pull_P_C0",
+            "emit-force_spring-pull_list-end_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "emit",
+          "call": "emit-force_spring-pull_list-end_P_C0",
+          "raw_text": "0 + {impressed-force_gravity-pull_P_C0} + {impressed-force_spring-pull_P_C0} {list-end_emit-force_P_C0}",
+          "text": "0 + {impressed-force_gravity-pull_P_C0} + {impressed-force_spring-pull_P_C0} {list-end_emit-force_P_C0}",
+          "open_calls": [
+            "impressed-force_gravity-pull_P_C0",
+            "impressed-force_spring-pull_P_C0",
+            "list-end_emit-force_P_C0"
+          ],
+          "degree": 3
+        },
+        {
+          "phase": "emit",
+          "call": "list-end_emit-force_P_C0",
+          "raw_text": "0 + {impressed-force_gravity-pull_P_C0} + {impressed-force_spring-pull_P_C0} ",
+          "text": "0 + {impressed-force_gravity-pull_P_C0} + {impressed-force_spring-pull_P_C0}",
+          "open_calls": [
+            "impressed-force_gravity-pull_P_C0",
+            "impressed-force_spring-pull_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "force",
+          "call": "impressed-force_gravity-pull_P_C0",
+          "raw_text": "0 + {gravity-pull_P_C0} + {impressed-force_spring-pull_P_C0} ",
+          "text": "0 + {gravity-pull_P_C0} + {impressed-force_spring-pull_P_C0}",
+          "open_calls": [
+            "gravity-pull_P_C0",
+            "impressed-force_spring-pull_P_C0"
+          ],
+          "degree": 2
+        },
+        {
+          "phase": "force",
+          "call": "gravity-pull_P_C0",
+          "raw_text": "0 + (m*g) + {impressed-force_spring-pull_P_C0} ",
+          "text": "0 + (m*g) + {impressed-force_spring-pull_P_C0}",
+          "open_calls": [
+            "impressed-force_spring-pull_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "force",
+          "call": "impressed-force_spring-pull_P_C0",
+          "raw_text": "0 + (m*g) + {spring-pull_P_C0} ",
+          "text": "0 + (m*g) + {spring-pull_P_C0}",
+          "open_calls": [
+            "spring-pull_P_C0"
+          ],
+          "degree": 1
+        },
+        {
+          "phase": "force",
+          "call": "spring-pull_P_C0",
+          "raw_text": "0 + (m*g) + (-k*x) ",
+          "text": "0 + (m*g) + (-k*x)",
+          "open_calls": [],
+          "degree": 0
+        }
+      ],
+      "events": [
+        {
+          "kind": "trace",
+          "detail": "started from 'sum-interactions_cell-0_P_C0'"
+        },
+        {
+          "kind": "expand",
+          "detail": "E0 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E7 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E1 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E8 at position 1"
+        },
+        {
+          "kind": "expand",
+          "detail": "E1 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E2 at position 1"
+        },
+        {
+          "kind": "expand",
+          "detail": "E3 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E5 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E3 at position 0"
+        },
+        {
+          "kind": "expand",
+          "detail": "E4 at position 0"
+        },
+        {
+          "kind": "return",
+          "detail": "E4 to E3"
+        },
+        {
+          "kind": "return",
+          "detail": "E3 to E1"
+        },
+        {
+          "kind": "return",
+          "detail": "E1 to E8"
+        },
+        {
+          "kind": "return",
+          "detail": "E8 to E1"
+        },
+        {
+          "kind": "return",
+          "detail": "E1 to E7"
+        },
+        {
+          "kind": "return",
+          "detail": "E7 to E0"
+        },
+        {
+          "kind": "return",
+          "detail": "E0 to root"
+        }
+      ],
+      "transcript": [
+        "> set reduce off",
+        "reduce policy: off.",
+        "> set cleanup off",
+        "cleanup policy: off.",
+        "> trace sum-interactions_cell-0_P_C0",
+        "trace started.",
+        "at: root",
+        "{sum-interactions_cell-0_P_C0}",
+        "open positions: 0",
+        "> goto 0",
+        "moved to root.",
+        "> expand 0",
+        "expanded E0 at position 0; now at child.",
+        "> goto 0",
+        "moved to E0.",
+        "> expand 0",
+        "expanded E7 at position 0; now at child.",
+        "> goto 0",
+        "moved to E7.",
+        "> expand 0",
+        "expanded E1 at position 0; now at child.",
+        "> goto 1",
+        "moved to E1.",
+        "> expand 1",
+        "expanded E8 at position 1; now at child.",
+        "> goto 1",
+        "moved to E8.",
+        "> expand 0",
+        "expanded E1 at position 0; now at child.",
+        "> goto 2",
+        "moved to E1.",
+        "> expand 1",
+        "expanded E2 at position 1; now at child.",
+        "> goto 0",
+        "moved to E1.",
+        "> expand 0",
+        "expanded E3 at position 0; now at child.",
+        "> goto 0",
+        "moved to E3.",
+        "> expand 0",
+        "expanded E5 at position 0; now at child.",
+        "> goto 0",
+        "moved to E1.",
+        "> expand 0",
+        "expanded E3 at position 0; now at child.",
+        "> goto 0",
+        "moved to E3.",
+        "> expand 0",
+        "expanded E4 at position 0; now at child.",
+        "trace complete.",
+        "0 + (m*g) + (-k*x) ",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> return",
+        "returned to parent.",
+        "> state",
+        "at: root",
+        "0 + (m*g) + (-k*x) ",
+        "open positions: none",
+        "> worklist",
+        "no open holes; trace is complete."
+      ],
+      "complete": true
+    }
+  ],
+  "mechanism": "Seed 0; recursive list visitation emits infix plus and a deferred force call; empty tail emits empty text.",
+  "limits": [
+    "Membership, closure and a duplicate-free finite enumeration are supplied.",
+    "The addition syntax is interpreted as left-associative; arbitrary accumulator expressions and general foldl are not implemented.",
+    "The callable interaction provider is provisional; kernels are supplied for fixed target P/context C0.",
+    "No new engine code, dynamic closures, arithmetic simplifier, or final NML3 triplet cut is supplied."
+  ]
+}

@@ -10,6 +10,19 @@ from crossover_vector_checks import infer
 
 
 class ComparisonPosteriorTests(unittest.TestCase):
+    def test_negligible_endpoint_tails_do_not_overflow_unused_quantile_branch(self):
+        from comparison_posterior import _quantiles, _PROBS
+        # A linear CDF on the numerical interval has ordinary interior
+        # quantiles even if its endpoint-tail masses are subnormal or zero.
+        # Eager evaluation of an unselected tail division must not overflow.
+        with np.errstate(over='raise'):
+            result = _quantiles(np.array([[[.5, .5]], [[.5, .5]]]),
+                                np.array([[-32., 32.], [-32., 32.]]),
+                                np.ones((2, 1)), np.array([1e-310, 0.]),
+                                np.array([1e-310, 0.]))
+        np.testing.assert_allclose(result, np.broadcast_to(64*_PROBS-32, (2, 7)),
+                                   atol=4e-9, rtol=0)
+
     def test_null_posterior_analytic(self):
         for truth in (.03, 1., 17.):
             result = infer_batch(np.zeros(3), np.zeros(3), truth)

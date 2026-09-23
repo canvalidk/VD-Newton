@@ -1,0 +1,208 @@
+PAGE 1
+VD-Justifications
+Can Valid
+February 2026
+1 Residue
+1.1 Motivation
+Every VD entry stores its definition as a raw string. A definition typically
+(i)invokesother headwords (concept-words already in the dictionary), and (ii)
+supplies some connective structure tying those headwords together. Theresidue
+of a definition is a way to extract and represent this connective structure as a
+template-with-holes.
+1.2 Headwords appearing inside a definition
+Fix a tokenization rule for strings (e.g. split into word-tokens plus punctuation).
+LetWbe the set of headwords currently present in the dictionary.
+Definition 1(Headwords in a definition string).Given a definition strings,
+define the set ofheadwords appearing insby
+Head(s) :={h∈ W:hoccursasatokenins}.
+We often enumerate theuniqueheadwords insasHead(s) ={h 1, . . . , hn}.
+1.3 Residue as a re-insertion function
+Intuitively, residue is the operation “remove headwords, keep the in-between
+text, then make a function that plugs headwords back in.”
+Definition 2(Occurrence decomposition).Letsbe a definition string and sup-
+pose the headword occurrences ins(in reading order) areh i1 , hi2 , . . . , hik, where
+eachh ij ∈Head(s)and repetitions are allowed. Thensadmits a decomposition
+s≡σ 0 hi1 σ1 hi2 · · ·h ik σk,
+where eachσ j is the (possibly empty) substring between headword occurrences.
+1
+PAGE 2
+Definition 3(Residue).Letsbe a definition string and enumerate the unique
+headwordsHead(s) ={h 1, . . . , hn}. Introduce placeholdersx 1, . . . , xn. Define
+theresidueofsto be then-ary function
+Ress(x1, . . . , xn) :=σ 0 xϕ(i1) σ1 xϕ(i2) · · ·x ϕ(ik) σk,
+whereϕ(i j)∈ {1, . . . , n}maps each headword occurrenceh ij to the index of its
+corresponding placeholder (i.e.h ij =h ϕ(ij )).
+[Reconstruction property] By construction, plugging the original headwords
+back into the residue recovers the original definition string (up to the chosen
+tokenization/spacing conventions):
+Ress(h1, . . . , hn)≡s.
+Thus residue is a canonical “definition skeleton” together with its headword-
+holes.
+1.4 Meaningfully defined entries
+Definition 4(Meaningfully defined).A definition stringsismeaningfully
+definedifHead(s) =. Equivalently, its residue is0-ary:Res s is a constant
+string with no inputs.
+1.5 Residue-based equality (one equality among several)
+Residue induces a useful but non-total notion of equivalence between law-strings.
+Definition 5(Residue equality up to placeholder renaming).Lets, tbe two
+strings withHead(s) ={h 1, . . . , hn}andHead(t) ={g 1, . . . , gn}. We saysand
+tareresidue-equal up to renamingif there exists a permutationπ∈S n such
+that
+Ress(x1, . . . , xn)≡Res t(xπ(1), . . . , xπ(n)).
+[Law sameness via residue] This yields a type of “same law” relation: two
+laws may be regarded as the same law (in this residue sense) if they involve
+the same headword signature and their residues are equal or socially/agent-wise
+similar enough. This sits alongside (and does not replace) other equalities such
+as literal syntactic equality, entry-identity in the log, and empirical equivalence
+of predictions.
+1.6 Example
+If a definition has the form
+“accelerationisthetime−derivativeof velocity ′′
+and the headwords in the string are{acceleration,velocity}, then the residue
+is the binary template
+Res(x1, x2) = “x1isthetime−derivativeof x 2
+′′.
+2
+PAGE 3
+Plugging (x1, x2) = (acceleration,velocity) reconstructs the original defini-
+tion.
+2 The Valid Dictionary (VD) Project
+2.1 Science has an Audit Problem
+The Problem.Physics demands rigorous precision in its mathematics (e.g.
+F=ma), but accepts dangerous ambiguity in its language. We treat scientific
+theories as static “books” of facts, ignoring the order in which concepts are
+built. This leads toConcept Rot: students attempt to understand high-level
+abstractions (like “Energy” or “Fields”) without understanding the foundational
+observations that ground them.
+The Solution.TheValid Dictionary(VD) is a protocol that redefines a sci-
+entific theory as anappend-only logof semantic transactions. It applies the logic
+of software version control to the philosophy of science.
+2.2 The 3 Core Rules
+1.The Log.A theory is a sequence of events. You cannot use a “Future
+Word” to define a “Past Word.”
+2.The Anchor.Every chain of definitions must eventually hitResidue—a
+direct human sensation or measurement (e.g. a dial reading).
+3.The Loop (The Law Triplet).APhysical Lawis not a truth-claim;
+it is aclosed 3-cycle. It locks three terms together (like Force, Mass,
+Acceleration) to create a stable structure.
+2.3 The Discovery
+When we “audited” Newtonian Mechanics using this protocol, we discovered a
+hidden hierarchy:
+•Newton’s 2nd Law is alow-degreeloop (close to reality/sensation).
+•Newton’s 3rd Law is ahigh-degreeloop (requires abstract bookkeeping
+like “Systems” and “Momentum”).
+2.4 The Goal
+To create a standard forauditable science. By making dependencies explicit, we
+can improve human education (teaching concepts in the right order) and enable
+AI to reason about causality without hallucinating.
+3
+PAGE 4
+3 The Valid Dictionary Protocol
+To move beyond the vague definition of “scientific theory,” we formalize a theory
+as a named data structure governed by a strict set of rules. This protocol—the
+Valid Dictionary(VD)—redefines a theory not as a static collection of facts,
+but as a sequential log of semantic transactions.
+3.1 The Dictionary Object
+The foundational unit of analysis is theDictionary Instance. We define the
+dictionaryDnot as a function, but as a named authority object consisting of a
+unique identifier and an ordered history:
+D= (N ame,L)
+Where:
+•Name: A unique string identifier (e.g.Newtonian Mechanics v1.0) that
+establishes the scope of authority.
+•L: TheEntry-Log, an ordered, append-only sequence of entries (E n)n≥0.
+The “state” of a theory is not timeless; it is path-dependent. The state of
+the dictionary at indexn, denotedD (n), is the cumulative result of all entries
+E0 throughE n.
+Consequently, the “definition” of any wordwis not a single output string,
+but the complete history of transactions involvingwin the log.
+3.2 The Entry Structure
+Each transaction in the log is a tuple representing a definitional event:
+En = (w, δ)
+Components:
+•w(Headword): The term being defined.
+•δ(Definition String): The literal syntactic output.
+Crucially, the VD distinguishes betweenSyntactic DefinitionandSemantic
+Residue:
+•Syntactic Definition (δ):A string definingwin terms of other words
+in the log (e.g. “Net Force := Mass×Acceleration”).
+•Residue (Γ):A special class of definition that points outside the log to a
+human-executable procedure or recognition pattern (e.g. “The sensation
+of muscle tension” or “The reading on a calibrated dial”). Residue is the
+mechanism by which the abstract log grounds itself in physical reality.
+4
+PAGE 5
+3.3 The Structure of Physical Law: The Triplet
+In standard discourse, a physical law is often treated as a sentence or equation.
+In the VD protocol, aPhysical Lawis identified as a specific topological structure
+within the log: a closed 3-cycle of mutually dependent entries.
+We term this structure theLaw Triplet. It rigidly assigns roles to the three
+terms involved to ensure logical stability without circular collapse.
+The Roles
+The Anchor Term (w Anc):
+•Constraint:Must be previously defined (exists at indexk < n) and must
+carry traceable Residue.
+•Function:Serves as the structural bridge between the new law and the
+existing log. It “donates” meaning to the cycle, preventing the law from
+being purely tautological.
+The Cyclic Terms (w Cyc1 , wCyc2):
+•Constraint:Must not be previously defined (or are treated as empty
+slots).
+•Function:Acquire meaning solely through their structural relationship
+with the Anchor Term.
+The Topology
+A Law Triplet is formed by three sequential entries (EA, EB, EC) that lock these
+terms together:
+wAnc :=f(w Cyc1 , wCyc2)
+wCyc1 :=f(w Anc, wCyc2)
+wCyc2 :=f(w Anc, wCyc1)
+This structure formalizes theconstructive circularityof physics. The law
+does not define the Cyclic Terms in isolation; it defines the relations between
+them, anchored byw Anc.
+3.4 Governance Rules
+To ensure the integrity of the audit trail, the VD enforces three strict constraints:
+Rule 1: The Law of Linear ProvenanceA definitionE n is valid if and
+only if every term used in its definition stringδexists at an indexk < n, or is
+a Cyclic Term introduced simultaneously within a Law Triplet.
+5
+PAGE 6
+Rule 2: The Unique-Anchor ConstraintTo prevent semantic drift, a
+specific headwordwmay serve as the Anchor Term for only one Law Triplet
+within a single dictionary instance.
+This forces conceptual disambiguation. If one wishes to define a “Force” with
+structural behavior different from Newton’s, one must fork the log or introduce
+a new term (e.g.Relativistic Force) rather than overloading the existing
+anchor.
+Rule 3: The Residue RequirementA dictionary instance is considered
+Validif and only if every Law Triplet traces its Anchor Term back to a Residue
+(Γ).
+4 Introduction
+Formal understanding of the phenomenon of “scientific theories” and their role
+in science remains either vague or incomplete. While physicists demand rigorous
+precision in their mathematics, thetheoryitself—the vehicle that carries these
+equations—is often treated as an intuitive, unstructured object. We aim to
+rigorously identify the mathematical nature and behaviour of scientific theories
+by analysing the provenance of their language.
+In doing so, we developed a protocol of rules—theValid Dictionary(VD)—that
+enables scientific theories to be expressed explicitly and auditably. The proto-
+col identifies the theory-specific dictionary as a critical structural feature of any
+theory, managing it not as a static list, but as anaudit trailof definition entries.
+By encoding theories into this common framework, we can trace the lineage of
+concepts and interrogate significant linguistic features of the laws. Importantly,
+aPhysical Lawis identified not as a standalone equation, but as a structural
+feature of this log: a triplet of interdependent definitions.
+We apply this framework by distinguishing between abstract theories (such
+as Newtonian Mechanics), which we callTheory Classes, and the specific ma-
+terial used to teach them, which we callTheory Instances. This distinction is
+central to our methodology. Just as a mechanic studies the abstract engineering
+of a “Car” by examining a specific vehicle on a lift, we study the abstract nature
+of a Theory Class by auditing a specific Theory Instance. While every specific
+car carries a unique history of repairs and modifications—analogous to the spe-
+cific diagrams and explanations added by a lecturer—the underlying engine (the
+Dictionary structure) remains accessible for structural analysis.
+We used the protocol to encode a simplified version of Newtonian Mechan-
+ics, enabling a systematised discussion of its internal architecture. The results
+demonstrate that by making these hidden structures explicit, we can not only
+audit the logical consistency of a theory, but also provide concrete methods to
+improve the clarity and quality of physics education.
+6

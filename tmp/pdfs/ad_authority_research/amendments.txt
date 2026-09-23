@@ -1,0 +1,206 @@
+PAGE 1
+VD notation
+Can Valid
+December 2025
+1 Introduction
+SDVD interface (ADT).State: a named authority (Name(D), D) with an
+entry-log (En)n≥0. Operations:
+lookup(w) :=D(w),
+define(w, δ)En :w:=δ(append),
+D(n) := stage(n),
+n(w) :=∃k < ns.t. head(E k) =w.
+Scope of this paper.We treat the SDVD as an append-only construction:
+entries are added in a fixed order and no in-place edits are permitted. We
+therefore do not propose a governance theory of error-correction (renaming,
+deprecation, merge/split policies, etc.) in this work. If an author wishes to
+revise an entry, the intended procedure here is to restart the build from a clean
+log. A separate follow-up will study admissible update policies and their effect
+on recognisable law-formation.
+Important clarifierWe need to make sure readers understand that entries to
+the VD can be made even though the entries are not physical laws. An example
+might be ”mass1 = the mass associated with particle 1.” or ”spring extension
+= the amount a spring is displaced by from its equilibrium position. ”
+SDVD (abstract interface).An SDVD instance consists of a name Name∈
+Strings, a mapD: Strings→Strings, and an append-only log (E n)n≥0.
+Operations:
+lookup(w) :=D(w),
+define(w, δ)En :w:=δ,
+D(n) := stage(n) (replayE 0, . . . , En),
+n(w) :=∃k < nwith head(E k) =w,
+Triplet(i, j, k) := mutual token-mentions among (Ei, Ej, Ek).
+1
+PAGE 2
+Concept Paper notation Pseudocode Python Type Notes
+LookupD(w)SDVD.D(w) D(w)Strings→Strings Raises error if undefined
+Commit entryE n :w:=δSDVD.define(w,) define(w,d)Strings×Strings→NAppendsE n; returnsn
+Entry-log view (E n)n≥0 SDVD.print log() print log()→(text) Audit / pedagogy
+Stage (snapshot)D (n) SDVD.stage(n) stage(n)N→(Strings→Strings) ReplayE 0..En
+Previously defined n(w)SDVD.previously defined(w,before=n) previously defined(w,before)Strings×N→ {⊤,⊥}Uses headword criterion
+Triplet recogniser (i, j, k)SDVD.is triplet(i,j,k) is triplet(i,j,k)N 3 → {⊤,⊥}Purely syntactic token-match
+Table 1: Core SDVD operations. Pseudocode is shorthand for the formal inter-
+face.
+We treat all recognition predicates (e.g.Triplet) as purely syntactic: they
+operate on strings.
+Multi-valued lookup (polysemy) and whyD: Strings→Stringsis too
+strong.In the early presentation it is tempting to model a dictionary as a
+functionD: Strings→Strings, sending each wordwto a unique definition-
+stringD(w). However, this single-valued model is incompatible with the in-
+tended SDVD workflow: (i) the construction isappend-only(entries are added
+in a linear order), and (ii) a word may legitimately acquire multiple simulta-
+neously active definition-strings (e.g. distinct senses, regimes, approximations,
+or competing proposals). If we insist onDbeing a function, then whenever a
+word is defined twice we must quietly introduce an additional policy (“latest
+definition wins”, “first definition wins”, “deprecated definitions are inactive”,
+etc.). Such a policy is precisely the kind of dictionary-modification rule we aim
+toavoidin this paper.
+Entry-log as primitive object.We therefore take the primitive object to
+be the entry-log rather than a single-valued map. An entry is a pair
+En := (wn, δn)∈Strings×Strings,
+and a stage-ndictionary state is the finite set (or ordered list)
+D(n) :={(w k, δk) : 0≤k≤n}.
+Lookup is induced from the log as amulti-map(equivalently, a relation)
+D(n)[w] :={δ∈Strings : (w, δ)∈ D (n)} ⊆Strings,
+or, when order matters, as the list ofδ k with headwordw k ≡win increasing
+log indexk.
+Why this change is necessary (and not an extra rule).AllowingD (n)[w]
+to contain multiple definition-strings does not add a new governance rule; it
+removes an implicit one. The append-only log already determineswhat com-
+mitments have been made(the multiset of entries), and multi-valued lookup
+2
+PAGE 3
+simply reports those commitments without choosing between them. Any sub-
+sequent practice of selecting, ranking, or reconciling definitions—for example, a
+choice functionS (n)(w)∈ D (n)[w] or a consistency filter—is a separate layer of
+methodology, which we postpone.
+Consequences for “previously defined” and law-recognition.With the
+log as primitive, “previously defined” is a statement about headwords in the log:
+n(w) :⇐ ⇒ ∃k < nsuch thatw k ≡w.
+Law-recognition likewise remains entry-indexed: a triplet is a property of three
+entries (Ei, Ej, Ek), not of a globally unique valueD(w). This keeps the formal
+system faithful to the guiding principle that SDVD commitments are syntactic
+(strings in an ordered log), while deferring semantic questions of consistency or
+preferred usage to later work.
+Unique-November constraint (one November word per law).In ad-
+dition to the entry-log and triplet recognition rules, we impose a simple unique-
+ness constraint onlaw anchors. Each recognised physical law has a designated
+Novemberheadword (the previously-logged term that is locked to two newly
+introduced terms). We require that no headword may serve as the November
+word for more than one law.
+Formally, letLdenote the set of recognised law-events (triplets), and let
+Nov :L →Strings return the November headword of a law-event. Theunique-
+Novemberconstraint is
+∀w∈Strings,
+{L∈ L: Nov(L)≡w}
+ ≤1,
+i.e. Nov is injective. This constraint doesnotprohibit polysemy: a headword
+may still admit multiple simultaneously active definition-strings in the entry-
+log. It only prohibits multiple distinctlaw-introductionsfrom being anchored
+to the same November headword.
+Hypergraph interpretation.Represent each law-eventL∈ Las a hyper-
+edge incident to the participating headwords, and mark one incident vertex as
+the November vertex. The unique-November constraint is equivalent to stating
+that the November-marked incidence relation forms a matching: each word-
+vertex has November-degree at most one. This endows the law-subgraph with
+a clean provenance structure (a unique “anchor” per law) while leaving the full
+entry-log free to contain additional, non-law definitions of the same headwords.
+We will most likely also need to write procedures to police this new rule
+when in code.
+3
+PAGE 4
+2 Entrenched VD Insights from the Newtonian
+Case Study
+The following are VD-specificpractice rulesandstructural insightsdistilled from
+our attempt to encode Newtonian mechanics. These are not claims about what
+is true in nature; they are commitments about how we represent and audit a
+theory in the VD.
+1.Separate bookkeeping from attribution.
+•Bookkeeping:definitions such asinteracting forces setandnet force
+specify how contributions are aggregated once they are included.
+•Attribution:deciding which contributions are included is a meaning-
+level recognition step unless a specific mechanism is explicitly de-
+clared.
+•Rule:never allow an aggregate term (e.g.net force) to silently
+imply a causal source. Causality attribution must be a separate layer.
+2.Do not infer interaction from kinematics alone.
+•Trajectories that look like collisions do not uniquely determine whether
+particles interacted; particles can approach and later separate with-
+out interaction (e.g. passing through in a toy model).
+•Conservation of total momentum for a subsystem does not imply
+internal interaction; it only implies vanishing net external impulse
+on that subsystem.
+•Rule:treat “is interacting” as a modeling decision unless the inter-
+action structure is explicitly represented.
+3.Localize irreducible complexity into recognition.
+•The hardest part of mechanics is not the algebra but the recognition
+step: system boundary choice, contact detection, regime selection,
+and deciding what is “in” the interaction set.
+•Rule:the only allowed vagueness is in recognition predicates; once
+recognition inputs are declared, all downstream steps must be me-
+chanically executable and auditable.
+4.Use explicit intermediate bridge words to avoid smuggling intu-
+ition.
+•Newton I becomes structurally clearer when one introduces an ex-
+plicit bridge term such asuniform motion on interval(I)oruniform motion at time(t0)
+rather than relying on tacit acceleration intuition.
+•Rule:when a law depends on an intuition that readers typically
+import silently, introduce and lock an explicit bridge word.
+4
+PAGE 5
+5.Arguments must appear in the headword for function-like terms.
+•Rule:if a term behaves like a function or predicate of parame-
+ters (time, particle labels, intervals), include those parameters in
+the headword (schema style), e.g.uniform motion at time(t0)not
+uniform motion at time.
+•Motivation: prevents hidden/free variables and makes the dictionary
+log auditable.
+6.Triplets are for commitments; raw-meaning entries are for exe-
+cution semantics.
+•Triplets lock a stable mutual relationship between terms (e.g.raw class,
+class specific features,instance of).
+•Raw-meaning entries specify human-executable procedures (e.g. book-
+keeping steps, recognition inputs, update rules) without attempting
+to define interpretability primitives.
+•Rule:use triplets when you want immovability; use raw-meaning
+when you want operational instructions.
+7.Track “degree of law” as a structural dependency metric.
+•Definition (informal):a law is higher-degree if its November term
+was previously introduced as a winter term of an earlier law; degree
+measures layering.
+•Rule:record degree as part of the audit trail to make compositional
+structure visible.
+8.Maintain strict control of November words (bridge discipline).
+•Rule:a November word is a deliberate anchor; do not promote a
+term to November unless you intend to anchor a new commitment.
+•Keep a ledger of November usage to prevent accidental reuse and
+semantic drift.
+9.Interpretability is assumed; do not over-define.
+•We do not define basic interpretive operations (e.g. arithmetic, sum-
+mation, human recognition) inside the VD; we treat them as meaning-
+level competence, as withF=mawhere multiplication is not de-
+fined.
+•Rule:avoid adding dictionary entries whose only purpose is to justify
+interpretability; prefer explicit bridge terms only when they remove
+ambiguity about dependencies.
+10.Distinguish existence from activation (presence vs activity).
+5
+PAGE 6
+•A modeled entity can exist even when its instantaneous contribution
+is zero (e.g. a spring exists even if not stretched).
+•Rule:represent “object exists” separately from “object is active /
+contributes now,” so that conceptual presence is not conflated with
+force magnitude.
+11.Avoid inferring causal source from net quantities.
+•net forceis an aggregate; equal-and-oppositenet forces do not
+identify whether the source was mutual interaction, mediation by a
+third object, or boundary exchange.
+•Rule:causal/source claims require explicit contributory structure
+(e.g. force-terms or later acting-object instances), not merely net
+equalities.
+12.System boundaries must be explicit when action–reaction is dis-
+cussed.
+•Momentum conservation and Newton III style reasoning depend on
+whether reaction partners are included in the system.
+•Rule:whenever a reaction term is not represented within the modeled
+system, the omission must be stated as an explicit boundary/externalization
+choice.
+6

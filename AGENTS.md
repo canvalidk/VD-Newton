@@ -1,5 +1,27 @@
 # VD Newton Project Guidance
 
+## Human-facing spaces and working artifacts — user preference, 2026-09-08
+
+The normal VD-Newton and VD-docs document areas are the user's curated,
+human-readable spaces. Keep internal working artifacts in a clearly separate
+scratch area, such as the workspace's `.tools/` directory. Scripts, logs,
+probes, machine outputs, and scratch notes may be created there as needed to
+complete authorized work; they do not each require an explicit request.
+This is a boundary between the user's document collection and the agent's
+working materials, not a ban on artifacts or a requirement to run checks only
+in memory. Do not routinely add companion reports or experiment bundles to
+the human-facing collection. Discuss exploratory ideas in the conversation
+without turning each discussion into another document. Requested production
+code, entry work, and necessary verification belong on their appropriate
+production surfaces.
+In VD-docs, a record is a specific document kind. The user decides when a
+record is written. Do not independently create or label documents as records,
+or create files merely to fit the document organization. Entry packets are
+also a specific authoring format; implementation notes are not entry packets.
+The record-keeping and handoff guidance below governs user-requested documents;
+it is not a standing request to turn each discussion or experiment into files.
+Do not delete existing artifacts as cleanup without the user's instruction.
+
 ## Project responsibility
 
 This workspace is the Newton entry-production surface. Its primary job is to
@@ -65,24 +87,26 @@ quick scoped changes needed to advance entry production.
 
 Managed VD-docs context is read-only by default. Do not reorganize, rename,
 deduplicate, refresh, or edit NML/context/informing documents in VD-docs unless
-the user explicitly asks. Record important conflicts, stale sources, entry
-decisions, and newly discovered dependencies as a handoff to the VD folders
-manager instead.
+the user explicitly asks. Raise important conflicts, stale sources, entry
+decisions, and newly discovered dependencies in the conversation. Write a
+record or handoff to the VD folders manager only when the user requests it.
 
 Do not delete, archive, or demote a local document solely because a copy exists
 in VD-docs. First establish whether the local file is historical, current,
 unsubmitted, or divergent and whether the managed copy has actually absorbed
 its content.
 
-When an entry task consumes VD-docs context, record the repository commit and
-source paths in the entry packet or handoff. Store locally the entry-facing
-interpretation and decisions, not another maintained copy of the source
-collection.
+When an entry task consumes VD-docs context, include the repository commit and
+source paths in the user-requested entry packet or handoff. If no saved
+deliverable was requested, report the provenance in the conversation. Any
+requested local document should hold entry-facing interpretation and decisions,
+not another maintained copy of the source collection.
 
 ## Outbound handoffs to VD-docs
 
-User policy established 2026-09-05: save new records and handoff documents
-intended for VD-docs in the workspace-root folder `pass to VD-docs/`.
+User policy established 2026-09-05, clarified 2026-09-08: when the user requests
+a record or handoff document intended for VD-docs, save it in the workspace-root
+folder `pass to VD-docs/`. The user decides when those documents are written.
 This is the local staging location for documents awaiting transfer to the
 managed collection. Keep their source references and submission status in
 the document; saving there does not itself mean VD-docs has received it.

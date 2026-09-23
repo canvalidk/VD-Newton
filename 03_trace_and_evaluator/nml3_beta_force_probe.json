@@ -1,0 +1,144 @@
+{
+  "repository": "canvalidk/VDfirst",
+  "source_commit": "11bfd8df1d27a5c7f2190aade2470a8a8801dc1f",
+  "source_branch": "codex/parameterized-headwords",
+  "source_sha256": {
+    "application.py": "13f70772dfd7d2c7423c0d9e0f7ce7a632e493f0f78bf72af14ecd3844890099",
+    "engine.py": "9ce153a0dc53bcdbc0557976ae7f49e0970accda8652df87ddd5b2f4cda94eca",
+    "simulator.py": "cf20d093d2ecb94ec8399ca9fea269177aac53f1d8794f96a0a92d0a656d06b8",
+    "repl.py": "cbd42ab45c5da2f720f9583599dc303ff47bfa3a4ff9228100c90dfa4faba4e8",
+    "demand.py": "0d65a145e2b174458587577abb326e50ba3450607114501a4464cc02906b1dd1",
+    "definiens.py": "972536e42692e41f982a50d4303e3bb224ef38da80e1b004ed22dfbe3e928e7f",
+    "residual.py": "4045a0c323b141e4778bc7d9ca4027842ef5bfd34b06e93fbebbe25f958ad48f"
+  },
+  "fixture_entries": [
+    [
+      "impressed-force_i_p_c",
+      "i_p_c"
+    ],
+    [
+      "spring-pull_p_c",
+      "(-k*x)"
+    ],
+    [
+      "gravity-pull_p_c",
+      "(m*g)"
+    ]
+  ],
+  "snapshots": [
+    {
+      "stage": "supplied output shape of a future summation traversal",
+      "text": "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0}",
+      "degree": 2,
+      "open_calls": [
+        "impressed-force_spring-pull_P_C0",
+        "impressed-force_gravity-pull_P_C0"
+      ]
+    },
+    {
+      "stage": "first beta-like instantiation exposes the spring provider",
+      "text": "0 + {spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0}",
+      "degree": 2,
+      "open_calls": [
+        "impressed-force_gravity-pull_P_C0",
+        "spring-pull_P_C0"
+      ]
+    },
+    {
+      "stage": "first force expression exposed; second call remains lazy",
+      "text": "0 + (-k*x) + {impressed-force_gravity-pull_P_C0}",
+      "degree": 1,
+      "open_calls": [
+        "impressed-force_gravity-pull_P_C0"
+      ]
+    },
+    {
+      "stage": "both force expressions exposed",
+      "text": "0 + (-k*x) + (m*g)",
+      "degree": 0,
+      "open_calls": []
+    }
+  ],
+  "transcript": [
+    "> set reduce off",
+    "reduce policy: off.",
+    "> set cleanup off",
+    "cleanup policy: off.",
+    "> trace 0 + impressed-force_spring-pull_P_C0 + impressed-force_gravity-pull_P_C0",
+    "trace started.",
+    "at: root",
+    "0 + {impressed-force_spring-pull_P_C0} + {impressed-force_gravity-pull_P_C0}",
+    "open positions: 0, 1",
+    "> expand 0",
+    "expanded E0 at position 0; now at child.",
+    "> expand 0",
+    "expanded E1 at position 0; now at child.",
+    "> return",
+    "returned to parent.",
+    "> return",
+    "returned to parent.",
+    "> expand 1",
+    "expanded E0 at position 1; now at child.",
+    "> expand 0",
+    "expanded E2 at position 0; now at child.",
+    "trace complete.",
+    "0 + (-k*x) + (m*g)",
+    "> return",
+    "returned to parent.",
+    "> return",
+    "returned to parent.",
+    "> state",
+    "at: root",
+    "0 + (-k*x) + (m*g)",
+    "open positions: none",
+    "> worklist",
+    "no open holes; trace is complete."
+  ],
+  "events": [
+    {
+      "kind": "trace",
+      "detail": "started from '0 + impressed-force_spring-pull_P_C0 + impressed-force_gravity-pull_P_C0'"
+    },
+    {
+      "kind": "expand",
+      "detail": "E0 at position 0"
+    },
+    {
+      "kind": "expand",
+      "detail": "E1 at position 0"
+    },
+    {
+      "kind": "return",
+      "detail": "E1 to E0"
+    },
+    {
+      "kind": "return",
+      "detail": "E0 to root"
+    },
+    {
+      "kind": "expand",
+      "detail": "E0 at position 1"
+    },
+    {
+      "kind": "expand",
+      "detail": "E2 at position 0"
+    },
+    {
+      "kind": "return",
+      "detail": "E2 to E0"
+    },
+    {
+      "kind": "return",
+      "detail": "E0 to root"
+    }
+  ],
+  "result": "0 + (-k*x) + (m*g)",
+  "complete": true,
+  "open_demands": 0,
+  "limits": [
+    "Initial force-sum syntax and membership are supplied; neither loop is implemented by this probe.",
+    "The callable-interaction forwarding interface is a test proposal, not an adopted entry structure.",
+    "Kernel definitions are supplied for fixed target P and context C0, with downward x from spring natural length.",
+    "No recognition, automatic force-law dispatch, arithmetic simplification, or physics validation is claimed."
+  ]
+}

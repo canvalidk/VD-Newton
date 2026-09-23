@@ -1,5 +1,12 @@
 # Mass estimator behavior laboratory
 
+For the current understanding of the estimator, completed simulation evidence
+and next question, start with the [investigation README](investigation/README.md).
+Its [testing manual](investigation/comparison_guide.md) explains the reusable
+simulation infrastructure. The material below documents the original numerical
+reference and its dated behavior checks; its commands remain specific to that
+reference suite.
+
 **Current purpose, clarified by the user 2026-09-07:** investigate what follows
 assuming Newton II is correct. For this conditional investigation, large error
 scores describe unlikely measurement discrepancies; they do not terminate the
@@ -118,8 +125,10 @@ checks a full-vector integral in the original magnitude/direction coordinates.
 
 The full empirical pipeline's object/time/frame and provenance checks, hard
 bounds, non-Gaussian policies, common-mass posterior integration, and production
-admission classifications are outside this laboratory. Common-mass profile
-compatibility has a test; a common-mass uncertainty law has not been invented.
+admission classifications are outside this original reference implementation.
+Common-mass profile compatibility has a test here. The later investigation
+develops [joint inference and confidence constructions](investigation/joint_inference_and_uncertainty.md)
+under declared models; those results do not install a new production policy.
 
 ## Robot and cart real-data trials (2026-09-06)
 

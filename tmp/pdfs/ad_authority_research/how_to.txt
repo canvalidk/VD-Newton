@@ -1,0 +1,261 @@
+PAGE 1
+SDVD / Valid Dictionary (VD): First Draft Notes
+1 Motivation and scope
+These notes are a first draft of a proposal for formalising how scientific language is built and
+used. The core claim is not that we have discovered the “true meanings” of words, but that we
+can write down a disciplinedstructurein which statements about words, definitions, and laws
+are made explicit and therefore debateable, comparable, and repairable.
+The proposed framework is theValid Dictionary(VD), implemented as a named dictionary
+authority. A concrete instance used throughout is theSuper Duper Valid Dictionary(SDVD), a
+deliberately unobtrusive name intended to avoid premature sociological escalation (“this is the
+one true dictionary of science”) while still enabling precise reference.
+2 VD as a named data structure
+2.1 Dictionary object and the necessity of a name
+At the most primitive level, a dictionary is a data structure:
+D: Strings→Strings,
+mapping an input string (a “word”) to an output string (its dictionary entry).
+A subtle but foundational point is that, in practice, one cannot speak about “the definition
+of a word” without implicitly relying on anauthority—some specific dictionary or convention.
+The VD proposal makes that authority explicit by treating the dictionary as anamed object.
+Definition 1(Named dictionary authority).Anamed dictionaryis a pair( Name(D), D)where
+Name(D)∈StringsandD: Strings→Strings.
+Remark 1(Authority indexing).Statements of the form “the definition of w is δ” should be
+read as
+“In dictionaryD,D(w) =δ.”
+Without the dictionary name (explicit or implicit), the statement is ill-posed.
+2.2 Democratising authority
+Once authority is explicit, it is alsocontestable and replicable. One may propose SDVD, an
+alternative VD2, or any other named dictionary, and compare them as objects. This turns many
+philosophical disputes into explicit disagreements about dictionary entries and their induced
+behaviour, rather than disputes conducted under a hidden background authority.
+Entries, ordinality, and the zeroth entry.Having fixed anameddictionary D : Σ∗ → Σ∗
+(and hence an explicit locus of authority for what is “meant” by each word), we must also specify
+what it means toaddcontent to D. We therefore treat each addition as anentry-event: at
+some stage n we submit an entry En to the dictionary, producing an updated dictionary D(n)
+which extends D(n−1). This induces an ordinal notion of priority: one entry isearlierthan
+1
+PAGE 2
+another if it was submitted at a prior stage. Numbering the entries by conventional integers
+is not logically necessary (the global structure is a hypergraph of cross-references), but some
+well-founded bookkeeping of “earlier vs later” is practically indispensable, because our later rules
+(e.g. “previously defined”) are statements about what existedbeforea given submission. With
+this in place, we designate a canonical starting point: theraw definitionentry is taken to be
+thezeroth entry E0, which fixes the primitive notion of definition used throughout. Concretely,
+E0 asserts that adefinitionis the output string associated to a word by the dictionary, and
+that two raw definitions are equal iff the corresponding strings are character-identical. From
+this point onward, all subsequent entries are logged relative to this baseline, so that claims like
+“word w was previously defined” become precise statements about whether w occurred in the
+accumulated log{E 0, E1, . . . , En−1}at the time an entryE n was added.
+3 The first three SDVD entries
+We now install three core entries in SDVD. They act as type-setting primitives: they specify
+what sort of objects “definitions”, “meanings”, and “physical laws” are taken to bein this
+framework.
+3.1 Definition:definitionis the dictionary output
+Definition 2(Definition in SDVD (DoD)).In SDVD, adefinitionis the output string returned
+by the named dictionary when queried with a word. Two raw definitions are different if even one
+character differs.
+This is intentionally syntactic. It separatesdictionary content(strings) from whatever mental,
+physical, or social phenomena those strings may trigger.
+3.2 Meaning:meaningis what an utterance does
+A dictionary entry is a string; meaning is not required to be a string. The VD proposal treats
+meaning as a causal notion: the effect of an utterance on the world.
+Definition 3(Meaning in SDVD (DoM)).In SDVD, themeaningof a word is the total change
+in the relevant state of the world (physical, cognitive, computational, etc.) caused by the utterance
+of that word in a given context.
+Remark 2(Wavefunction as an instantiation).In quantum-mechanical settings, the “relevant
+state” may be represented as a wavefunction; in other settings it may be a belief state, internal
+robot registers, a social/behavioural state, or even the acoustic field. The definition is intended
+to bemodel-agnostic: choose the state representation appropriate to the discussion.
+3.3 Physical law: a triplet entry (structural definition)
+The definition of physical law is kept purely structural: it describes a pattern of dictionary
+introduction.
+Definition 4(Physical law in SDVD).Aphysical lawis thefirst entryin atripletof
+dictionary entries in which:
+(i) the first word is introduced together with (and explicitly evokes) two previously undefined
+terms, and
+(ii) the three terms aremutually locked: none can be fully defined without reference to the
+other two.
+2
+PAGE 3
+This definition intentionally does not attempt to encode truth, experiment, or utility. Those
+topics may be discussed as external selection pressures on which triplets are retained by a
+community, but they are not built into the dictionary-level definition of “physical law”.
+4 The Punnet Square: tracking definition/meaning interactions
+Words like “definition” and “meaning” are themselves words whose behaviour must be tracked.
+A compact bookkeeping device is thePundit Square, a 2×2 grid:
+Definition of Definition (DoD) Definition of Meaning (DoM)
+Meaning of Definition (MoD) Meaning of Meaning (MoM)
+4.1 Pedagogical order
+A practical point: many readers interpret “definition” as “mathematical characterisation” by
+default. To avoid this confusion, a good learning order is:
+DoD→DoM→MoD→MoM.
+First nail down the syntactic dictionary notion of definition; then ground meaning as causal
+effect; only then explain how the word “definition” behaves in human/mathematical practice;
+finally explain the meta-behaviour of the word “meaning”.
+5 DoM with examples: meaning as causal impact
+Under DoM, an utterance can have many types of effects:
+•Physical:air vibrations, recordings, signals in wires, actuation on sensors.
+•Cognitive:recalling a stored definition, shifting attention, changing expectations.
+•Behavioural/social:changing decisions, eliciting actions, coordinating groups.
+•Computational:updating internal registers, running a procedure, logging an event.
+Thus meaning is not reduced to a private mental “feeling” nor to a static semantic object; it is
+the world-state update induced by an utterance.
+A key interaction with the dictionary is this: uttering a word can increase the probability
+that listeners explicitly realise (or “load into working memory”) particular definition strings
+stored in their own internal dictionaries.
+6 MoD: mathematical equality vs raw definitional identity
+A recurring confusion is that the word “definition” often means something like “characterisation
+up to mathematical equality”. VD makes it possible to separate these notions cleanly.
+6.1 Raw definitional identity
+By construction, raw definitional identity is character-level identity of strings. If δ1 and δ2 differ
+by one character, they are distinct raw definitions.
+3
+PAGE 4
+6.2 Mathematical equality is a different relation
+In ordinary mathematics one writes
+4 = 2 + 2 = 1 + 3.
+This is not a claim that the strings “4”, “2+2”, and “1+3” are identical definitions; they are
+not. Instead the equality sign “=” is carrying amathematical equalityrelation, e.g. equality of
+value in (N,+).
+Remark 3(VD is compatible with mathematics).VD does not reject mathematical language;
+it clarifies that mathematical “=” is not raw string identity. Mathematics is an arena where
+both definitions and the operational meaning of expressions are unusually tightly policed.
+7 MoM: why language works, why debates break, and how VD
+helps
+Themeaning of meaningis the recognition that (i) definitions are private and variable, while (ii)
+communication succeeds because thecausal effectsof utterances (meanings) overlap sufficiently
+across agents.
+7.1 Different definitions, aligned meanings
+Two people almost never store identical definition strings for a word; yet they can coordinate
+because utterances push them into similar enough predictive/behavioural states. Communication
+is therefore primarily supported by overlap of meanings, not identity of raw definitions.
+7.2 Why natural language is easy and mathematics is hard
+Natural language tolerates large definitional variation because approximate meaning-overlap
+often suffices in context. Mathematics is difficult precisely because it demands tighter policing:
+both definitions and the operational meaning of expressions (procedures performed by people
+and machines) must align sharply to support long inference chains.
+7.3 Why apparent agreement collapses in debate
+Casual agreement can be an illusion: agents may share enough meaning-overlap for everyday
+coordination while harbouring divergent definitions that only become visible under pressure
+(debate, edge cases, formal derivation). VD diagnoses this as a mismatch between definition
+alignment and meaning alignment.
+7.4 Yielding authority to SDVD as a repair protocol
+If disputants yield authority to a shared named dictionary (e.g. SDVD), they gain a protocol:
+(i) index claims to explicit entries (stop smuggling hidden authorities),
+(ii) separate definitional disagreement (dictionary edits/splits) from empirical disagreement
+(world facts),
+(iii) split overloaded symbols/words into distinct entries when needed,
+(iv) continue discussion under explicit rules despite language slipperiness.
+4
+PAGE 5
+8 Triplets and physical law structure
+8.1 Abstract triplet pattern
+Let D be a named dictionary. A triplet involves three words ( w0, w1, w2) and three entries D(wi)
+such that:
+(i)w 0 is introduced by an entry that explicitly invokes two previously undefined terms w1, w2,
+(ii)D(w 1) referencesw 0 andw 2,
+(iii)D(w 2) referencesw 0 andw 1,
+so that the dependency graph forms a 3-cycle. This is the minimal closure structure preventing
+infinite definitional regress.
+Previously defined (relative to an entry index).Fix an entry-log {E0, E1, . . .}, where
+En is the nth submitted dictionary entry. At the moment we are about to add En, we say a
+word (raw string) w ispreviously definediff there exists some k < n such that Ek is an entry
+whosedefined word(the word on the left / the headline of the entry) is exactly w. Equivalently:
+w already has its own dictionary entry prior to stage n. (We distinguish this from the weaker
+notionpreviously mentioned, meaning w occurs anywhere inside earlier entry-texts; for the
+governance rules below, “previously defined” is the operative notion.)
+Law triplet.Alaw tripletis a package of three entries which jointly lock three words into
+mutual definability. Concretely, a law triplet introduces two new words (thewinters) relative to
+a previously defined bridge word, and provides three entries such that each of the three words is
+defined in terms of the other two. In best practice these three entries are logged consecutively
+(so they are recognisable as one unit), but the underlying structure is the existence of the three
+mutual entries, not the typography of the lecture.
+Recognisability and completion of law triplets.A single entry mayintendto be part of
+a physical law without yet beingrecognisableas such from the dictionary alone. This is because
+a law, in the strict SDVD sense, is not a lone statement but atripletof mutually defining entries:
+until the other two entries are present, the reader (or an automated checker) cannot in general
+certify that the requisite three-cycle exists, nor determine unambiguously which words are being
+locked together by the law. Accordingly, we distinguish between acandidate law-entry(the
+first entry of a prospective triplet) and acompleted law-triplet(all three entries logged). As a
+best practice, whenever one records a candidate law-entry one should promptly follow it by the
+remaining two entries, ideally as a consecutive block in the entry-log. This does not change
+the logical content of the theory, but it greatly improves auditability, teaching clarity, and the
+mechanical verification of “previously defined” constraints.
+Explicit numbered example.Assume that by some earlier point we have already defined the
+bridge word net force; i.e. there exists an index k such that Ek has defined word net force.
+We now log a law triplet at the next three indices:
+Ek+1 (November entry)net force:= mass· acceleration,
+Ek+2 (January entry)mass:=net force/acceleration,
+Ek+3 (February entry)acceleration:=net force/mass.
+Here the underscore-marked strings mass and acceleration in Ek+1 are placeholders indicating
+that these are intended asnewwords at the time the bridge entry is first stated; they are then
+5
+PAGE 6
+“promoted” to ordinary headwords by Ek+2 and Ek+3. Once all three entries are present, the
+two winter-words are unambiguously recognisable as the two other nodes locked to the bridge
+word by this triplet.
+The November–January–February convention (the winters).For any law triplet, we
+adopt the following role-names for the three defined words:
+• The word defined by thefirstentry of the triplet is called theNovember word(role-index
+0). It must bepreviously definedin the dictionary, and functions as the bridge linking this
+law to earlier material.
+• The words defined by thesecondandthirdentries are called theJanuary word(role-index
+1) and theFebruary word(role-index 2). Together they are calledthe winters, i.e. the
+paired new words introduced (or at least firstlocked) by the law triplet.
+This convention allows us to refer quickly to governance constraints such as: “the November
+word must already be defined; the winters must be new (or else require refactor/renaming).” It
+also supports retroactive reconstruction: a lecturer may present any one of the three equations
+first, but the triplet can be oriented by identifying which participating word is already defined
+in the existing dictionary (the November word), thereby determining which two words are the
+winters.
+Naming the entries themselves.Finally, we name the three entries of a law triplet by the
+month of the word they define: the entry which defines the November word is theNovember
+entry; the entry which defines the January word is theJanuary entry; and the entry which
+defines the February word is theFebruary entry.
+8.2 Triplets can chain
+Large mathematical statements can be decomposed into networks of triplets (by introducing
+intermediate names for subexpressions). In practice one often keeps equations compact to avoid
+naming explosion, while recognising that a triplet decomposition exists in principle.
+9 Laws, operations, and “meaningful relationships”
+A physical or mathematical law is not merely a list of definitions; it also specifies operations and
+relations that tell a capable agent what to do with numbers or procedures.
+Even in arithmetic, defining an addition operator does not by itself make the statement
+“2 + 2 = 4” hold as a raw definitional identity. Rather, the equation asserts that when a capable
+system engages the relevant computation under the accepted rules, the values coincide. This
+illustrates a general point: the non-term symbols in laws (“+”, “=”, “proportional to”, etc.)
+carry binding operational meaning.
+(1) Symbol overloading and dictionary collisions.Physics notation often reuses the same
+glyph for distinct quantities (e.g. writing F in both F = ma and F = kx), relying on human
+intuition and context to disambiguate. In VD terms this is adictionary collision: multiple
+concepts are implicitly mapped onto the same symbol-entry, and meaning is patched in “by vibe”
+rather than by explicit definition. A VD-aligned discipline therefore prefers naming hygiene (e.g.
+Fnet, FT , Fg) and explicit splits of overloaded symbols, because otherwise definitional drift is
+easy, learning becomes harder, and even capable reasoning systems can silently conflate distinct
+entries.
+6
+PAGE 7
+(2) “Definition” in ordinary practice vs. SDVD “definition”.Many readers hear
+the worddefinitionand import a mathematical notion (“characterisation up to mathemati-
+cal equality”) or an essentialist notion (“the true nature of the thing”). SDVD deliberately
+starts with a narrower syntactic primitive:definitionmeans the literal output string of a
+named dictionary, with identity determined character-by-character. The pedagogical order
+DoD→DoM→MoD→MoM is designed to prevent confusion: one first fixes the string-level object,
+then grounds meaning as causal impact, and only then explains how mathematical and everyday
+uses of “definition” relate to (and often overload) the SDVD usage.
+(3) Equality is overloaded: raw identity vs. mathematical equality.The glyph “=”
+carries multiple distinct relations across domains. Under raw definition, equality isstring identity:
+two definitions are equal only if their character strings are identical. In mathematics, however,
+“=” typically denotes avalue-equalityrelation inside a structure (e.g. equality of denotation in
+(N, +)), allowing different strings such as “2 + 2” and “1 + 3” to be equal even though they
+are not identical as strings. VD is compatible with mathematics precisely because it forces
+this disambiguation: whenever “=” is used, one must make explicit which equality relation is
+intended rather than silently sliding between them.
+10 Outlook (not yet finalised)
+The present notes motivate several necessary extensions:
+•Governance rules:how laws are added, revised, restricted in scope, or removed.
+• Question-answering:how “why?” chains traverse triplets and where closure is obtained.
+• Causality:how causal language emerges from update rules, interventions, and directed
+traversals.
+• Stopping regress:formalising why repeated “why?” loops around triplets unless anchored
+by external procedures.
+7

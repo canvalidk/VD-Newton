@@ -1,0 +1,25 @@
+PAGE 1
+The Valid Dictionary: Core Specification
+Can Valid
+February 2026
+V alid Dictionary (VD) Document:The Valid Dictionary: Core Spec-
+ificationStatus:DRAFT
+Internal ID:vd-coreProject tag:vd-project
+Point.Define the VD as a formal object: notation, core syntax, and validity
+constraints that are stable across all theory instances.
+T arget goals.
+•Specify theVD data type(entries, headwords, indices, dependency struc-
+ture, residues, and law-triplets).
+•Provide aminimal syntactic rule listthat is crisp and checkable.
+•Establish a notation system for referencing VD structures throughout the
+project.
+•State thescope boundary: what this document does and does not define.
+Non-goals.
+•Teaching Newtonian mechanics or motivating physics content.
+•Providing an extended style guide (belongs invd-guide).
+•Philosophical defense beyond brief positioning (belongs invd-philosophy).
+T arget audience.Physicists and technically-minded readers who want a pre-
+cise spec; future validators/implementers.
+Dependencies / references.None (this is the root reference).
+1 Introduction
+1

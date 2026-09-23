@@ -83,15 +83,20 @@ def _quantiles(cdf_coeff, edges, panel_end, left_mass, right_mass):
     # Analytic endpoint tails also cover quantiles outside the numeric range.
     lm, rm = left_mass[:, None], right_mass[:, None]
     with np.errstate(divide='ignore', invalid='ignore'):
+        # np.where evaluates both branches. Log differences avoid overflowing
+        # an unused ratio when an endpoint mass is positive but subnormal.
         value = np.where(probability < lm,
-                         -_LIMIT + np.log(probability / lm), value)
+                         -_LIMIT + np.log(probability) - np.log(lm), value)
         value = np.where(probability > 1 - rm,
-                         _LIMIT - np.log((1 - probability) / rm), value)
+                         _LIMIT - np.log1p(-probability) + np.log(rm), value)
     return value
 
 
 def _summary(density, edges, z, half, weights, vander, projection,
              left_coefficient, right_coefficient, y, truth_log_kernel):
+    # Per-trial channel calibration can give different standardized truths;
+    # these affect only the scoring location, never the posterior integration.
+    y = np.broadcast_to(np.asarray(y, dtype=float), (len(edges),))
     raw_panel_mass = np.sum(density * weights, axis=2) * half
     raw_left = left_coefficient * math.exp(-_LIMIT)
     raw_right = right_coefficient * math.exp(-_LIMIT)
@@ -117,21 +122,21 @@ def _summary(density, edges, z, half, weights, vander, projection,
     quantiles = _quantiles(cdf_coeff, edges, panel_end, left_mass, right_mass)
 
     rows = np.arange(len(edges))
-    index = np.clip(np.sum(edges <= y, axis=1) - 1, 0, half.shape[1] - 1)
+    index = np.clip(np.sum(edges <= y[:, None], axis=1) - 1, 0, half.shape[1] - 1)
     position = (y - (edges[rows, index] + edges[rows, index + 1])/2) / half[rows, index]
     position = np.clip(position, -1, 1)
     cdf_truth = np.clip(_evaluate(cdf_coeff[rows, index], position), 0, 1)
     previous_integral = np.cumsum(panel_cdf_integral, axis=1) - panel_cdf_integral
     integral_to_truth = (left_mass + previous_integral[rows, index]
                          + _evaluate(integral_cdf_coeff[rows, index], position))
-    if y < -_LIMIT:
-        cdf_truth = left_mass * math.exp(y + _LIMIT)
-        integral_to_truth = cdf_truth.copy()
-    elif y > _LIMIT:
-        tail_factor = math.exp(_LIMIT - y)
-        cdf_truth = 1 - right_mass * tail_factor
-        integral_to_truth = (left_mass + panel_cdf_integral.sum(axis=1)
-                             + y - _LIMIT - right_mass * (1 - tail_factor))
+    left = y < -_LIMIT
+    cdf_truth[left] = left_mass[left] * np.exp(y[left] + _LIMIT)
+    integral_to_truth[left] = cdf_truth[left]
+    right = y > _LIMIT
+    tail_factor = np.exp(_LIMIT - y[right])
+    cdf_truth[right] = 1 - right_mass[right] * tail_factor
+    integral_to_truth[right] = (left_mass[right] + panel_cdf_integral[right].sum(axis=1)
+                               + y[right] - _LIMIT - right_mass[right] * (1 - tail_factor))
 
     # .5 E|Z-Z'| = E[Z(2F(Z)-1)], with analytic endpoint tail contributions.
     pair_half = np.sum(np.sum(z * (2*cdf - 1) * pdf * weights, axis=2) * half, axis=1)
@@ -162,7 +167,8 @@ def infer_batch(force, acceleration, truth=1., order=96):
     """Return batched point estimates and continuous log-mass diagnostics.
 
     ``force`` and ``acceleration`` have shape (n,3), or shape (3,) for one
-    reading.  ``truth`` is one strictly positive finite mass, used only for
+    reading. ``truth`` is one strictly positive finite mass or an (n,) array,
+    used only for
     CDF and scoring; it never selects estimator values or quadrature panels.
     ``order`` >= 24 controls within-panel resolution (96 means degree 16).
     Increase to 192 for convergence checks.  Fixed endpoint tails outside
@@ -175,7 +181,9 @@ def infer_batch(force, acceleration, truth=1., order=96):
         raise ValueError('force and acceleration must have identical (n,3) shapes')
     if not np.all(np.isfinite(force)) or not np.all(np.isfinite(acceleration)):
         raise ValueError('readings must be finite')
-    if not np.isfinite(truth) or truth <= 0 or order < 24:
+    truth = np.asarray(truth, dtype=float)
+    if (truth.shape not in ((), (len(force),)) or not np.all(np.isfinite(truth))
+            or np.any(truth <= 0) or order < 24):
         raise ValueError('truth must be finite and positive; order must be >= 24')
     if not len(force):
         raise ValueError('at least one reading is required')
@@ -187,7 +195,10 @@ def infer_batch(force, acceleration, truth=1., order=96):
     fixed = np.array([-_LIMIT, -20., -12., -8., -6., -4., -2., 0.,
                       2., 4., 6., 8., 12., 20., _LIMIT])
     # Narrow panels straddle the resolved interior mode.
-    adaptive = centre[:, None] + scale[:, None] * np.array([-2., 0., 2.])
+    # Resolve the shoulders as well as the central peak: with repeated
+    # measurements a very narrow peak can otherwise leave its two-sigma
+    # tails inside a much wider fixed panel, understating uncertainty.
+    adaptive = centre[:, None] + scale[:, None] * np.array([-8., -4., -2., 0., 2., 4., 8.])
     adaptive = np.clip(adaptive, -_LIMIT + 1e-8, _LIMIT - 1e-8)
     edges = np.sort(np.concatenate((np.broadcast_to(fixed, (len(p), len(fixed))), adaptive), axis=1), axis=1)
     # Exact coincidences create zero panels, which are harmless for integrals;
@@ -203,13 +214,13 @@ def infer_batch(force, acceleration, truth=1., order=96):
                     + 2*dot[:, None, None]*sn*cs)
     radial = _radial(h2, peak[:, None, None])
     endpoints = _radial(np.stack((q, p), axis=1), peak[:, None])
-    y = math.log(truth)
+    y = np.log(truth)
     # Stable sine/cosine for extreme finite truth, without squaring truth.
-    ytheta = math.atan(truth)
-    ys, yc = math.sin(ytheta), math.cos(ytheta)
+    ytheta = np.arctan(truth)
+    ys, yc = np.sin(ytheta), np.cos(ytheta)
     yh2 = np.maximum(0, p*ys**2 + q*yc**2 + 2*dot*ys*yc)
     yradial = _radial(yh2, peak)
-    log_jacobian = -abs(y) - math.log1p(math.exp(-2*abs(y)))
+    log_jacobian = -abs(y) - np.log1p(np.exp(-2*abs(y)))
     log_j1 = (yh2-peak)/2 + np.log(yradial[4])
     truth_log_kernel = (log_j1 + log_jacobian,
                         np.logaddexp(np.log1p(yh2)+log_j1, -peak/2) + log_jacobian)
