@@ -3,7 +3,7 @@
 ## One Sentence
 
 Design 2.1 consolidates the Newton entries; its working ledger now includes the
-November contribution-law and recursive Force-Sum proposals, ahead of the
+Force-Sum, recursive Interaction, and Action–Reaction proposals, ahead of the
 installed entry wording.
 
 ## Proposed Continuation — Updated 2026-11-17
@@ -11,14 +11,19 @@ installed entry wording.
 [DESIGN_2_1_ENTRY_STRUCTURE.md](DESIGN_2_1_ENTRY_STRUCTURE.md) now places:
 
 ```text
-contribution law: net-force / contribution / haze
-Force-Sum:        contribution / impressed-force / interaction-set
+Force-Sum:       net-force / contribution / haze
+Interaction:     contribution / impressed-force / interaction-set
+Action–Reaction: impressed-force / action-force_acting-object / reaction-force_acting-object
 ```
 
 The ledger's P-labels are provisional entry addresses. E1–E12 keep their
 existing locations, while E13-and-later routing is explicitly historical.
-This is a structure update, not installation of final entry strings or a
-replacement ratification of the August naming decision.
+The user corrected the names on 2026-11-17: the former “contribution law”
+is Force-Sum, and the recursive law is Interaction. Those names govern the
+current structure. The source records retain their historical names.
+P-FS, P-I, and P-AR label the three proposed houses; the ledger includes a
+mapping from the previous temporary labels. Final entry strings remain to be
+written.
 
 The working sequence is now explicit:
 
@@ -35,13 +40,25 @@ landing site at or behind the interaction-set wall. An erroneous comparison,
 selection, or increment is a located step error. A zero force value is not a
 stop condition.
 
-The ledger also carries the November acting-object requirements: membership
-entails activation under preserved bindings; the inverse and concrete force
-routes address the same quantity; counterpart location can remain internal
-or external until constrained. Their final house packaging is open.
+The proposed Action–Reaction house reuses the Interaction law's impressed-force
+corner as its chimney; its November corner also serves as the impressed-force
+wall. It adds the action and reaction winter corners and their two grounding
+walls. The content is a reciprocal pair belonging to the same interaction,
+addressed to distinct participants, with equal-and-opposite values.
 
-The pinned November sources and their decision grades are linked in the
-ledger. The 12 November record supersedes the 11 November suggestions of a
+This is developed enough for a proposed house. Its exact joint corner
+dependencies, participant/identity arguments, and concrete walls remain
+unfinished. The orientation record's alternative evaluation triplet is still
+an open design option. A numerical negation alone neither locates a recipient
+nor establishes the physical counterpart.
+
+The November acting-object requirements remain: membership entails activation
+under preserved bindings, the inverse and concrete routes address the same
+force quantity, and counterpart location can remain internal or external until
+constrained. The acting object's own house packaging remains open.
+
+The pinned November sources and their decision grades, together with the
+orientation and member-named-force sources, are linked in the ledger. The 12 November record supersedes the 11 November suggestions of a
 shrinking set and summation beginning before set construction finishes.
 
 ## Earlier Ratified Force-Sum Triplet Names — 2026-08-26
@@ -56,7 +73,8 @@ It fixed names and minimum typed distinctions, while leaving entry numbers,
 walls, membership, and closure open. See
 `../08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md`.
 The new ledger proposals separate explicit contribution from net force through
-haze. The August record remains an earlier authority and has not been rewritten.
+haze. The user's 17 November correction supplies the current law names;
+the August record is preserved as historical authority for its earlier cut.
 
 ## Confirmed Structural Bug — 2026-08-12
 
@@ -83,8 +101,9 @@ that the 2026-08-26 naming decision now expresses as
 net-force / interaction-set / impressed-force
 ```
 
-Force-Sum consumes an already constructed, identity-bearing `interaction-set`
-and obtains a target-directed `impressed-force` from each interaction.
+In the current naming, the Interaction law consumes an already constructed,
+identity-bearing `interaction-set` and obtains a target-directed
+`impressed-force` from each interaction.
 Individual membership and closure remain outside the aggregate equality, which
 cannot perform those member-level jobs.
 
@@ -133,9 +152,10 @@ set, its length, and one conditional contribution definition. Construction
 still needs interaction identity, admission, and the grounds for the physical
 no-more-elements claim. These are separate from the mechanical counter test.
 
-The contribution-law corners, haze wall, Force-Sum corners and walls now have
-provisional ledger locations. Haze's peripheral contract and the full inward
-Force-Sum definitions remain unfinished. The total contribution is C_0; net
+The Force-Sum corners and haze wall, the Interaction corners and walls, and
+the Action–Reaction house now have provisional ledger locations. Haze's
+peripheral contract and the full inward Interaction definitions remain
+unfinished. The total contribution is C_0; net
 force and haze alone do not determine every tail C_n.
 
 Witness sheets mean peripheral scene testimony, which a person may consult

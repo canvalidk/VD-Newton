@@ -3,8 +3,8 @@
 Working structure ledger forked from Design 3. This file is for placing entry
 roles before writing final Design 2.1 entry wording.
 
-Updated 2026-11-17 to include the November contribution, haze, and recursive
-Force-Sum proposals. The proposed continuation below is ahead of the installed
+Updated 2026-11-17 with the user's Force-Sum / Interaction naming correction
+and a proposed Action–Reaction house. The proposed continuation below is ahead of the installed
 entry wording in `DESIGN_2_1_DRAFT_1_ENTRIES.md`.
 
 Columns:
@@ -20,38 +20,64 @@ Columns:
 
 ## Current Proposal And Source Status
 
-The working continuation now has two connected houses:
+The user's naming correction on 2026-11-17 governs this ledger:
 
-```text
-contribution law: net-force / contribution / haze
-Force-Sum:        contribution / impressed-force / interaction-set
-```
+| Law | Headwords | Role |
+|---|---|---|
+| **Force-Sum** | net-force / contribution / haze | Relates net force to explicit contribution and haze. |
+| **Interaction** | contribution / impressed-force / interaction-set | Recursively expands contribution over the supplied interactions. |
+| **Action–Reaction** (proposed house) | impressed-force / action-force_acting-object / reaction-force_acting-object | Connects a target's impressed force to a reciprocal pair with distinct recipients. |
 
-The 11 November record states the contribution-law decision and the choice to
-expand contribution. The 12 November record supplies the corrected single
-conditional, a fixed numbered set, and the start at counter zero. Its reading
-of the re-anchored Force-Sum triplet is graded **Agreed**, rather than a separate
-ratification of every corner. This ledger places those proposals for entry
-writing; it does not claim that the full houses have been written or checked.
+The law previously labelled “contribution law” is **Force-Sum**. The recursive
+law previously labelled “Force-Sum” is **Interaction**. The user described that
+second law as otherwise unnamed. This corrects the current terminology; source
+filenames and historical quotations retain the names they used.
+
+The 11 November record supplies the haze/contribution relation and the choice
+to expand contribution. The 12 November record supplies the corrected single
+conditional, a fixed numbered set, and the start at counter zero. The names
+above are now explicit user direction. Exact inward corner wording and the
+unfinished walls remain proposals.
+
+Action–Reaction is added as an entry-house candidate at the user's request.
+Its pair obligation, recipient distinction, and value relation are clear
+enough to place. Its final triplet cut and the peripheral orientation/identity
+content still need completion; see its assessment below.
 
 The 26 August decision established
-`net-force / impressed-force / interaction-set`. It remains the historical
-naming authority until a replacement decision is made. The proposed
-continuation separates its aggregation role from the relation to net force.
-It preserves its interaction/value/target distinctions and the August
-membership-versus-aggregation correction. The retired E13–E17 cut is not
-reinstated.
+`net-force / impressed-force / interaction-set` under its then-current
+Force-Sum name. It remains historical evidence for the interaction/value/target
+distinctions and is read alongside the current naming correction, not as a
+reason to retain the earlier names. The retired E13–E17 cut is not reinstated.
+
+Proposal labels now follow the law names. To locate references to the earlier
+version of this ledger:
+
+| Earlier label | Current label |
+|---|---|
+| P-C1, P-C2, P-C3 | P-FS1, P-FS2, P-FS3 |
+| P-H | P-FS4 |
+| P-F1, P-F2, P-F3, P-F4 | P-I1, P-I2, P-I3, P-I4 |
+| P-F5 | P-AR1 (the impressed-force wall shared with Action–Reaction) |
 
 Sources read at VD-docs commit `90383f7dfa8225e8b5496d7b3d795e13cbff3151`:
 
-- [8 November entry synthesis](https://github.com/canvalidk/VD-docs/blob/90383f7dfa8225e8b5496d7b3d795e13cbff3151/inbox/NEWTON_ENTRY_STRUCTURE_SYNTHESIS_2026-11-08.md): acting-object commitments, pairing, identity, and peripheral witness testimony.
-- [11 November contribution-law decisions](https://github.com/canvalidk/VD-docs/blob/90383f7dfa8225e8b5496d7b3d795e13cbff3151/inbox/contribution_law_and_force_sum_decisions_2026-11-11.md): decision grades, haze, expansion direction, and open walls.
+- [8 November entry synthesis](https://github.com/canvalidk/VD-docs/blob/90383f7dfa8225e8b5496d7b3d795e13cbff3151/inbox/NEWTON_ENTRY_STRUCTURE_SYNTHESIS_2026-11-08.md), especially §§2, 9–10: activation, quantity identity, counterpart existence, participant location, and peripheral witness testimony.
+- [11 November contribution-law decisions](https://github.com/canvalidk/VD-docs/blob/90383f7dfa8225e8b5496d7b3d795e13cbff3151/inbox/contribution_law_and_force_sum_decisions_2026-11-11.md): earlier terminology, decision grades, haze, and open walls.
 - [12 November contribution recursion](https://github.com/canvalidk/VD-docs/blob/90383f7dfa8225e8b5496d7b3d795e13cbff3151/inbox/how_the_list_works_contribution_recursion_2026-11-12.md): supersedes the earlier shrinking-set and simultaneous-building suggestions.
-- [26 August Force-Sum naming decision](../08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md): earlier authority and minimum typed distinctions.
-- [Aggregate-versus-member bug report](DESIGN_2_1_BUG_REPORT_AGGREGATE_VS_MEMBER_CONSTRAINT.md) and [abstraction boundary](FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md): aggregate agreement cannot admit or close a physical interaction set.
+- [Canonical-force orientation](https://github.com/canvalidk/VD-docs/blob/90383f7dfa8225e8b5496d7b3d795e13cbff3151/Newton-analysis/criticism_history/canonical_force_orientation/CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md), §§7–10: target assignment, a competing evaluation-triplet cut, and the structural counterpart obligation.
+- [Member-named force laws](https://github.com/canvalidk/VD-docs/blob/90383f7dfa8225e8b5496d7b3d795e13cbff3151/Newton-analysis/criticism_history/participant_symmetric_canonical_orientation/VD_PARTICIPANT_SYMMETRIC_CANONICAL_ORIENTATION_MESHING_d2.md), Part IX: the direction of installing the quoted-member convention in concrete entry headwords; final wording remains open.
+- [Constitutive asymmetry sketch](https://github.com/canvalidk/VD-docs/blob/90383f7dfa8225e8b5496d7b3d795e13cbff3151/Newton-analysis/criticism_history/ACTION_REACTION_CONSTITUTIVE_ASYMMETRY_SKETCH_d1.md): historical motivation and unresolved participant/mechanism distinction; its claim that the carrier uniquely fixes orientation is qualified by the later convention analysis.
+- [26 August naming decision](../08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md), [aggregate-versus-member bug report](DESIGN_2_1_BUG_REPORT_AGGREGATE_VS_MEMBER_CONSTRAINT.md), and [abstraction boundary](FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md): earlier names and the enduring separation of membership from aggregation.
 
-`action-force` remains the inherited name for the action-side force; the
-synthesis's broader phrase “acting force” does not settle a new headword.
+The old triplet wording was also checked in
+[`02_engine/newton.py`](../02_engine/newton.py) at VD-Newton commit
+`68d77605ccb1cf6987af3c695b7a716db4edc505`. It supplies historical
+wording, not a completed implementation of the proposed house.
+
+`action-force` remains the inherited action-side headword. Its conventional
+designation must be stated; the synthesis's broader phrase “acting force”
+does not settle a new headword.
 
 ## Negative And Zero Entries
 
@@ -115,19 +141,19 @@ The outward-facing inertial-mass wall at [E12] remains deferred until NML2.2.
 | [E6] | Newton I wall; free-particle. | Captures D2[E19]. | point-particle status; free-particle status; absence of relevant external influence |  |
 | [E7] | Newton II chimney; inertial-acceleration-material-object. | Captures D2[E20], revised to make the massive/material-object domain part of the headword itself. | material-object; trajectory; inertial-frame; acceleration; selected time | First of exactly two inertial-acceleration-material-object definitions. Generic point-particle acceleration remains kinematic. |
 | [E8] | Newton II triplet; inertial-acceleration-material-object November redefine. | Captures D2[E21]; for one material object, this acceleration is net-force-material-object divided by inertial-mass-material-object. | inertial-acceleration-material-object; net-force-material-object; inertial-mass-material-object | Second and final inertial-acceleration-material-object definition. |
-| [E9] | Newton II triplet; net-force-material-object winter entry; proposed contribution-law chimney. | Captures D2[E22]. | net-force-material-object; inertial-mass-material-object; inertial-acceleration-material-object | Official headword fixed for NML2.1. Supplies earlier grounding for the proposed contribution law; no new chimney entry is inserted. |
+| [E9] | Newton II triplet; net-force-material-object winter entry; proposed Force-Sum chimney. | Captures D2[E22]. | net-force-material-object; inertial-mass-material-object; inertial-acceleration-material-object | Official headword fixed for NML2.1. Supplies earlier grounding for the proposed Force-Sum law; no new chimney entry is inserted. |
 | [E10] | Newton II triplet; inertial-mass-material-object winter entry. | Captures D2[E23]. | inertial-mass-material-object; net-force-material-object; inertial-acceleration-material-object | Official headword fixed for NML2.1; distinct from the deferred outward-facing inertial-mass wall. |
 | [E11] | Newton II wall; net-force-material-object. |  | material-object; net-force-material-object; interaction-set | Official headword fixed for NML2.1. |
 | [E12] | Newton II wall; inertial-mass (exact headword deferred). |  | material-object; inertial-mass | Deferred until NML2.2 supplies the target/address and persistence account. |
 
-### Proposed Contribution-Law House
+### Proposed Force-Sum House
 
 The table gives entry roles and mathematical content, not tokeniser-ready
 strings. Write `F` for `net-force-material-object`, `H` for `haze`, and
 `C_n` for the parameterized headword `contribution_n`. All refer to the same
 target, time/frame, and context. `C_0` is the total explicit contribution.
 
-The contribution law is `F = H + C_0`. Its joint dependencies are
+The Force-Sum law is `F = H + C_0`. Its joint dependencies are
 `F -> (H, C_0)`, `C_0 -> (F, H)`, and `H -> (F, C_0)`.
 The inward contribution corner below determines the **total at n = 0**.
 It does not determine every tail from F and H alone. How the inward entry
@@ -136,18 +162,18 @@ wording question.
 
 | Number | Role | Contents | Attribute refs | Notes |
 |---|---|---|---|---|
-| [E9], reused | Contribution-law chimney. | Earlier Newton-II grounding of net-force-material-object. | target; inertial-mass; inertial-acceleration | Existing entry, not a second installation. |
-| [P-C1] | Contribution-law triplet; net-force-material-object November redefine. | Net force is haze plus contribution_n with n set to 0. | haze; contribution_n; target/context | Start the meaningful operation at n = 0; haze enters once here. Exact entry spelling remains open. |
-| [P-C2] | Contribution-law triplet; contribution_n winter entry, at n = 0. | The total explicit contribution is net force minus haze: C_0 = F - H. | net-force-material-object; haze; target/context | Proposed placement; also supplies the earlier grounding for the Force-Sum house. General tail values need the list relation below. |
-| [P-C3] | Contribution-law triplet; haze winter entry. | Haze is net force minus total explicit contribution: H = F - C_0. | net-force-material-object; contribution_n at n = 0 | Its independent peripheral content belongs at P-H, not inside this corner. |
-| [P-H] | Contribution-law wall; haze. | Placeholder for the human-supplied tolerance and the conditions under which omitted influence may be treated as haze. | question tolerance; target/context; admissibility of haze | **placeholder**. Bound, distribution, and a possible bar on reproducible structure are unresolved alternatives. Haze does not recursively expand inside the trace. |
+| [E9], reused | Force-Sum chimney. | Earlier Newton-II grounding of net-force-material-object. | target; inertial-mass; inertial-acceleration | Existing entry, not a second installation. |
+| [P-FS1] | Force-Sum triplet; net-force-material-object November redefine. | Net force is haze plus contribution_n with n set to 0. | haze; contribution_n; target/context | Start the meaningful operation at n = 0; haze enters once here. Exact entry spelling remains open. |
+| [P-FS2] | Force-Sum triplet; contribution_n winter entry, at n = 0. | The total explicit contribution is net force minus haze: C_0 = F - H. | net-force-material-object; haze; target/context | Proposed placement; also supplies the earlier grounding for the Interaction house. General tail values need the list relation below. |
+| [P-FS3] | Force-Sum triplet; haze winter entry. | Haze is net force minus total explicit contribution: H = F - C_0. | net-force-material-object; contribution_n at n = 0 | Its independent peripheral content belongs at P-FS4, not inside this corner. |
+| [P-FS4] | Force-Sum wall; haze. | Placeholder for the human-supplied tolerance and the conditions under which omitted influence may be treated as haze. | question tolerance; target/context; admissibility of haze | **placeholder**. Bound, distribution, and a possible bar on reproducible structure are unresolved alternatives. Haze does not recursively expand inside the trace. |
 
-The other contribution-law wall is **P-F1**, below: it gives contribution its
+The other Force-Sum wall is **P-I1**, below: it gives contribution its
 outward definition through the supplied interaction set and impressed forces,
 and is the November corner of the next house. This is one proposed entry with
 two structural roles, not a second copy of the same definition.
 
-### Proposed Force-Sum House
+### Proposed Interaction House
 
 For this traversal, let `I` be a fixed interaction-set, supplied with one
 number for each member and a length `L`. Number its members `i_0 ... i_(L-1)`.
@@ -156,12 +182,12 @@ same context. The counter is the changing state; I does not shrink.
 
 | Number | Role | Contents | Attribute refs | Notes |
 |---|---|---|---|---|
-| [P-C2], reused | Force-Sum chimney. | Prior contribution-law grounding of the total contribution. | contribution_n at n = 0; net-force-material-object; haze | The general-tail/inward-definition interface remains to be written. |
-| [P-F1] | Force-Sum triplet; contribution_n November redefine; contribution-law wall. | One definition: if length(I) > n, return impressed force of member n plus contribution_(n+1); otherwise return the zero vector. | interaction-set; length; numbered member; impressed-force; next counter | **usable as a mathematical schema**; final wording/engine spelling pending. Re-test the condition on each expansion. |
-| [P-F2] | Force-Sum triplet; interaction-set winter entry. | Placeholder for the inward relation between the supplied collection, its target-directed impressed forces, and contribution. | interaction identities; impressed-force; contribution_n | Full corner unwritten. Aggregate agreement constrains a proposed account; it neither identifies a unique set nor establishes membership or the no-more-elements claim. |
-| [P-F3] | Force-Sum triplet; impressed-force winter entry. | Proposed inverse direction for an identified member: f_n = C_n - C_(n+1), when n < L; equivalently isolate that member from the total and all the others. | same interaction; target/context; contribution tails; uncertainties | Candidate corner content, not a claim that a total uniquely determines several unknown forces. Preserve the identity of the quantity when comparing with its acting-force expression. |
-| [P-F4] | Force-Sum wall; interaction-set. | Supply the already constructed interaction set, its numbering, and its length. Expose the identity, admission, and no-more-elements commitments behind that account. | target/context; interaction identities; numbering; length; admission grounds | **placeholder** for construction and physical warrant. Placement of the physical claim at or behind this wall is proposed; its separation from traversal is settled. Identity and who supplies numbering remain open. |
-| [P-F5] | Force-Sum wall; impressed-force. | Ground one interaction's target-directed force; preserve its ID, participant bindings, and action/reaction convention when connecting to acting-force content. | interaction; target; acting ID; activation bindings; force expression/constraint | **placeholder**. Connects to the later acting-object/action-reaction work; the revised downstream house cut is open. |
+| [P-FS2], reused | Interaction chimney. | Prior Force-Sum grounding of the total contribution. | contribution_n at n = 0; net-force-material-object; haze | The general-tail/inward-definition interface remains to be written. |
+| [P-I1] | Interaction triplet; contribution_n November redefine; Force-Sum wall. | One definition: if length(I) > n, return impressed force of member n plus contribution_(n+1); otherwise return the zero vector. | interaction-set; length; numbered member; impressed-force; next counter | **usable as a mathematical schema**; final wording/engine spelling pending. Re-test the condition on each expansion. |
+| [P-I2] | Interaction triplet; interaction-set winter entry. | Placeholder for the inward relation between the supplied collection, its target-directed impressed forces, and contribution. | interaction identities; impressed-force; contribution_n | Full corner unwritten. Aggregate agreement constrains a proposed account; it neither identifies a unique set nor establishes membership or the no-more-elements claim. |
+| [P-I3] | Interaction triplet; impressed-force winter entry. | Proposed inverse direction for an identified member: f_n = C_n - C_(n+1), when n < L; equivalently isolate that member from the total and all the others. | same interaction; target/context; contribution tails; uncertainties | Candidate corner content, not a claim that a total uniquely determines several unknown forces. Preserve the identity of the quantity when comparing with its acting-force expression. |
+| [P-I4] | Interaction wall; interaction-set. | Supply the already constructed interaction set, its numbering, and its length. Expose the identity, admission, and no-more-elements commitments behind that account. | target/context; interaction identities; numbering; length; admission grounds | **placeholder** for construction and physical warrant. Placement of the physical claim at or behind this wall is proposed; its separation from traversal is settled. Identity and who supplies numbering remain open. |
+| [P-AR1] | Interaction wall; impressed-force; proposed Action–Reaction November corner. | Ground one interaction's target-directed force through the pair and recipient relation specified below. | interaction; target; acting ID; activation bindings; action/reaction pair | **placeholder for final wording**. Shared entry with the proposed Action–Reaction house, not an extra impressed-force definition. |
 
 The inverse expressions describe relations between the same quantities.
 They do not move physical recognition into a triplet residual. Final
@@ -194,8 +220,8 @@ The further policy “expand or bound the tail” remains a proposal.
 
 | Event | Meaning | Entry location / status |
 |---|---|---|
-| No more elements are to be added to the account | Physical claim about the system and the chosen account. | Outside the summation; P-F4 marks a proposed landing site, not a finished construction law. |
-| Counter reaches the supplied length | Mechanical exhaustion of that given list. | P-F1's condition; says nothing further about the physical account. |
+| No more elements are to be added to the account | Physical claim about the system and the chosen account. | Outside the summation; P-I4 marks a proposed landing site, not a finished construction law. |
+| Counter reaches the supplied length | Mechanical exhaustion of that given list. | P-I1's condition; says nothing further about the physical account. |
 | Wrong comparison, member, branch, or increment | Error in applying a meaningful step. | Locate it at that step; numerical agreement does not certify the step. |
 
 Haze is outside this traversal. The terminal zero is the additive identity.
@@ -210,17 +236,96 @@ comparison remained unchecked, and the graph dropped the self-reference.
 This ledger therefore records entry design, not verified executable strings
 or a completed law-detection result.
 
+### Proposed Action–Reaction House
+
+**Assessment:** sufficient content for a proposed structural house; not yet a
+finished six-entry law. The candidate retains the historical three headwords:
+
+```text
+impressed-force / action-force_acting-object / reaction-force_acting-object
+```
+
+For one active binary Newtonian interaction i, let a and r be its distinct
+action and reaction recipients under the declared convention, with vectors
+A(i) and R(i) in the same time/frame/context. The content to preserve is:
+
+```text
+R(i) = -A(i)
+
+impressed-force(i, p) =
+    A(i), when p is the action recipient a
+    R(i), when p is the reaction recipient r
+    inapplicable, when p is neither participant
+```
+
+The pair also asserts that the reciprocal force occurrence exists on the other
+participant. Writing a negative vector alone does not establish that occurrence
+or identify its recipient. The two occurrences remain distinct even if both
+vectors are zero. Neither the force's value nor “either action or reaction”
+by itself supplies an interaction identity.
+
+| Number | Role | Contents | Attribute refs | Notes |
+|---|---|---|---|---|
+| [P-I3], reused | Action–Reaction chimney; impressed-force. | Earlier inward determination of an identified member's target-directed force through the Interaction law. | same interaction; target/context; contribution tails | Existing proposal reused as grounding. |
+| [P-AR1], shared | Action–Reaction triplet; impressed-force November redefine; Interaction wall. | An interaction's impressed force on a participant is the action or reaction member addressed to that participant, with the reciprocal member on the other participant and equal-and-opposite values. | action-force_acting-object; reaction-force_acting-object; interaction; recipient bindings | Candidate inward content. The choice of branch must follow explicit bindings; a nonparticipant gets neither branch. This is the same P-AR1 listed in the Interaction house. |
+| [P-AR2] | Action–Reaction triplet; action-force_acting-object winter entry. | The action-designated impressed force of this interaction, addressed to a, whose paired reaction force is addressed to r and has the opposite value. Conversely A(i) = -R(i) for that same pair. | impressed-force; reaction-force_acting-object; same interaction/context; action recipient | Candidate relational corner; designation and recipient grounding belong at the walls. It must refer to this interaction occurrence, not one global force per acting object. |
+| [P-AR3] | Action–Reaction triplet; reaction-force_acting-object winter entry. | The reciprocal impressed force of this interaction, addressed to r, paired with the action on a, with R(i) = -A(i). | impressed-force; action-force_acting-object; same interaction/context; reaction recipient | Candidate relational corner. An unknown recipient can remain an existentially specified participant; an arbitrary opposite number cannot stand in for it. |
+| [P-AR4] | Action–Reaction wall; action-force_acting-object. | Ground the designated action member through the concrete kind's recognition, participant assignment, and force expression or constraint, carrying the same acting ID and interaction. | concrete kind; action recipient; activation bindings; constructs/parameters; member-named force content | **placeholder**. Member-designating concrete entries are the sourced direction; exact headword/argument and convention content still need writing. |
+| [P-AR5] | Action–Reaction wall; reaction-force_acting-object. | Ground which concrete member and participant the reaction demand concerns, connecting to the corresponding member-named content and the same interaction. | concrete kind; reaction recipient; original activation bindings; reciprocal relation | **placeholder**. A required peripheral grounding role, not a second independent numerical input by default. Merely repeating R = -A would not finish this wall. |
+
+The proposed joint corner dependencies are
+`impressed-force -> (action-force, reaction-force)`,
+`action-force -> (impressed-force, reaction-force)`, and
+`reaction-force -> (impressed-force, action-force)`, with full qualified
+headwords as above. The final residues and argument bindings must make these
+real dependencies. The displayed pair equation alone relates two quantities
+and does not prove a three-corner law.
+
+#### What Is Ready, And What Remains Open
+
+- **Pairing and recipient obligations are ready to state.** Preserve one
+  interaction across the two distinct recipient accounts. For this interaction,
+  a participant receives one member of the pair; both members must not be
+  inserted into that participant's account. A larger system may contain both
+  recipients. One acting mechanism may participate in multiple interactions,
+  so its ID alone need not identify a unique pair.
+- **The convention needs a visible home.** A = -R does not choose which member
+  a quoted concrete formula denotes. The member-named entry direction can
+  supply that choice by dictionary authority. Reversing the quoted recipient
+  and the quoted vector together preserves the target-side forces. Mechanical
+  ownership, force recipient, and system membership must not be conflated.
+- **Counterpart existence precedes known location or value.** An unresolved
+  counterpart may be inside or outside the selected system. Establishing its
+  participant inside the system forces the corresponding internal obligation.
+  An omitted row is not evidence that the counterpart is external; a zero
+  resultant is not evidence of mechanical closure.
+- **The exact house cut remains a proposal.** The orientation record also
+  proposes an evaluation triplet with impressed-force, canonical-force, and
+  an orientation convention. This ledger adds the requested action/reaction
+  candidate without claiming that the competing cut has been disproved.
+  Final entries must account for both force delivery and pair existence.
+- **Concrete grounding is unfinished.** The actor/mechanism-to-recipient link,
+  argument identity, and both walls need actual entry wording. Preserve the
+  original activation bindings on the reaction route. The conditional
+  half-weighted two-instance architecture is not adopted by adding this house.
+
+This house is scoped to the binary Newtonian pair being represented.
+Generalisation to more participants and final executable wording are deferred.
+The proposed rows do not claim that every force mechanism has an independently
+supplied reaction formula, or that computing a negative vector independently
+tests the physical account.
+
 ### Downstream Entry Requirements From The November Synthesis
 
-These requirements steer the replacement of the historical acting-object and
-closure rows. They do not ratify the old three-corner packaging or create a
-new law for every requirement.
+These requirements connect the proposed Action–Reaction house to the
+unfinished acting-object and closure rows. The acting object's own
+three-property packaging remains open.
 
 | Proposed content / role | What the entry structure must carry | Placement still open |
 |---|---|---|
 | Acting ID/name | Preserve which acting object, interaction, target, and context the activation and force routes concern. Equal vector values do not establish identity. | Minimal identity content must be available before membership; its headword and inward/outward cut are not fixed. |
 | Activation-condition | Inclusion of an interaction's force entails activation under its original participant/context bindings. Recognition may require substantial peripheral prose. | The recognition wall and its connection to admission remain to be written. A reaction recipient does not replace the original activation bindings. |
-| Acting-force expression or constraint | The independently evaluated force and the force isolated from net force minus haze and the other contributions concern the same quantity, with compatible uncertainty. An admitted force may still be numerically unknown. | P-F3/P-F5 must connect to this content; final abstract-to-concrete routing is deferred. |
+| Acting-force expression or constraint | The independently evaluated force and the force isolated from net force minus haze and the other contributions concern the same quantity, with compatible uncertainty. An admitted force may still be numerically unknown. | P-I3 and P-AR1–P-AR5 must connect to this content; final abstract-to-concrete routing is deferred. |
 | Reciprocal counterpart | Every action carries a counterpart obligation. If its recipient is unresolved, internal and external locations remain alternatives. Identified participants can force an internal counterpart. | Participant identification, mechanical composition, and system membership need explicit connections; an opposite vector alone does not locate its recipient. |
 | System closure | Keep reciprocal incidence and membership of the chosen system distinct from list exhaustion and the account's no-more-elements claim. | Replacement closure entries remain placeholders. |
 
@@ -232,16 +337,19 @@ open. A zero-valued active interaction is still an interaction.
 
 - Write the contribution headword's n = 0 inward domain and general recursive
   outward definition without treating every tail as F - H.
-- Finish P-F2 and P-F3 as actual inward entries and check the proposed joint
+- Finish P-I2 and P-I3 as actual inward entries and check the proposed joint
   dependencies; the recursive schema alone does not complete the triplet.
 - Set haze's peripheral contract; finish interaction identity, admission,
   numbering, and the no-more-elements warrant.
-- Resolve how P-C1 relates to E11's current “exactly two ways” wording in
+- Resolve how P-FS1 relates to E11's current “exactly two ways” wording in
   its NML2.1 scope. The suggestion that E11 needs changing is still a proposal.
 - Decide final E-numbers and residual handles after the house cut is stable.
   P-labels are temporary ledger addresses.
-- Write and check the downstream acting-object, reciprocal-participant, and
-  system-closure connections before treating the historical houses as usable.
+- Finish the Action–Reaction corner dependencies, participant/identity
+  arguments, and P-AR4/P-AR5 walls; resolve its relationship to the alternative
+  orientation-triplet cut.
+- Write and check the downstream acting-object and system-closure connections
+  before treating the historical houses as usable.
 
 ### Historical E13-And-Later Routing
 
@@ -296,7 +404,7 @@ keep, simplify, or mark as deferred.
 | inertial-frame | Reference-frame accepted for trajectory-read acceleration and Newtonian force accounting. | D2[E16], D2[E18]. |
 | mechanical-system | Selected collection of particle objects. | D2[E39]. |
 | interaction-set | Target-indexed set of independently warranted interactions in a fixed context, supplied with a numbering and length for traversal. | Constructed before summation. Exact identity, admission, and the physical no-more-elements warrant remain open. |
-| impressed-force | Target-directed vector force-action supplied by one interaction to one participant and summed into explicit contribution. | Preserve interaction/target identity; net force also includes haze in the proposed contribution law. |
+| impressed-force | Target-directed vector force-action supplied by one interaction to one participant and summed into explicit contribution. | Preserve interaction/target identity; net force also includes haze in the proposed Force-Sum law. |
 | contribution_n | Vector-valued tail of the explicit account from counter n; contribution_0 is its total. | Proposed parameterized headword; I stays fixed as n changes. |
 | haze | Omitted influence entering once alongside the total explicit contribution. | Proposed winter headword; peripheral tolerance/admissibility contract unfinished. |
 | acting-object | Force-producing or force-contributing callable object. | D2[E34], Design 3 stress point. |

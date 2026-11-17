@@ -11,8 +11,11 @@ implementation burden.
 
 Start with [CURRENT_STATE.md](CURRENT_STATE.md) and the **proposed
 continuation** in [DESIGN_2_1_ENTRY_STRUCTURE.md](DESIGN_2_1_ENTRY_STRUCTURE.md).
-The ledger now includes the November contribution law, haze wall, and single
-conditional Force-Sum recursion, with pinned sources and temporary P-labels.
+The ledger uses the user's 17 November names: **Force-Sum** for
+net-force / contribution / haze, and **Interaction** for the single conditional
+recursion over impressed forces and the interaction set. It also adds a proposed
+**Action–Reaction** house, with its recipient, convention, and grounding
+questions explicit. Sources are pinned and entry labels remain provisional.
 The August material below supplies the earlier naming and abstraction
 boundary; it does not describe the whole current proposal. Final entry
 wording remains in `DESIGN_2_1_DRAFT_1_ENTRIES.md`.
@@ -24,12 +27,13 @@ aggregate constraint cannot supply the individual membership predicate for the
 collection being aggregated. The affected structure remains under correction.
 Then read
 `../08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md`,
-which fixes `net-force / impressed-force / interaction-set` while leaving the
-rest of the cut open. The older
+which historically fixed `net-force / impressed-force / interaction-set`
+while leaving the rest of the cut open. Use the 17 November naming correction
+in the ledger for the current two-law continuation. The older
 `FORCE_SUM_IFS_ABSTRACTION_BOUNDARY_DISCOVERY_NOTE.md` supplies the underlying
 identity/value and construction/aggregation reasoning; translate its `IFS` and
 `V(f)` notation under the naming decision. Finally read
-[VD-docs: Newton-analysis/_dscn_entry_structure/canonical_force_orientation/CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md](https://github.com/canvalidk/VD-docs/blob/main/Newton-analysis/_dscn_entry_structure/canonical_force_orientation/CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md), which records
+[VD-docs: Canonical-force orientation](https://github.com/canvalidk/VD-docs/blob/90383f7dfa8225e8b5496d7b3d795e13cbff3151/Newton-analysis/criticism_history/canonical_force_orientation/CANONICAL_FORCE_ORIENTATION_CONVENTION_DISCOVERY_2026-08-14.md), which records
 the further evaluator result and the newly exposed human convention selecting
 which member of an equal-and-opposite pair is canonical.
 
@@ -96,13 +100,15 @@ Read these first, in this order:
    - Active output file for the current Design 2.1 entry-drafting effort.
 
 14. `DESIGN_2_1_ENTRY_STRUCTURE.md`
-   - Working entry ledger: existing Newton locations, November proposals,
-     open wall/corner content, and separately preserved historical routing.
+   - Working entry ledger: existing Newton locations, Force-Sum, Interaction,
+     and Action–Reaction proposals, open corners/walls, and historical routing.
 
 15. `../08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md`
    - Earlier ratified authority for `net-force / impressed-force / interaction-set`.
-     The ledger's November proposal inserts the contribution law and re-anchors
-     aggregation on contribution; final replacement wording remains open.
+     The current names are Force-Sum for net-force / contribution / haze and
+     Interaction for contribution / impressed-force / interaction-set.
+     The user's 17 November correction governs those names; final corner
+     wording remains open.
 
 16. `../08_nm_lesson_drafts/nml3/NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`
    - Ratified word-choice authority for `impressed-force`, as semantically
