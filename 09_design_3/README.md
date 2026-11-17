@@ -5,4 +5,4 @@ Design 3 will develop Newton entries by running mechanics questions end to end w
 Use the first working traces for later conceptual analysis. The proposed Design 4 work covers how parameters get their values and how witness sheets support the answers supplied to a trace.
 
 - [Entry structure](DESIGN_3_ENTRY_STRUCTURE.md) tracks proposed entries and their roles.
-- [Official Python dictionary](newton_design_3.py) holds the ordered entry strings and the VDfirst builder. It starts empty.
+- [Official Python dictionary](newton_design_3.py) holds the installed kinematic entries in order and the VDfirst builder.
