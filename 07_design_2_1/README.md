@@ -1,12 +1,21 @@
 # VD Newton Design 2.1 Workspace
 
-Status: working branch space, started 2026-05-14.
+Status: working branch space, started 2026-05-14; proposal ledger updated
+2026-11-17.
 
 Design 2.1 is a scoped fork from the Design 3 work. It keeps the useful
 structural progress from Design 3 while avoiding the full object/witness-sheet
 implementation burden.
 
 ## Fast Reading Order
+
+Start with [CURRENT_STATE.md](CURRENT_STATE.md) and the **proposed
+continuation** in [DESIGN_2_1_ENTRY_STRUCTURE.md](DESIGN_2_1_ENTRY_STRUCTURE.md).
+The ledger now includes the November contribution law, haze wall, and single
+conditional Force-Sum recursion, with pinned sources and temporary P-labels.
+The August material below supplies the earlier naming and abstraction
+boundary; it does not describe the whole current proposal. Final entry
+wording remains in `DESIGN_2_1_DRAFT_1_ENTRIES.md`.
 
 Before using the entry ledger, read
 `DESIGN_2_1_BUG_REPORT_AGGREGATE_VS_MEMBER_CONSTRAINT.md`. It records a
@@ -87,11 +96,13 @@ Read these first, in this order:
    - Active output file for the current Design 2.1 entry-drafting effort.
 
 14. `DESIGN_2_1_ENTRY_STRUCTURE.md`
-   - The forked entry ledger copied from Design 3 and renamed for Design 2.1.
+   - Working entry ledger: existing Newton locations, November proposals,
+     open wall/corner content, and separately preserved historical routing.
 
 15. `../08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md`
-   - Ratified authority for `net-force / impressed-force / interaction-set`.
-     It deliberately leaves numbering and the rest of the cut open.
+   - Earlier ratified authority for `net-force / impressed-force / interaction-set`.
+     The ledger's November proposal inserts the contribution law and re-anchors
+     aggregation on contribution; final replacement wording remains open.
 
 16. `../08_nm_lesson_drafts/nml3/NML3_IMPRESSED_FORCE_TERMINOLOGY_DECISION_2026-08-12.md`
    - Ratified word-choice authority for `impressed-force`, as semantically

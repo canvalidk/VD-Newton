@@ -2,33 +2,61 @@
 
 ## One Sentence
 
-Design 2.1 is a conservative branch from Design 3 that aims to make the entry
-structure more complete and usable by adding list machinery, cleaning wording,
-and filling missing wall entries without fully implementing objects or witness
-sheets.
+Design 2.1 consolidates the Newton entries; its working ledger now includes the
+November contribution-law and recursive Force-Sum proposals, ahead of the
+installed entry wording.
 
-## Ratified Force-Sum Triplet Names — 2026-08-26
+## Proposed Continuation — Updated 2026-11-17
 
-The three Force-Sum headwords are settled:
+[DESIGN_2_1_ENTRY_STRUCTURE.md](DESIGN_2_1_ENTRY_STRUCTURE.md) now places:
+
+```text
+contribution law: net-force / contribution / haze
+Force-Sum:        contribution / impressed-force / interaction-set
+```
+
+The ledger's P-labels are provisional entry addresses. E1–E12 keep their
+existing locations, while E13-and-later routing is explicitly historical.
+This is a structure update, not installation of final entry strings or a
+replacement ratification of the August naming decision.
+
+The working sequence is now explicit:
+
+1. Supply a constructed interaction set with consistent numbering and length.
+2. Start contribution_n at n = 0; add haze once outside the recursion.
+3. In one conditional definition, use the member's impressed force plus the
+   next contribution when length > n; otherwise return the zero vector.
+4. Preserve the unexpanded tail when stopping early.
+
+The set stays fixed; the counter is the changing traversal state. Reaching its
+length makes no new claim about the physical system. The physical
+no-more-elements claim belongs outside summation; the ledger proposes a
+landing site at or behind the interaction-set wall. An erroneous comparison,
+selection, or increment is a located step error. A zero force value is not a
+stop condition.
+
+The ledger also carries the November acting-object requirements: membership
+entails activation under preserved bindings; the inverse and concrete force
+routes address the same quantity; counterpart location can remain internal
+or external until constrained. Their final house packaging is open.
+
+The pinned November sources and their decision grades are linked in the
+ledger. The 12 November record supersedes the 11 November suggestions of a
+shrinking set and summation beginning before set construction finishes.
+
+## Earlier Ratified Force-Sum Triplet Names — 2026-08-26
+
+The August naming decision settled:
 
 ```text
 net-force / impressed-force / interaction-set
 ```
 
-The `interaction-set` contains the target particle's relevant interactions.
-Each indexed interaction supplies a target-directed `impressed-force`, and the
-vector sum of those impressed forces is the target's `net-force`:
-
-```text
-net-force(p | C)
-    = sum of impressed-force(i -> p | C)
-      for i in interaction-set(p | C)
-```
-
-This fixes the names and minimum typed relation only. Entry numbers, wall and
-chimney assignments, interaction membership and closure, action/reaction, and
-the rest of the NML3 cut remain open. The authority is
+It fixed names and minimum typed distinctions, while leaving entry numbers,
+walls, membership, and closure open. See
 `../08_nm_lesson_drafts/nml3/NML3_FORCE_SUM_TRIPLET_NAMING_DECISION_2026-08-26.md`.
+The new ledger proposals separate explicit contribution from net force through
+haze. The August record remains an earlier authority and has not been rewritten.
 
 ## Confirmed Structural Bug — 2026-08-12
 
@@ -37,9 +65,9 @@ authority for a confirmed error in the force-accounting structure. A condition
 on the aggregate produced by a collection cannot, in general, determine whether
 one candidate belongs to that collection.
 
-Accordingly, the E13-and-later Force-Sum and dependent action/reaction structure
-is under correction. Design work must distinguish the interaction candidate
-universe, interaction identity/equality, an individual membership rule, the
+Accordingly, the historical E13-and-later Force-Sum and dependent
+action/reaction structure remains under correction. Design work must distinguish
+the interaction candidate universe, interaction identity/equality, an individual membership rule, the
 constructed and closed `interaction-set`, the target-directed
 `impressed-force`, and only then vector aggregation. This does not
 invalidate the completed NML2 entry work, whose packets explicitly defer force
@@ -81,9 +109,10 @@ It was copied from:
 DESIGN_3_ENTRY_STRUCTURE.md
 ```
 
-Only its title and opening ledger description have been renamed so far. The
-entry content still mostly reflects the Design 3 structure and must be edited
-deliberately.
+The ledger retains the earlier Newton structure and historical downstream
+routing, and now includes the November proposals. Final entry wording remains
+in `DESIGN_2_1_DRAFT_1_ENTRIES.md`; the new P-labelled entries are not installed
+there.
 
 ## What Design 2.1 Keeps From Design 3
 
@@ -99,35 +128,37 @@ deliberately.
 
 ## What Design 2.1 Adds Or Emphasises
 
-The new emphasis is lists.
+The list traversal now has a specified mathematical form: a supplied numbered
+set, its length, and one conditional contribution definition. Construction
+still needs interaction identity, admission, and the grounds for the physical
+no-more-elements claim. These are separate from the mechanical counter test.
 
-The design should be able to talk about structures such as:
+The contribution-law corners, haze wall, Force-Sum corners and walls now have
+provisional ledger locations. Haze's peripheral contract and the full inward
+Force-Sum definitions remain unfinished. The total contribution is C_0; net
+force and haze alone do not determine every tail C_n.
 
-```text
-list of acting-object candidates
-list of interaction candidates
-interaction-set as list-like accumulator or closed collection
-no-more-items / list closure signal
-empty list / zero-sum result where appropriate
-```
-
-The exact formal list vocabulary is not settled yet. Design 2.1 should create
-enough explicit list treatment to keep force accounting and wall entries from
-depending on vague prose.
+Witness sheets mean peripheral scene testimony, which a person may consult
+when answering a wall. Explicit trace bindings record the supplied information.
+The ledger's demand inventory does not impose a sheet schema or a trace-side
+sheet reader.
 
 ## What Design 2.1 Defers
 
 Design 2.1 does not attempt to finish:
 
-- formal witness sheets;
-- full object schemas;
+- full object schemas or a witness-sheet runtime;
 - acting-object instance dispatch;
 - spring, gravity, contact, or friction concrete clusters;
 - external object detection;
 - full closure reasoning through interaction-pairs;
 - prediction-set machinery.
 
-Deferred material can remain as notes or placeholders when needed.
+Deferred material can remain as notes or placeholders when needed. The
+12 November probe demonstrates hand-driven recursion with scratch entries,
+not an automatically checked implementation: argument arithmetic, the filing
+of the increment, branch checking, and graph treatment of self-reference
+remain open.
 
 ## Working Attitude
 
