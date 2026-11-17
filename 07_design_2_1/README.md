@@ -14,8 +14,10 @@ continuation** in [DESIGN_2_1_ENTRY_STRUCTURE.md](DESIGN_2_1_ENTRY_STRUCTURE.md)
 The ledger uses the user's 17 November names: **Force-Sum** for
 net-force / contribution / haze, and **Interaction** for the single conditional
 recursion over impressed forces and the interaction set. It also adds a proposed
-**Action–Reaction** house, with its recipient, convention, and grounding
-questions explicit. Sources are pinned and entry labels remain provisional.
+**Action–Reaction** house and the **orientation-based evaluation alternative**,
+each with explicit corner and wall rows. Their recipient, convention, and
+grounding questions remain visible. Sources are pinned and entry labels remain
+provisional.
 The August material below supplies the earlier naming and abstraction
 boundary; it does not describe the whole current proposal. Final entry
 wording remains in `DESIGN_2_1_DRAFT_1_ENTRIES.md`.

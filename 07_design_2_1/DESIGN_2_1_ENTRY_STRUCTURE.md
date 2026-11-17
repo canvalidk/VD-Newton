@@ -4,8 +4,8 @@ Working structure ledger forked from Design 3. This file is for placing entry
 roles before writing final Design 2.1 entry wording.
 
 Updated 2026-11-17 with the user's Force-Sum / Interaction naming correction
-and a proposed Action–Reaction house. The proposed continuation below is ahead of the installed
-entry wording in `DESIGN_2_1_DRAFT_1_ENTRIES.md`.
+and proposed Action–Reaction and alternative orientation-based houses.
+The proposed continuation below is ahead of the installed entry wording in `DESIGN_2_1_DRAFT_1_ENTRIES.md`.
 
 Columns:
 
@@ -27,6 +27,7 @@ The user's naming correction on 2026-11-17 governs this ledger:
 | **Force-Sum** | net-force / contribution / haze | Relates net force to explicit contribution and haze. |
 | **Interaction** | contribution / impressed-force / interaction-set | Recursively expands contribution over the supplied interactions. |
 | **Action–Reaction** (proposed house) | impressed-force / action-force_acting-object / reaction-force_acting-object | Connects a target's impressed force to a reciprocal pair with distinct recipients. |
+| **Orientation-based evaluation** (alternative house; name provisional) | impressed-force / canonical-force_acting-object / canonical-force-orientation | Evaluates the target-side force from the quoted member and its recipient convention. |
 
 The law previously labelled “contribution law” is **Force-Sum**. The recursive
 law previously labelled “Force-Sum” is **Interaction**. The user described that
@@ -42,7 +43,9 @@ unfinished walls remain proposals.
 Action–Reaction is added as an entry-house candidate at the user's request.
 Its pair obligation, recipient distinction, and value relation are clear
 enough to place. Its final triplet cut and the peripheral orientation/identity
-content still need completion; see its assessment below.
+content still need completion; see its assessment below. The orientation-based
+alternative is also laid out as P-O1–P-O5. These are competing cuts at the
+impressed-force wall, not two consecutive houses to install together.
 
 The 26 August decision established
 `net-force / impressed-force / interaction-set` under its then-current
@@ -315,6 +318,60 @@ The proposed rows do not claim that every force mechanism has an independently
 supplied reaction formula, or that computing a negative vector independently
 tests the physical account.
 
+### Alternative Orientation-Based Evaluation House
+
+This places the alternative proposed in the canonical-force orientation
+record, §§7–10, as an explicit house candidate:
+
+```text
+impressed-force / canonical-force_acting-object / canonical-force-orientation
+```
+
+The latter two names are provisional source vocabulary. “Canonical force”
+means the member selected for direct quotation, not an additional physical
+force. Its relationship to the current `action-force_acting-object` headword
+must be settled when choosing the cut.
+
+For a fixed active binary interaction i with distinct participants a and b,
+let the convention select a canonical recipient c and quote vector K for that
+recipient. All quantities use the same interaction, time, and frame:
+
+```text
+impressed-force(i, p) =
+    K(i),  when p = c(i)
+   -K(i),  when p is the other participant
+    inapplicable, when p is not a participant
+```
+
+| Number | Role | Contents | Attribute refs | Notes |
+|---|---|---|---|---|
+| [P-I3], reused | Alternative evaluation-house chimney; impressed-force. | Prior Interaction-law grounding of the target-directed force of an identified member. | interaction; target/context; contribution tails | Same earlier grounding as the Action–Reaction candidate. |
+| [P-O1] | Alternative triplet; impressed-force November redefine; Interaction wall. | Return the quoted canonical vector to its declared recipient and its negative to the other participant; a nonparticipant receives neither. | canonical-force_acting-object; canonical-force-orientation; interaction; target | Alternative to P-AR1 at the same outward definition site, not an additional installed impressed-force definition. |
+| [P-O2] | Alternative triplet; canonical-force_acting-object winter entry. | Relate the quoted vector to the impressed force under the declared orientation: K = f for the canonical recipient, and K = -f for the other participant. | impressed-force; canonical-force-orientation; interaction; target | Candidate inverse corner, restricted to a participant. |
+| [P-O3] | Alternative triplet; canonical-force-orientation winter entry. | State which recipient/vector assignments are compatible with the quoted force and the target's impressed force under the same pair relation. | impressed-force; canonical-force_acting-object; participant identities | Inward relation unfinished. Agreement does not always determine a unique convention: when K = f = 0, values alone do not distinguish the recipients. |
+| [P-O4] | Alternative wall; canonical-force_acting-object. | Ground the quoted member through concrete force content, parameters or constraints, and its specified recipient. | concrete kind; same acting/interaction identity; member-named expression; context | **placeholder**. Connects to the acting-object content without introducing a second force quantity for the same member. |
+| [P-O5] | Alternative wall; canonical-force-orientation. | State which participant receives the quoted vector and which member the concrete formula denotes, preserving its coordinate and sign meanings. | participant bindings; quoted-member declaration; entry/convention authority | **placeholder**. The sourced direction is to install this declaration through member-named concrete entries; the final headword and placement remain open. |
+
+The candidate joint dependencies are
+`impressed-force -> (canonical-force, orientation)`,
+`canonical-force -> (impressed-force, orientation)`, and
+`orientation -> (impressed-force, canonical-force)`.
+These indicate the intended corners; P-O3 still needs a satisfactory inward
+definition, including its underdetermined cases.
+
+Reversing both the canonical recipient and K leaves each participant's force
+unchanged. Reversing K alone does not. The orientation must therefore accompany
+the formula, even where dictionary authority supplies it once per kind rather
+than the reader selecting it anew in every trace.
+
+**Relationship to Action–Reaction:** P-O1–P-O5 and P-AR1–P-AR5 are alternatives
+for developing the impressed-force wall. The orientation version makes force
+delivery and the convention explicit. It still needs the structural content
+that a reciprocal occurrence exists, belongs to the same interaction, and
+addresses the other participant. Evaluating a negative vector does not supply
+those facts. Their eventual entry location remains open, as does whether the
+two candidates can be reconciled into one cut.
+
 ### Downstream Entry Requirements From The November Synthesis
 
 These requirements connect the proposed Action–Reaction house to the
@@ -347,7 +404,7 @@ open. A zero-valued active interaction is still an interaction.
   P-labels are temporary ledger addresses.
 - Finish the Action–Reaction corner dependencies, participant/identity
   arguments, and P-AR4/P-AR5 walls; resolve its relationship to the alternative
-  orientation-triplet cut.
+  orientation-triplet cut P-O1–P-O5, including P-O3's underdetermined cases.
 - Write and check the downstream acting-object and system-closure connections
   before treating the historical houses as usable.
 

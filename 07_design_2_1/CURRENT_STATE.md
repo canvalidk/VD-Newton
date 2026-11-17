@@ -21,9 +21,10 @@ existing locations, while E13-and-later routing is explicitly historical.
 The user corrected the names on 2026-11-17: the former “contribution law”
 is Force-Sum, and the recursive law is Interaction. Those names govern the
 current structure. The source records retain their historical names.
-P-FS, P-I, and P-AR label the three proposed houses; the ledger includes a
-mapping from the previous temporary labels. Final entry strings remain to be
-written.
+P-FS, P-I, and P-AR label the three proposed houses. P-O labels the
+orientation-based alternative at the impressed-force wall. The ledger includes
+a mapping from the previous temporary labels. Final entry strings remain to
+be written.
 
 The working sequence is now explicit:
 
@@ -48,9 +49,14 @@ addressed to distinct participants, with equal-and-opposite values.
 
 This is developed enough for a proposed house. Its exact joint corner
 dependencies, participant/identity arguments, and concrete walls remain
-unfinished. The orientation record's alternative evaluation triplet is still
-an open design option. A numerical negation alone neither locates a recipient
-nor establishes the physical counterpart.
+unfinished. The orientation record's alternative evaluation triplet now has
+explicit rows P-O1–P-O5: impressed-force / canonical-force_acting-object /
+canonical-force-orientation, with provisional names. It shares P-I3 as the
+chimney and proposes P-O1 instead of P-AR1 at the impressed-force wall.
+These alternatives are not installed consecutively. The orientation corner's
+inverse remains unfinished, especially when zero values cannot distinguish
+recipient assignments. Reciprocal occurrence and participant obligations
+still need an entry location; numerical negation alone does not supply them.
 
 The November acting-object requirements remain: membership entails activation
 under preserved bindings, the inverse and concrete routes address the same
