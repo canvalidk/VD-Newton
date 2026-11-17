@@ -22,6 +22,12 @@ The August material below supplies the earlier naming and abstraction
 boundary; it does not describe the whole current proposal. Final entry
 wording remains in `DESIGN_2_1_DRAFT_1_ENTRIES.md`.
 
+The first seven candidate packets are linked in the ledger's
+[entry-packet index](DESIGN_2_1_ENTRY_STRUCTURE.md#entry-packets--2026-11-17).
+Start with P-FS2 and P-I1 together, then P-FS1, P-FS3, and P-I3. P-O1/P-O2 are
+separate alternative-house candidates. They include provisional entry wording
+and semantic checks; they are not installed in the active draft or engine.
+
 Before using the entry ledger, read
 `DESIGN_2_1_BUG_REPORT_AGGREGATE_VS_MEMBER_CONSTRAINT.md`. It records a
 confirmed structural bug in the E13-and-later force-accounting design: an

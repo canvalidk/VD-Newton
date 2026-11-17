@@ -67,6 +67,20 @@ The pinned November sources and their decision grades, together with the
 orientation and member-named-force sources, are linked in the ledger. The 12 November record supersedes the 11 November suggestions of a
 shrinking set and summation beginning before set construction finishes.
 
+## Entry Packet Batch — 2026-11-17
+
+Seven [candidate packets](DESIGN_2_1_ENTRY_STRUCTURE.md#entry-packets--2026-11-17)
+are written: P-FS1, P-FS2, P-FS3, P-I1, P-I3, and the alternative P-O1/P-O2.
+They supply working entry strings, residuals, IRIL/IRIEs, boundary behaviour,
+and desk checks. Their status is candidate; the active entry draft and engine
+are unchanged.
+
+P-FS2 is explicitly restricted to n = 0. P-I1 handles the general tail over a
+fixed set. P-I3 exposes the set lookup that binds the force to its member
+index. The orientation packets state their proposed participant/convention
+interface and leave the house choice open. Exact argument grammar and
+definition selection are unresolved; no executable syntax is claimed.
+
 ## Earlier Ratified Force-Sum Triplet Names — 2026-08-26
 
 The August naming decision settled:

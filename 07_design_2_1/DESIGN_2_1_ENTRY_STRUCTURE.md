@@ -82,6 +82,32 @@ wording, not a completed implementation of the proposed house.
 designation must be stated; the synthesis's broader phrase “acting force”
 does not settle a new headword.
 
+## Entry Packets — 2026-11-17
+
+Seven substantive candidate packets now accompany this ledger. Each contains
+source provenance, IRIL/IRIEs, a candidate entry string, entry-owned residual
+notes, boundary behaviour, worked semantic checks, and open questions.
+
+Read P-FS2 and P-I1 together first: the former determines only C_0 through
+Force-Sum, while the latter gives the general recursive tail. Packet argument
+notation is provisional and has not been installed or tested as engine syntax.
+
+| Packet | Scope and status |
+|---|---|
+| [P-FS2: Total Contribution](entry_packets/ENTRY_PACKET_P_FS2_TOTAL_CONTRIBUTION.md) | Primary candidate; inward contribution restricted to n = 0. |
+| [P-I1: Recursive Contribution](entry_packets/ENTRY_PACKET_P_I1_RECURSIVE_CONTRIBUTION.md) | Primary candidate; one conditional over a fixed numbered set. |
+| [P-FS1: Net Force Through Contribution And Haze](entry_packets/ENTRY_PACKET_P_FS1_NET_FORCE.md) | Primary candidate; net force from total contribution and haze. |
+| [P-FS3: Haze As The Force-Sum Difference](entry_packets/ENTRY_PACKET_P_FS3_HAZE.md) | Primary candidate; required haze distinguished from its admissibility. |
+| [P-I3: Impressed Force From Adjacent Contributions](entry_packets/ENTRY_PACKET_P_I3_IMPRESSED_FORCE.md) | Primary candidate; identified-member inverse with explicit set lookup. |
+| [P-O1: Impressed Force Under A Declared Orientation](entry_packets/ENTRY_PACKET_P_O1_ORIENTED_IMPRESSED_FORCE.md) | Alternative candidate; target-side evaluation under declared orientation. |
+| [P-O2: Canonical Force From An Addressed Impressed Force](entry_packets/ENTRY_PACKET_P_O2_CANONICAL_FORCE.md) | Alternative candidate; canonical vector from an explicitly selected participant. |
+
+P-O1/P-O2 belong to the orientation-based alternative; their presence does not
+select it over Action–Reaction. The other proposed entries remain at ledger
+stage. In particular, the haze wall, collection construction/inward definition,
+Action–Reaction corners/walls, and orientation inverse/walls remain unfinished.
+The existing E9 packet supplies the earlier chimney; no duplicate was created.
+
 ## Negative And Zero Entries
 
 These entries sit before the Newtonian kinematic sequence. Positive entry
