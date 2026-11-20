@@ -105,6 +105,35 @@ NEWTON_ENTRIES: list[tuple[str, str]] = [
         "or traces a straight path with constant velocity, i.e. constant speed with\n"
         "unchanged direction.",
     ),
+    # E2
+    (
+        "uniform-motion",
+        "Uniform-motion is the motion a free-particle must exhibit when described in an "
+        "inertial-frame.",
+    ),
+    # E3
+    (
+        "inertial-frame",
+        "A reference-frame in which every free-particle must exhibit uniform-motion.",
+    ),
+    # E4
+    (
+        "free-particle",
+        "A point-particle that must exhibit uniform-motion when described in an "
+        "inertial-frame.",
+    ),
+    # E5
+    (
+        "inertial-frame",
+        "A reference-frame modelled, to the required accuracy, as introducing no "
+        "acceleration through its own translation or rotation.",
+    ),
+    # E6
+    (
+        "free-particle",
+        "A point-particle whose trajectory is uninfluenced by other objects. It may "
+        "represent a material-object or a massless particle such as a photon.",
+    ),
 ]
 
 

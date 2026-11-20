@@ -22,6 +22,11 @@ The K labels follow the [Design 2.1 kinematic draft](https://github.com/canvalid
 | K14 | `relative-velocity` | Differentiate relative position or subtract velocities. | `reference-frame`, `relative-position`, `time`, `velocity` | Installed / 13 |
 | K15 | `path-length` | Integrate the spatial line element along the path, counting each arc once. | `path`, `reference-frame` | Installed / 14 |
 | K16 / E1 | `uniform-motion` | Connect the kinematic interval property to Newton I. The speed reference is retained. | `path`, `point-particle`, `position`, `speed`, `time-interval`, `trajectory`, `velocity` | Installed / 15 |
+| E2 | `uniform-motion` | Newton I triplet. Relate required motion to freedom and the inertial frame. | `free-particle`, `inertial-frame` | Installed / 16 |
+| E3 | `inertial-frame` | Newton I triplet. Specify the frame condition for all free particles. | `free-particle`, `reference-frame`, `uniform-motion` | Installed / 17 |
+| E4 | `free-particle` | Newton I triplet. State the motion required of a free particle in an inertial frame. | `inertial-frame`, `point-particle`, `uniform-motion` | Installed / 18 |
+| E5 | `inertial-frame` | Inertial-frame wall. Express the frame approximation used for this analysis. | `acceleration`, `reference-frame` | Installed / 19 |
+| E6 | `free-particle` | Free-particle wall. Identify the absence of influence for material and massless particles. | `point-particle`, `trajectory` | Installed / 20 |
 
 ## First trace to describe
 
